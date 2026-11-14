@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-31T20:27:34.411Z",
+  "projectHost": "roamotmagssiipntchgh.supabase.co",
+  "requestedAppRedirect": "http://localhost:4173/#/account",
+  "status": 302,
+  "destinationOrigin": "https://accounts.google.com",
+  "callbackUrl": "https://roamotmagssiipntchgh.supabase.co/auth/v1/callback",
+  "usesPKCE": true,
+  "googleClientIdPresent": true,
+  "error": null,
+  "googleEndpoint": {
+    "status": 302,
+    "nextOrigin": "https://accounts.google.com"
+  },
+  "completedConsent": false,
+  "callbackExchanged": false,
+  "userCreationVerified": false,
+  "sessionPersistenceVerified": false
+}

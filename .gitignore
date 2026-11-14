@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.env.local
+.env.*
+!.env.example
+.supabase/
+.private/
+
+# Local exports and working artifacts
+outputs/
+*.log
+.DS_Store
+Thumbs.db

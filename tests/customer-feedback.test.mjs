@@ -1,0 +1,50 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile,readdir} from 'node:fs/promises';
+import {PGlite} from '@electric-sql/pglite';
+import {parseFeedback,feedbackSQL} from '../scripts/import-customer-feedback.mjs';
+import {productReviewsMarkup} from '../js/product-reviews.js';
+
+test('external feedback preserves content, supports half stars, deduplicates and keeps order references private',async()=>{
+ const db=new PGlite();
+ try{
+ await db.exec(`create role anon;create role authenticated;create role service_role bypassrls;create schema auth;create table auth.users(id uuid primary key);create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.uid',true),'')::uuid$$;create function auth.jwt() returns jsonb language sql stable as $$select jsonb_build_object('aal',coalesce(current_setting('request.aal',true),'aal1'))$$;grant usage on schema public,auth to anon,authenticated,service_role;`);
+ for(const f of (await readdir('supabase/migrations')).filter(f=>/^\d.*\.sql$/.test(f)).sort())await db.exec(await readFile('supabase/migrations/'+f,'utf8'));
+ const product=(await db.query("insert into products(name,brand,model) values('Exact Product','Brand','Model') returning id")).rows[0];
+ const source='Exact Product\n\nTotal Reviews: 1\n\nReview 1\nCustomer: O\'Brien <buyer>\nOrder ID: ORD-TEST\nRating: 4.5/5 ⭐⭐⭐⭐½\nFeedback: Exact customer feedback & punctuation.\n';
+ const records=parseFeedback(source,[{...product,name:'Exact Product'}]);
+ assert.deepEqual(parseFeedback(source+'-------\n',[{...product,name:'Exact Product'}]),records);
+ await db.exec(feedbackSQL(records));await db.exec(feedbackSQL(records));
+ const rows=(await db.query('select * from reviews')).rows;assert.equal(rows.length,1);assert.equal(Number(rows[0].rating),4.5);assert.equal(rows[0].body,records[0].body);assert.equal(rows[0].verified_purchase,false);assert.equal(rows[0].user_id,null);
+ await assert.rejects(()=>db.exec(feedbackSQL([{...records[0],body:'Changed feedback content'}])),/Existing review differs/);await db.exec('rollback');
+ await db.exec('set role anon');assert.equal((await db.query('select rating,display_name,feedback_source from reviews')).rows.length,1);
+ await assert.rejects(()=>db.query('select external_order_reference from reviews'),/permission denied/);
+ await assert.rejects(()=>db.query('select source_record from reviews'),/permission denied/);
+ await assert.rejects(()=>db.exec("insert into reviews(product_id,rating,body,display_name) values('"+product.id+"',5,'forged feedback','Fake')"),/permission denied/);
+ await db.exec('reset role;set role authenticated');
+ await assert.rejects(()=>db.query("select submit_review($1,4.5,'Title','A non-purchaser review','Buyer')",[product.id]),/Sign in/);
+ await db.exec('reset role');
+ const buyer='11111111-1111-4111-8111-111111111111',visitor='22222222-2222-4222-8222-222222222222';
+ await db.query('insert into auth.users values($1)',[buyer]);
+ await db.query('update products set published=true,verification_source=$2,verified_at=now() where id=$1',[product.id,'https://example.com/test']);
+ await db.query("select set_config('request.uid',$1,false)",[buyer]);await db.exec('set role authenticated');
+ assert.equal((await db.query('select review_eligibility($1) state',[product.id])).rows[0].state,'eligible');
+ await db.query("select submit_review($1,4.5,'Title','A non-purchaser review','Buyer')",[product.id]);
+ assert.equal((await db.query('select approved from my_product_reviews()')).rows[0].approved,false);
+ await assert.rejects(()=>db.query("select submit_review($1,5,'Title','Duplicate review body','Buyer')",[product.id]),/already reviewed/);
+ await assert.rejects(()=>db.query("select submit_review($1,4.25,'Title','Invalid rating review','Buyer')",[product.id]),/Enter/);
+ assert.equal((await db.query('update reviews set approved=true returning id')).rows.length,0);
+ assert.equal((await db.query('select approved from my_product_reviews()')).rows[0].approved,false);
+ await db.exec("reset role;select set_config('request.uid','',false);set role anon");
+ const like=()=>db.query('select like_review($1,$2) result',[rows[0].id,visitor]);
+ assert.deepEqual((await like()).rows[0].result,{count:1,liked:true});assert.deepEqual((await like()).rows[0].result,{count:1,liked:true});
+ assert.equal((await db.query('select product_review_likes($1,$2) result',[product.id,visitor])).rows[0].result[0].liked,true);
+ await assert.rejects(()=>db.query('select * from review_likes'),/permission denied/);
+ await assert.rejects(()=>db.query('select like_review($1,$2)',[crypto.randomUUID(),visitor]),/unavailable/);
+ await db.exec('reset role');const pending=(await db.query('select id from reviews where not approved')).rows[0].id;
+ await db.exec('set role anon');await assert.rejects(()=>db.query('select like_review($1,$2)',[pending,visitor]),/unavailable/);
+ await db.exec('reset role');await db.exec(await readFile('supabase/migrations/021_external_customer_feedback.sql','utf8'));
+ await db.exec(await readFile('supabase/migrations/022_review_interactions.sql','utf8'));
+ const html=productReviewsMarkup(rows,'sign_in');assert.ok(html.includes('4.5 / 5 · 1 review'));assert.ok(html.includes('4.5/5'));assert.ok(html.includes('O&#39;Brien &lt;buyer&gt;'));assert.ok(!html.includes('Verified purchase'));assert.ok(!html.includes('<time'));assert.ok(!html.includes('ORD-TEST'));
+ }finally{await db.close();}
+});

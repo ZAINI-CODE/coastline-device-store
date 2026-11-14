@@ -1,0 +1,24 @@
+{
+  "name": "electronics-store",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:frontend": "node --test tests/admin-records.test.mjs tests/assets.test.mjs tests/core.test.mjs tests/frontend-review.test.mjs tests/load-env.test.mjs tests/media-and-theme.test.mjs tests/promotions.test.mjs tests/public-config.test.mjs tests/seo.test.mjs tests/session.test.mjs tests/product-experience.test.mjs tests/priced-catalogue.test.mjs",
+    "test:backend": "node --test tests/backend-endpoints.test.mjs tests/database.test.mjs tests/payment.test.mjs tests/catalogue-import.test.mjs tests/persistent-catalogue.test.mjs",
+    "catalogue:prepare": "node scripts/prepare-catalogue-import.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "check:edge": "node scripts/check-edge.mjs",
+    "qa:fixture": "node tests/qa-server.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.81.1"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.14",
+    "esbuild": "0.25.12",
+    "sharp": "^0.35.5"
+  }
+}

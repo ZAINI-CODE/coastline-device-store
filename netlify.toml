@@ -1,0 +1,11 @@
+[build]
+command = "npm ci && npm run build"
+publish = "dist"
+[[headers]]
+for = "/*"
+[headers.values]
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin-when-cross-origin"
+X-Frame-Options = "DENY"
+Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+Content-Security-Policy = "default-src 'self'; script-src 'self' https://www.paypal.com https://www.paypalobjects.com; style-src 'self'; img-src 'self' data: https://*.paypal.com https://*.paypalobjects.com; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://*.paypal.com; frame-src https://*.paypal.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"

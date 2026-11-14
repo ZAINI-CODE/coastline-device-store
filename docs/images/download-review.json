@@ -1,0 +1,51 @@
+[
+  {
+    "slug": "dualsense-white-hd",
+    "title": "Playstation DualSense Controller.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Playstation_DualSense_Controller.png",
+    "status": "blocked",
+    "reason": "The SSL connection could not be established, see inner exception."
+  },
+  {
+    "slug": "iphone-16-ultramarine-back",
+    "title": "Back view of iPhone 16 Ultramarine.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Back_view_of_iPhone_16_Ultramarine.jpg",
+    "status": "blocked",
+    "reason": "The SSL connection could not be established, see inner exception."
+  },
+  {
+    "slug": "dualsense-edge",
+    "title": "DualSense Edge Controller.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:DualSense_Edge_Controller.jpg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/DualSense_Edge_Controller.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "licence": "CC0",
+    "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "author_html": "Sonson2",
+    "credit_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+    "sha256": "045D350B9119F04E79AFBE9F8250A850C581A6D737ECFBEC643032BF0F652045",
+    "original_path": "images/research/dualsense-edge.jpg",
+    "checked_on": "2026-11-03",
+    "status": "awaiting_visual_review"
+  },
+  {
+    "slug": "dualsense-midnight-black",
+    "title": "Playstation 5 DualSense controller in Midnight Black, 2026-02-07 (front).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Playstation_5_DualSense_controller_in_Midnight_Black%2C_2026-02-07_%28front%29.jpg",
+    "status": "blocked",
+    "reason": "The SSL connection could not be established, see inner exception."
+  },
+  {
+    "slug": "ps5-alternative",
+    "title": "Immagine Playstation 5.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Immagine_Playstation_5.jpg",
+    "status": "blocked",
+    "reason": "The SSL connection could not be established, see inner exception."
+  },
+  {
+    "slug": "airpods-comparison",
+    "title": "AirPods 4 and AirPods Pro 2.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:AirPods_4_and_AirPods_Pro_2.jpg",
+    "status": "blocked",
+    "reason": "The SSL connection could not be established, see inner exception."
+  }
+]

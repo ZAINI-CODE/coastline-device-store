@@ -1,0 +1,9 @@
+{
+  "name": "Coastline Device Co.",
+  "tagline": "Modern technology. Reliable shopping.",
+  "location": "Sunrise Boulevard, Fort Lauderdale, Florida, USA",
+  "currency": "USD", "email": null, "supportEmail": "support@coastlinedevice.com", "phone": null,
+  "hours": null, "domain": "https://coastlinedevice.com", "newsletterUrl": null,
+  "policiesApproved": true, "googleEnabled": true, "appleEnabled": false,
+  "categories": ["Apple iPhones", "Apple Products and Headphones", "Gaming Consoles", "Gaming PCs"]
+}

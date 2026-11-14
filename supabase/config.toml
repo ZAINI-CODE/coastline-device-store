@@ -1,0 +1,9 @@
+project_id = "electronics-store"
+[functions.store-api]
+verify_jwt = false
+[functions.paypal-webhook]
+verify_jwt = false
+[functions.refund-order]
+verify_jwt = false
+[functions.order-email]
+verify_jwt = false

@@ -1,0 +1,82 @@
+import { db, unwrap, invoke } from "./api.js";
+import { escapeHTML as e, money } from "./core.js";
+import { safe, notify } from "./app.js";
+import {resumeAfterSignIn,reviewAuthRedirect} from './review-navigation.js';
+let user;
+const field = (name, label, type = "text") => `<label>${label}<input name="${name}" type="${type}" required></label>`;
+async function accountPage() {
+  if (!db) return '<section class="wrap page"><h1>Your account</h1><div class="panel"><h2>We\u2019re getting ready.</h2><p>Account services are currently unavailable. Your cart stays on this device.</p><a class="button" href="#/shop">Explore the collection</a></div></section>';
+  user = (await db.auth.getUser()).data.user;
+  if(user&&resumeAfterSignIn())return '<section class="wrap page"><p>Returning to your page…</p></section>';
+  if (!user) return `<section class="wrap page"><span class="eyebrow">WELCOME BACK</span><h1>Your connection to the store.</h1><div class="account-grid"><form id="login" class="panel"><h2>Sign in</h2>${field("email", "Email", "email")}${field("password", "Password", "password")}<button class="button">Sign in</button><button type="button" id="recover" class="text-button">Forgot password?</button><hr><button type="button" class="google-signin" data-provider="google"><svg class="google-icon" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M44 24c0-1.3-.1-2.6-.4-4H24v8h11a10 10 0 0 1-4 6v5h7c4-4 6-9 6-15Z"/><path fill="#34A853" d="M24 44c6 0 10-2 14-5l-7-5c-2 1-4 2-7 2-5 0-10-4-11-9H6v6c4 7 10 11 18 11Z"/><path fill="#FBBC05" d="M13 27a12 12 0 0 1 0-7v-6H6a20 20 0 0 0 0 19Z"/><path fill="#EA4335" d="M24 12c3 0 6 1 8 3l6-6a20 20 0 0 0-32 5l7 6c1-5 6-8 11-8Z"/></svg>Continue with Google</button><button type="button" data-provider="apple">Continue with Apple</button></form><form id="register" class="panel"><h2>Create an account</h2><p>Keep your orders and tracking in one place.</p>${field("email", "Email", "email")}${field("password", "Password (at least 12 characters)", "password")}<button class="button">Create account</button><p>Check your email to verify your account before signing in.</p></form></div></section>`;
+  let accountRows;
+  try {
+    accountRows = await Promise.all([unwrap(db.from("orders").select("*,order_items(product_name,variant,quantity,unit_price_cents),order_status_history(status,payment_status,created_at)").eq("user_id", user.id).order("created_at", { ascending: false })), unwrap(db.from("customer_addresses").select("*")), unwrap(db.from("profiles").select("*").eq("id", user.id).maybeSingle()), unwrap(db.rpc("my_product_reviews"))]);
+  } catch (error) {
+    return `<section class="wrap page"><h1>Your account</h1><div class="panel"><h2>Signed in</h2><p>${e(user.email)}</p><p>Your account details are temporarily unavailable. Try reloading this page.</p><button id="logout">Sign out</button></div></section>`;
+  }
+  const [orders, addresses, profile, reviews] = accountRows;
+  return `<section class="wrap page"><div class="section-head"><div><span class="eyebrow">YOUR ACCOUNT</span><h1>Welcome back.</h1><p>${e(user.email)}</p></div><button id="logout">Sign out</button></div><div class="account-grid"><form id="profile" class="panel"><h2>Profile</h2><label>Display name<input name="display_name" maxlength="80" value="${e(profile?.display_name || "")}"></label><button class="button">Save profile</button></form><form id="password" class="panel"><h2>Account security</h2>${field("password", "New password (12+ characters)", "password")}<button class="button">Change password</button><p>Use this form after following a password recovery link.</p></form></div><h2>Order history & tracking</h2>${orders.length ? orders.map((o) => `<article class="panel order"><h3>Order ${e(o.id)}</h3><p>${e(new Date(o.created_at).toLocaleString())} \xB7 ${e(o.method)} \xB7 ${money(o.total_cents)}</p><div class="status-tags"><span>Order: ${e(o.status.replaceAll("_", " "))}</span><span>Payment: ${e(o.payment_status.replaceAll("_", " "))}</span></div>${o.order_items.map((i) => `<p>${e(i.product_name)} \xB7 ${e(i.variant)} \xB7 ${i.quantity} \xD7 ${money(i.unit_price_cents)}</p>`).join("")}<p>Ship to: ${e(o.shipping_address.full_name)}, ${e(o.shipping_address.line1)}, ${e(o.shipping_address.city)}, ${e(o.shipping_address.state)} ${e(o.shipping_address.postal_code)}, ${e(o.shipping_address.country)}</p>${o.tracking_number ? `<p>Carrier: ${e(o.carrier)} \xB7 Tracking: ${e(o.tracking_number)}</p>` : "<p>Tracking has not been added.</p>"}${["pending", "processing"].includes(o.payment_status) && !o.stock_released ? `<p><a class="button" href="#/checkout?order=${e(o.id)}">Review order & payment</a></p>` : ""}<details><summary>Status history</summary>${o.order_status_history.sort((a, b) => new Date(a.created_at) - new Date(b.created_at)).map((h) => `<p>${e(new Date(h.created_at).toLocaleString())} \xB7 ${e(h.status)} \xB7 Payment ${e(h.payment_status)}</p>`).join("")}</details></article>`).join("") : '<div class="empty"><h3>Your first order starts here.</h3><a href="#/shop">Explore the collection \u2197</a></div>'}<h2>Saved addresses</h2><div class="account-grid">${addresses.map((a) => `<article class="panel"><p>${e(a.full_name)}<br>${e(a.line1)}<br>${e(a.city)}, ${e(a.state)} ${e(a.postal_code)}<br>${e(a.country)}</p><button data-delete-address="${e(a.id)}">Delete address</button></article>`).join("")}<form id="address" class="panel"><h3>Add an address</h3>${[["full_name", "Full name"], ["line1", "Street address"], ["city", "City"], ["state", "State / region"], ["postal_code", "ZIP / postal code"], ["country", "Country code"]].map(([n, l]) => field(n, l)).join("")}<button class="button">Save address</button></form></div><h2>Your reviews</h2>${reviews.map((r) => `<article class="review"><p>${r.rating}/5 \xB7 ${r.approved ? "Published" : "Awaiting moderation"}</p><p>${e(r.body)}</p><a href="#/product/${e(r.product_id)}">View product</a></article>`).join("") || "<p>No reviews submitted.</p>"}</section>`;
+}
+function wireAccount(render) {
+  document.querySelector("#login")?.addEventListener("submit", (ev) => safe(async () => {
+    ev.preventDefault();
+    const f = Object.fromEntries(new FormData(ev.target));
+    await unwrap(db.auth.signInWithPassword(f));
+    if(!resumeAfterSignIn())render();
+  }));
+  document.querySelector("#register")?.addEventListener("submit", (ev) => safe(async () => {
+    ev.preventDefault();
+    const f = Object.fromEntries(new FormData(ev.target));
+    if (f.password.length < 12) throw new Error("Use at least 12 characters.");
+    const result=await unwrap(db.auth.signUp({ ...f, options: { emailRedirectTo: reviewAuthRedirect() } }));
+    if(result.session&&resumeAfterSignIn())return;
+    notify("Check your email for the verification link.");
+  }));
+  document.querySelector("#recover")?.addEventListener("click", () => safe(async () => {
+    const email = document.querySelector("#login [name=email]").value;
+    if (!email) throw new Error("Enter your email first.");
+    await unwrap(db.auth.resetPasswordForEmail(email, { redirectTo: location.origin + location.pathname + "#/account" }));
+    notify("If an account exists, a recovery email will be sent.");
+  }));
+  document.querySelectorAll("[data-provider]").forEach((b) => b.onclick = () => safe(async () => {
+    const config = await fetch("./config/store.json").then((r) => r.json());
+    if (!config[b.dataset.provider + "Enabled"]) throw new Error("This sign-in provider is awaiting configuration.");
+    await unwrap(db.auth.signInWithOAuth({ provider: b.dataset.provider, options: { redirectTo: reviewAuthRedirect() } }));
+  }));
+  document.querySelector("#logout")?.addEventListener("click", () => safe(async () => {
+    await unwrap(db.auth.signOut());
+    render();
+  }));
+  document.querySelector("#profile")?.addEventListener("submit", (ev) => safe(async () => {
+    ev.preventDefault();
+    await unwrap(db.from("profiles").upsert({ id: user.id, ...Object.fromEntries(new FormData(ev.target)) }));
+    notify("Profile saved.");
+  }));
+  document.querySelector("#password")?.addEventListener("submit", (ev) => safe(async () => {
+    ev.preventDefault();
+    const password = new FormData(ev.target).get("password");
+    if (password.length < 12) throw new Error("Use at least 12 characters.");
+    await unwrap(db.auth.updateUser({ password }));
+    notify("Password updated.");
+    ev.target.reset();
+  }));
+  document.querySelector("#address")?.addEventListener("submit", (ev) => safe(async () => {
+    ev.preventDefault();
+    await unwrap(db.from("customer_addresses").insert({ user_id: user.id, ...Object.fromEntries(new FormData(ev.target)) }));
+    render();
+  }));
+  document.querySelectorAll("[data-delete-address]").forEach((b) => b.onclick = () => safe(async () => {
+    await unwrap(db.from("customer_addresses").delete().eq("id", b.dataset.deleteAddress));
+    render();
+  }));
+  document.querySelectorAll(".zelle-reference").forEach((f) => f.onsubmit = (ev) => safe(async () => {
+    ev.preventDefault();
+    await invoke("zelle_reference", { id: f.dataset.id, reference: new FormData(f).get("reference") });
+    notify("Reference saved. Payment is still pending verification.");
+  }));
+}
+export {
+  accountPage,
+  wireAccount
+};

@@ -1,0 +1,1894 @@
+{
+  "variants": [
+    {
+      "images": [],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/cyberpowerpc-et99707",
+      "variant": "Colour to confirm / ET99707"
+    },
+    {
+      "images": [],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/ibuypower-ryzen-5-9500f",
+      "variant": "Colour to confirm / Exact configuration pending"
+    },
+    {
+      "images": [],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/acer-nitro-85-n85-100-ur35",
+      "variant": "Colour to confirm / N85-100-UR35 / UD.P02AA.07G"
+    },
+    {
+      "images": [],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/lenovo-legion-tower-5-gen-10-rtx-5070-ti",
+      "variant": "Colour to confirm / 90YJ001LUS"
+    },
+    {
+      "images": [],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/ps5-pro-2tb",
+      "variant": "Colour to confirm / Exact configuration pending"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone 16, Teal, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-16-teal-b71cb00c4cb48358-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-16-teal-b71cb00c4cb48358-480.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-16-teal-31816583915ed0e1-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-16-teal-1ad1a81fab2cd47a-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-16",
+      "variant": "Teal / 128GB"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone 16, Pink, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-16-pink-644413691842dde9-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-16-pink-644413691842dde9-480.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-16-pink-946c645b78b2da6a-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-16-pink-a8c69ae5f0ab565f-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-16",
+      "variant": "Pink / 128GB"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone 16, White, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-16-white-000e9191ffe9568b-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-16-white-000e9191ffe9568b-480.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-16-white-e2d4a0ec993bbdcf-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-16-white-7410209e8af4a841-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-16",
+      "variant": "White / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone 16, Ultramarine, side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-16-ultramarine-055b2cf3d75bbcc9-1600.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-16-ultramarine-055b2cf3d75bbcc9-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-16-ultramarine-990c698c1124f2b5-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-16",
+      "variant": "Ultramarine / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone 16, Black, side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-16-black-11e528837b26a3f4-1600.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-16-black-11e528837b26a3f4-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-16-black-c619161110c17bf4-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-16",
+      "variant": "Black / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone 17, Black, side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17-black-9cad583bea888958-1600.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17-black-9cad583bea888958-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17-black-6bcc5fd3b9a39bc2-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-17",
+      "variant": "Black / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone 17, Lavender, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17-lavender-9b977fa47be19d2b-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17-lavender-9b977fa47be19d2b-480.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17-lavender-531ecae16f8a4071-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17-lavender-ed062bc7dbcd3596-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-17",
+      "variant": "Lavender / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone 17, Mist Blue, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17-mist-blue-70b9934a0220ed9c-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17-mist-blue-70b9934a0220ed9c-480.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17-mist-blue-9e241efe48c83e83-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17-mist-blue-195c4b4034924468-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-17",
+      "variant": "Mist Blue / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone 17, Sage, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17-sage-c5167023c1ee687d-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17-sage-c5167023c1ee687d-480.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17-sage-40e3030e259b1513-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17-sage-ccd17be28e6d7f3f-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-17",
+      "variant": "Sage / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone 17, White, side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17-white-98c3d5aa9241e478-1600.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17-white-98c3d5aa9241e478-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17-white-8fe0d39e87e39555-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-17",
+      "variant": "White / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone 18 Pro, Black, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-18-pro-black-1b3e082e470ad6c8-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-18-pro-black-1b3e082e470ad6c8-480.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-18-pro-black-1e36d99704a8c51e-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-18-pro-black-fa36ee7db8f04133-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-18-pro",
+      "variant": "Black / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone 18 Pro, Burgundy, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-18-pro-burgundy-c6ad3b02aeb1c96d-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-18-pro-burgundy-c6ad3b02aeb1c96d-480.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-18-pro-burgundy-c3d20b5ff012339f-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-18-pro-burgundy-ac49eb6dc2160658-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-18-pro",
+      "variant": "Burgundy / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone 18 Pro, Glacier, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-18-pro-glacier-2ad0e798c4e29740-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-18-pro-glacier-2ad0e798c4e29740-480.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-18-pro-glacier-efed471fab58a105-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-18-pro-glacier-577a83f92f90302b-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-18-pro",
+      "variant": "Glacier / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone 18 Pro, Silver, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-18-pro-silver-53a1b86e618c39ac-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-18-pro-silver-53a1b86e618c39ac-480.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-18-pro-silver-2ce5eaeec9c61b84-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-18-pro-silver-26a4b7121516a9c8-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-18-pro",
+      "variant": "Silver / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple AirPods Pro 3, White, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-airpods-pro-3-white-35aee945c7be91ed-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-airpods-pro-3-white-35aee945c7be91ed-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-airpods-pro-3-white-94d9f7bdcc5a3a5d-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-airpods-pro-3-white-98958645344f2591-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/airpods-pro-3",
+      "variant": "White / Retail revision to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple AirPods 5, White, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-airpods-5-white-6d7d8e4ad870c9ca-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-airpods-5-white-6d7d8e4ad870c9ca-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-airpods-5-white-27e51ba62e2afe06-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-airpods-5-white-7e49eb639ac68ec2-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/airpods-5",
+      "variant": "White / Charging case variant to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone 17e, Black, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17e-black-160e7e160aef5fa8-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17e-black-160e7e160aef5fa8-480.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17e-black-24effd70563bfa30-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17e-black-c26fa3c92a934735-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-17e",
+      "variant": "Black / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone 17e, Soft Pink, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17e-soft-pink-3f8613fc64368d93-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17e-soft-pink-3f8613fc64368d93-480.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17e-soft-pink-f1db42d3c828e1f8-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17e-soft-pink-6fbe73c59cbb3802-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-17e",
+      "variant": "Soft Pink / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone 17e, White, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17e-white-1d2e79614fb0642b-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17e-white-1d2e79614fb0642b-480.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17e-white-97ac572923ec0883-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-17e-white-c89f5b3319f2f67e-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-17e",
+      "variant": "White / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone Air, Cloud White, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-air-cloud-white-2ef737581bbe35d0-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-air-cloud-white-2ef737581bbe35d0-480.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-air-cloud-white-e91fa9307c0a1b82-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-air-cloud-white-c416941c59131993-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-air",
+      "variant": "Cloud White / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone Air, Light Gold, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-air-light-gold-e673f9cdc10f5163-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-air-light-gold-e673f9cdc10f5163-480.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-air-light-gold-7a0f0eeaa132dd93-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-air-light-gold-e4154d7ede95b4b1-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-air",
+      "variant": "Light Gold / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone Air, Sky Blue, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-air-sky-blue-ee7f0229c636c620-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-air-sky-blue-ee7f0229c636c620-480.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-air-sky-blue-25a25a23edce1848-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-air-sky-blue-8af41af151490d95-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-air",
+      "variant": "Sky Blue / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone Air, Space Black, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-air-space-black-d230641574756171-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-air-space-black-d230641574756171-480.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-air-space-black-880a73abf641d5f9-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-air-space-black-a384c8dafa8ff6ce-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-air",
+      "variant": "Space Black / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone Duo, Night Sky, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-duo-night-sky-fe0841878185a289-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-duo-night-sky-fe0841878185a289-480.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-duo-night-sky-470ddf338d2f3b57-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-duo-night-sky-33851ad146454cc6-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-duo",
+      "variant": "Night Sky / Storage to confirm"
+    },
+    {
+      "images": [
+        {
+          "alt": "Apple iPhone Duo, Star White, main",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-duo-star-white-f08661b08e86f6cc-1600.webp"
+        },
+        {
+          "alt": "Product view",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-duo-star-white-f08661b08e86f6cc-480.webp"
+        },
+        {
+          "alt": "side",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-duo-star-white-a1154197a87aaade-480.webp"
+        },
+        {
+          "alt": "Camera / product detail",
+          "fit": "contain",
+          "loaded": true,
+          "src": "./images/products/owner-iphone-duo-star-white-df3aa5dc37532c3e-480.webp"
+        }
+      ],
+      "orderDisabled": true,
+      "overflow": false,
+      "url": "#/product/iphone-duo",
+      "variant": "Star White / Storage to confirm"
+    }
+  ],
+  "gallery": [
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-16-teal-b71cb00c4cb48358-1600.webp",
+      "url": "#/product/iphone-16",
+      "variant": "Teal / 128GB"
+    },
+    {
+      "caption": "side · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-16-teal-31816583915ed0e1-1600.webp",
+      "url": "#/product/iphone-16",
+      "variant": "Teal / 128GB"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-16-teal-1ad1a81fab2cd47a-1600.webp",
+      "url": "#/product/iphone-16",
+      "variant": "Teal / 128GB"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-16-pink-644413691842dde9-1600.webp",
+      "url": "#/product/iphone-16",
+      "variant": "Pink / 128GB"
+    },
+    {
+      "caption": "side · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-16-pink-946c645b78b2da6a-1600.webp",
+      "url": "#/product/iphone-16",
+      "variant": "Pink / 128GB"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-16-pink-a8c69ae5f0ab565f-1600.webp",
+      "url": "#/product/iphone-16",
+      "variant": "Pink / 128GB"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-16-white-000e9191ffe9568b-1600.webp",
+      "url": "#/product/iphone-16",
+      "variant": "White / Storage to confirm"
+    },
+    {
+      "caption": "side · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-16-white-e2d4a0ec993bbdcf-1600.webp",
+      "url": "#/product/iphone-16",
+      "variant": "White / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-16-white-7410209e8af4a841-1600.webp",
+      "url": "#/product/iphone-16",
+      "variant": "White / Storage to confirm"
+    },
+    {
+      "caption": "side · 1 of 2",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-16-ultramarine-055b2cf3d75bbcc9-1600.webp",
+      "url": "#/product/iphone-16",
+      "variant": "Ultramarine / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 2 of 2",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-16-ultramarine-990c698c1124f2b5-1600.webp",
+      "url": "#/product/iphone-16",
+      "variant": "Ultramarine / Storage to confirm"
+    },
+    {
+      "caption": "side · 1 of 2",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-16-black-11e528837b26a3f4-1600.webp",
+      "url": "#/product/iphone-16",
+      "variant": "Black / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 2 of 2",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-16-black-c619161110c17bf4-1600.webp",
+      "url": "#/product/iphone-16",
+      "variant": "Black / Storage to confirm"
+    },
+    {
+      "caption": "side · 1 of 2",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17-black-9cad583bea888958-1600.webp",
+      "url": "#/product/iphone-17",
+      "variant": "Black / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 2 of 2",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17-black-6bcc5fd3b9a39bc2-1600.webp",
+      "url": "#/product/iphone-17",
+      "variant": "Black / Storage to confirm"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17-lavender-9b977fa47be19d2b-1600.webp",
+      "url": "#/product/iphone-17",
+      "variant": "Lavender / Storage to confirm"
+    },
+    {
+      "caption": "side · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17-lavender-531ecae16f8a4071-1600.webp",
+      "url": "#/product/iphone-17",
+      "variant": "Lavender / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17-lavender-ed062bc7dbcd3596-1600.webp",
+      "url": "#/product/iphone-17",
+      "variant": "Lavender / Storage to confirm"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17-mist-blue-70b9934a0220ed9c-1600.webp",
+      "url": "#/product/iphone-17",
+      "variant": "Mist Blue / Storage to confirm"
+    },
+    {
+      "caption": "side · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17-mist-blue-9e241efe48c83e83-1600.webp",
+      "url": "#/product/iphone-17",
+      "variant": "Mist Blue / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17-mist-blue-195c4b4034924468-1600.webp",
+      "url": "#/product/iphone-17",
+      "variant": "Mist Blue / Storage to confirm"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17-sage-c5167023c1ee687d-1600.webp",
+      "url": "#/product/iphone-17",
+      "variant": "Sage / Storage to confirm"
+    },
+    {
+      "caption": "side · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17-sage-40e3030e259b1513-1600.webp",
+      "url": "#/product/iphone-17",
+      "variant": "Sage / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17-sage-ccd17be28e6d7f3f-1600.webp",
+      "url": "#/product/iphone-17",
+      "variant": "Sage / Storage to confirm"
+    },
+    {
+      "caption": "side · 1 of 2",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17-white-98c3d5aa9241e478-1600.webp",
+      "url": "#/product/iphone-17",
+      "variant": "White / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 2 of 2",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17-white-8fe0d39e87e39555-1600.webp",
+      "url": "#/product/iphone-17",
+      "variant": "White / Storage to confirm"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-18-pro-black-1b3e082e470ad6c8-1600.webp",
+      "url": "#/product/iphone-18-pro",
+      "variant": "Black / Storage to confirm"
+    },
+    {
+      "caption": "side · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-18-pro-black-1e36d99704a8c51e-1600.webp",
+      "url": "#/product/iphone-18-pro",
+      "variant": "Black / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-18-pro-black-fa36ee7db8f04133-1600.webp",
+      "url": "#/product/iphone-18-pro",
+      "variant": "Black / Storage to confirm"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-18-pro-burgundy-c6ad3b02aeb1c96d-1600.webp",
+      "url": "#/product/iphone-18-pro",
+      "variant": "Burgundy / Storage to confirm"
+    },
+    {
+      "caption": "side · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-18-pro-burgundy-c3d20b5ff012339f-1600.webp",
+      "url": "#/product/iphone-18-pro",
+      "variant": "Burgundy / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-18-pro-burgundy-ac49eb6dc2160658-1600.webp",
+      "url": "#/product/iphone-18-pro",
+      "variant": "Burgundy / Storage to confirm"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-18-pro-glacier-2ad0e798c4e29740-1600.webp",
+      "url": "#/product/iphone-18-pro",
+      "variant": "Glacier / Storage to confirm"
+    },
+    {
+      "caption": "side · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-18-pro-glacier-efed471fab58a105-1600.webp",
+      "url": "#/product/iphone-18-pro",
+      "variant": "Glacier / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-18-pro-glacier-577a83f92f90302b-1600.webp",
+      "url": "#/product/iphone-18-pro",
+      "variant": "Glacier / Storage to confirm"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-18-pro-silver-53a1b86e618c39ac-1600.webp",
+      "url": "#/product/iphone-18-pro",
+      "variant": "Silver / Storage to confirm"
+    },
+    {
+      "caption": "side · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-18-pro-silver-2ce5eaeec9c61b84-1600.webp",
+      "url": "#/product/iphone-18-pro",
+      "variant": "Silver / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-18-pro-silver-26a4b7121516a9c8-1600.webp",
+      "url": "#/product/iphone-18-pro",
+      "variant": "Silver / Storage to confirm"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-airpods-pro-3-white-35aee945c7be91ed-1600.webp",
+      "url": "#/product/airpods-pro-3",
+      "variant": "White / Retail revision to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-airpods-pro-3-white-94d9f7bdcc5a3a5d-1600.webp",
+      "url": "#/product/airpods-pro-3",
+      "variant": "White / Retail revision to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-airpods-pro-3-white-98958645344f2591-1600.webp",
+      "url": "#/product/airpods-pro-3",
+      "variant": "White / Retail revision to confirm"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-airpods-5-white-6d7d8e4ad870c9ca-1600.webp",
+      "url": "#/product/airpods-5",
+      "variant": "White / Charging case variant to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-airpods-5-white-27e51ba62e2afe06-1600.webp",
+      "url": "#/product/airpods-5",
+      "variant": "White / Charging case variant to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-airpods-5-white-7e49eb639ac68ec2-1600.webp",
+      "url": "#/product/airpods-5",
+      "variant": "White / Charging case variant to confirm"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17e-black-160e7e160aef5fa8-1600.webp",
+      "url": "#/product/iphone-17e",
+      "variant": "Black / Storage to confirm"
+    },
+    {
+      "caption": "side · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17e-black-24effd70563bfa30-1600.webp",
+      "url": "#/product/iphone-17e",
+      "variant": "Black / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17e-black-c26fa3c92a934735-1600.webp",
+      "url": "#/product/iphone-17e",
+      "variant": "Black / Storage to confirm"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17e-soft-pink-3f8613fc64368d93-1600.webp",
+      "url": "#/product/iphone-17e",
+      "variant": "Soft Pink / Storage to confirm"
+    },
+    {
+      "caption": "side · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17e-soft-pink-f1db42d3c828e1f8-1600.webp",
+      "url": "#/product/iphone-17e",
+      "variant": "Soft Pink / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17e-soft-pink-6fbe73c59cbb3802-1600.webp",
+      "url": "#/product/iphone-17e",
+      "variant": "Soft Pink / Storage to confirm"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17e-white-1d2e79614fb0642b-1600.webp",
+      "url": "#/product/iphone-17e",
+      "variant": "White / Storage to confirm"
+    },
+    {
+      "caption": "side · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17e-white-97ac572923ec0883-1600.webp",
+      "url": "#/product/iphone-17e",
+      "variant": "White / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-17e-white-c89f5b3319f2f67e-1600.webp",
+      "url": "#/product/iphone-17e",
+      "variant": "White / Storage to confirm"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-air-cloud-white-2ef737581bbe35d0-1600.webp",
+      "url": "#/product/iphone-air",
+      "variant": "Cloud White / Storage to confirm"
+    },
+    {
+      "caption": "side · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-air-cloud-white-e91fa9307c0a1b82-1600.webp",
+      "url": "#/product/iphone-air",
+      "variant": "Cloud White / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-air-cloud-white-c416941c59131993-1600.webp",
+      "url": "#/product/iphone-air",
+      "variant": "Cloud White / Storage to confirm"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-air-light-gold-e673f9cdc10f5163-1600.webp",
+      "url": "#/product/iphone-air",
+      "variant": "Light Gold / Storage to confirm"
+    },
+    {
+      "caption": "side · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-air-light-gold-7a0f0eeaa132dd93-1600.webp",
+      "url": "#/product/iphone-air",
+      "variant": "Light Gold / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-air-light-gold-e4154d7ede95b4b1-1600.webp",
+      "url": "#/product/iphone-air",
+      "variant": "Light Gold / Storage to confirm"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-air-sky-blue-ee7f0229c636c620-1600.webp",
+      "url": "#/product/iphone-air",
+      "variant": "Sky Blue / Storage to confirm"
+    },
+    {
+      "caption": "side · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-air-sky-blue-25a25a23edce1848-1600.webp",
+      "url": "#/product/iphone-air",
+      "variant": "Sky Blue / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-air-sky-blue-8af41af151490d95-1600.webp",
+      "url": "#/product/iphone-air",
+      "variant": "Sky Blue / Storage to confirm"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-air-space-black-d230641574756171-1600.webp",
+      "url": "#/product/iphone-air",
+      "variant": "Space Black / Storage to confirm"
+    },
+    {
+      "caption": "side · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-air-space-black-880a73abf641d5f9-1600.webp",
+      "url": "#/product/iphone-air",
+      "variant": "Space Black / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-air-space-black-a384c8dafa8ff6ce-1600.webp",
+      "url": "#/product/iphone-air",
+      "variant": "Space Black / Storage to confirm"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-duo-night-sky-fe0841878185a289-1600.webp",
+      "url": "#/product/iphone-duo",
+      "variant": "Night Sky / Storage to confirm"
+    },
+    {
+      "caption": "side · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-duo-night-sky-470ddf338d2f3b57-1600.webp",
+      "url": "#/product/iphone-duo",
+      "variant": "Night Sky / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-duo-night-sky-33851ad146454cc6-1600.webp",
+      "url": "#/product/iphone-duo",
+      "variant": "Night Sky / Storage to confirm"
+    },
+    {
+      "caption": "Product view · 1 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-duo-star-white-f08661b08e86f6cc-1600.webp",
+      "url": "#/product/iphone-duo",
+      "variant": "Star White / Storage to confirm"
+    },
+    {
+      "caption": "side · 2 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-duo-star-white-a1154197a87aaade-1600.webp",
+      "url": "#/product/iphone-duo",
+      "variant": "Star White / Storage to confirm"
+    },
+    {
+      "caption": "Camera / product detail · 3 of 3",
+      "error": false,
+      "fit": "contain",
+      "loaded": true,
+      "src": "http://localhost:4175/images/products/owner-iphone-duo-star-white-df3aa5dc37532c3e-1600.webp",
+      "url": "#/product/iphone-duo",
+      "variant": "Star White / Storage to confirm"
+    }
+  ],
+  "responsive": [
+    {
+      "images": [],
+      "overflow": false,
+      "url": "#/product/cyberpowerpc-et99707",
+      "width": 375
+    },
+    {
+      "images": [],
+      "overflow": false,
+      "url": "#/product/ibuypower-ryzen-5-9500f",
+      "width": 375
+    },
+    {
+      "images": [],
+      "overflow": false,
+      "url": "#/product/acer-nitro-85-n85-100-ur35",
+      "width": 375
+    },
+    {
+      "images": [],
+      "overflow": false,
+      "url": "#/product/lenovo-legion-tower-5-gen-10-rtx-5070-ti",
+      "width": 375
+    },
+    {
+      "images": [],
+      "overflow": false,
+      "url": "#/product/ps5-pro-2tb",
+      "width": 375
+    },
+    {
+      "images": [
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        }
+      ],
+      "overflow": false,
+      "stage": 324,
+      "url": "#/product/iphone-16",
+      "width": 375
+    },
+    {
+      "images": [
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        }
+      ],
+      "overflow": false,
+      "stage": 324,
+      "url": "#/product/iphone-17",
+      "width": 375
+    },
+    {
+      "images": [
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        }
+      ],
+      "overflow": false,
+      "stage": 324,
+      "url": "#/product/iphone-18-pro",
+      "width": 375
+    },
+    {
+      "images": [
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        }
+      ],
+      "overflow": false,
+      "stage": 324,
+      "url": "#/product/airpods-pro-3",
+      "width": 375
+    },
+    {
+      "images": [
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        }
+      ],
+      "overflow": false,
+      "stage": 324,
+      "url": "#/product/airpods-5",
+      "width": 375
+    },
+    {
+      "images": [
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        }
+      ],
+      "overflow": false,
+      "stage": 324,
+      "url": "#/product/iphone-17e",
+      "width": 375
+    },
+    {
+      "images": [
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        }
+      ],
+      "overflow": false,
+      "stage": 324,
+      "url": "#/product/iphone-air",
+      "width": 375
+    },
+    {
+      "images": [
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        }
+      ],
+      "overflow": false,
+      "stage": 324,
+      "url": "#/product/iphone-duo",
+      "width": 375
+    },
+    {
+      "images": [],
+      "overflow": false,
+      "url": "#/product/cyberpowerpc-et99707",
+      "width": 768
+    },
+    {
+      "images": [],
+      "overflow": false,
+      "url": "#/product/ibuypower-ryzen-5-9500f",
+      "width": 768
+    },
+    {
+      "images": [],
+      "overflow": false,
+      "url": "#/product/acer-nitro-85-n85-100-ur35",
+      "width": 768
+    },
+    {
+      "images": [],
+      "overflow": false,
+      "url": "#/product/lenovo-legion-tower-5-gen-10-rtx-5070-ti",
+      "width": 768
+    },
+    {
+      "images": [],
+      "overflow": false,
+      "url": "#/product/ps5-pro-2tb",
+      "width": 768
+    },
+    {
+      "images": [
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        }
+      ],
+      "overflow": false,
+      "stage": 348.15625,
+      "url": "#/product/iphone-16",
+      "width": 768
+    },
+    {
+      "images": [
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        }
+      ],
+      "overflow": false,
+      "stage": 348.15625,
+      "url": "#/product/iphone-17",
+      "width": 768
+    },
+    {
+      "images": [
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        }
+      ],
+      "overflow": false,
+      "stage": 348.15625,
+      "url": "#/product/iphone-18-pro",
+      "width": 768
+    },
+    {
+      "images": [
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        }
+      ],
+      "overflow": false,
+      "stage": 348.15625,
+      "url": "#/product/airpods-pro-3",
+      "width": 768
+    },
+    {
+      "images": [
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        }
+      ],
+      "overflow": false,
+      "stage": 348.15625,
+      "url": "#/product/airpods-5",
+      "width": 768
+    },
+    {
+      "images": [
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        }
+      ],
+      "overflow": false,
+      "stage": 348.15625,
+      "url": "#/product/iphone-17e",
+      "width": 768
+    },
+    {
+      "images": [
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        }
+      ],
+      "overflow": false,
+      "stage": 348.15625,
+      "url": "#/product/iphone-air",
+      "width": 768
+    },
+    {
+      "images": [
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        },
+        {
+          "fit": "contain",
+          "loaded": true
+        }
+      ],
+      "overflow": false,
+      "stage": 348.15625,
+      "url": "#/product/iphone-duo",
+      "width": 768
+    }
+  ]
+}

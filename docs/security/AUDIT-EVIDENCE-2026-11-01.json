@@ -1,0 +1,17 @@
+{
+ "source":"Owner-provided schema_rls_report in this chat; compact factual summary, not a fresh remote scan",
+ "projectHost":"roamotmagssiipntchgh.supabase.co",
+ "reportedOn":"2026-11-01",
+ "storageTables":["buckets","buckets_analytics","buckets_vectors","migrations","objects","s3_multipart_uploads","s3_multipart_uploads_parts","vector_indexes"],
+ "allReportedStorageTablesRlsEnabled":true,
+ "allReportedStorageTablesRlsForced":false,
+ "explicitPublicOrStoragePolicies":[],
+ "publicTablesReported":[],
+ "publicColumns":[],
+ "publicFunctions":[{"name":"rls_auto_enable","arguments":"","securityDefiner":true,"configuration":["search_path=pg_catalog"],"bodyProvided":false,"ownerProvided":false,"eventBindingProvided":false}],
+ "cliMigrationHistoryExists":false,
+ "bucketConfigurationProvided":false,
+ "remoteChangesExecuted":false,
+ "storageRemediationJustifiedByCurrentEvidence":false,
+ "productionReady":false
+}

@@ -1,0 +1,15 @@
+{
+  "checkedOn": "2026-11-01",
+  "timezone": "Asia/Karachi",
+  "projectHost": "roamotmagssiipntchgh.supabase.co",
+  "evidenceSource": "User completed the live Google flow and reported the diagnostic page results; agent browser automation unavailable",
+  "supabaseIdentityVerified": true,
+  "googleCallbackVerified": true,
+  "newSupabaseUserVerifiedDuringFlow": true,
+  "sessionRestoredAfterFullReload": true,
+  "emailPasswordLoginTested": false,
+  "logoutTestedInLiveProject": false,
+  "hostedRlsVerified": false,
+  "remoteApplicationSchemaChanged": false,
+  "privateCredentialsOrUserTokensRecorded": false
+}

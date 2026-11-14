@@ -1,0 +1,2 @@
+import {transform} from 'esbuild';import {readdir,readFile,writeFile} from 'node:fs/promises';
+for(const dir of ['js','scripts','tests'])for(const file of await readdir(dir)){if(!/\.(js|mjs)$/.test(file)||file==='format.mjs')continue;const path=dir+'/'+file;const source=await readFile(path,'utf8');const result=await transform(source,{loader:'js',format:'esm',target:'es2022',legalComments:'inline'});await writeFile(path,result.code);}

@@ -1,0 +1,42 @@
+{
+  "checked_on": "2026-10-31",
+  "published_count": 0,
+  "target_count": "40–50",
+  "note": "Research candidates, not sellable inventory. No stock, sale price, commercial image permission or owner approval has been supplied. Verify every variant and price immediately before import. Do not substitute a successor when a source redirects.",
+  "candidates": [
+    {
+      "name": "iPhone 16", "manufacturer": "Apple", "model_number": null,
+      "status": "pending_variant_and_image_review", "officially_released": true,
+      "specifications": {"chip":"A18", "display":"6.1-inch OLED"},
+      "colours": ["Black","White","Pink","Teal","Ultramarine"],
+      "configuration": "128GB",
+      "source": "https://www.apple.com/iphone-16/specs/",
+      "price_reference": {"amount_cents":82900,"currency":"USD","condition":"Apple US, connect to any carrier later; observed reference only, not owner sale price","source":"https://www.apple.com/shop/buy-iphone/iphone-16?storage=128gb","checked_on":"2026-10-31"},
+      "sale_price_cents":null,"inventory":null,"image_permission":"not obtained"
+    },
+    {
+      "name": "AirPods 4", "manufacturer": "Apple", "model_number": null,
+      "status": "pending_model_price_and_image_review", "officially_released": true,
+      "specifications": {"chip":"H2", "case_connector":"USB-C", "resistance":"IP54"},
+      "source":"https://support.apple.com/en-gb/121203",
+      "price_reference":null,"sale_price_cents":null,"inventory":null,"image_permission":"not obtained",
+      "source_warning":"The old apple.com/airpods-4/specs URL redirected to AirPods 5 during research. Do not use successor images or specifications for this product."
+    },
+    {
+      "name":"Ryzen 7 9700X", "manufacturer":"AMD", "model_number":"100-100001404WOF",
+      "status":"pending_price_inventory_and_image_review", "officially_released":true,
+      "specifications":{"cores":8,"threads":16,"socket":"AM5","architecture":"Zen 5","default_tdp_watts":65},
+      "source":"https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-7-9700X.html",
+      "price_reference":null,"sale_price_cents":null,"inventory":null,"image_permission":"not obtained"
+    },
+    {
+      "name":"DualSense wireless controller", "manufacturer":"Sony Interactive Entertainment", "model_number":"CFI-ZCT1W",
+      "status":"pending_exact_retail_variant_price_and_image_review", "officially_released":true,
+      "specifications":{"connector":"USB-C","features":"Haptic feedback and adaptive triggers in supported games"},
+      "colour":"White",
+      "source":"https://direct.playstation.com/en-us/buy-accessories/dualsense-wireless-controller",
+      "model_source":"https://www.playstation.com/content/dam/global_pdc/en/corporate/support/manuals/accessories/ps5-accessories/dualsense-wireless-controller-cfi-zct1w/CFI-ZCT1W_PS5_Wireless%20Controller_Instruction_Manual%24en.pdf",
+      "price_reference":null,"sale_price_cents":null,"inventory":null,"image_permission":"not obtained"
+    }
+  ]
+}

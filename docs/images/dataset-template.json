@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "images": [
+    {
+      "product_id": "dualsense-original-white",
+      "variant_key": "original-white",
+      "color": "White",
+      "configuration": "Original launch model",
+      "angle": "front",
+      "label": "Front view",
+      "file": "dualsense-white/front.jpg",
+      "kind": "photograph",
+      "source": "Owner-provided original photograph or exact source URL",
+      "licence": "Document ownership or commercial-use permission here"
+    },
+    {
+      "product_id": "dualsense-original-white",
+      "variant_key": "original-white",
+      "color": "White",
+      "configuration": "Original launch model",
+      "angle": "rear",
+      "label": "Rear view",
+      "file": "dualsense-white/rear.jpg",
+      "kind": "photograph",
+      "source": "Owner-provided original photograph or exact source URL",
+      "licence": "Document ownership or commercial-use permission here"
+    }
+  ]
+}

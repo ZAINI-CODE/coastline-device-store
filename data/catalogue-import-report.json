@@ -1,0 +1,73 @@
+{
+  "source_file": "Electronics_catalogue_all_products_priced.xlsx",
+  "sha256": "29532fe1bac98b28744d67088a60aae622ae085000a0cc43e6d4a0cc386c6116",
+  "sheets": [
+    {
+      "name": "iPhone prices",
+      "rows": 32,
+      "columns": 14
+    },
+    {
+      "name": "Catalogue",
+      "rows": 60,
+      "columns": 16
+    },
+    {
+      "name": "PC supplied details",
+      "rows": 134,
+      "columns": 3
+    }
+  ],
+  "matched_products": 52,
+  "total_updated": 53,
+  "new_products": 0,
+  "iphone_storage_prices": 21,
+  "researched_missing_prices": 1,
+  "researched_references": {
+    "airpods-5": {
+      "source": "https://www.apple.com/shop/buy-airpods/airpods-5",
+      "checked_on": "2026-11-07",
+      "currency": "USD",
+      "price_cents": 12900,
+      "price_label": "Manufacturer reference (from)",
+      "configuration": "Charging case option pending",
+      "pricing_note": "Apple US reference: $129 for AirPods 5; $149 with Wireless Charging Case, before tax. Exact supplied case option and SKU remain unconfirmed. This is a reference, not a confirmed store offer."
+    }
+  },
+  "workbook_reference_prices": 52,
+  "model_stock": 15,
+  "variant_stock_allocation": "Pending owner allocation; no duplicated stock",
+  "not_in_workbook": [
+    "airpods-5"
+  ],
+  "categories": {
+    "Gaming PCs": 5,
+    "Gaming Consoles": 5,
+    "Apple iPhones": 13,
+    "Processors and CPUs": 11,
+    "Apple Products and Headphones": 12,
+    "Gaming Controllers": 7
+  },
+  "pending_checks": {
+    "cyberpowerpc-et99707": [
+      "Supplied processor text claims an AMD Ryzen AI NPU. This specific claim is pending confirmation and is not included in the displayed CPU specification."
+    ],
+    "ibuypower-ryzen-5-9500f": [
+      "Exact SKU is missing; similar manufacturer configuration is not proof of this exact build.",
+      "DLSS version, SSD performance and warranty remain supplied claims pending exact build verification."
+    ],
+    "acer-nitro-85-n85-100-ur35": [
+      "Supplied Ethernet description includes both 2.5GbE and Gigabit Ethernet; exact adapter requires confirmation.",
+      "The supplied $1,999.99 sale reference differs from the earlier $2,099.99 manufacturer observation; retain both as dated references."
+    ],
+    "lenovo-legion-tower-5-gen-10-rtx-5070-ti": [
+      "$3,810.99 is described as an estimated value, not a verified previous selling price.",
+      "Supplier delivery estimate, rewards and warranty do not establish this store’s terms."
+    ],
+    "ps5-pro-2tb": [
+      "Supplied availability says currently unavailable; this does not establish owner stock.",
+      "Trade-in promotion is conditional supplier information, not this store’s offer."
+    ]
+  },
+  "hosted_writes": false
+}

@@ -1,0 +1,15 @@
+{
+  "source": "Owner-supplied result of storage_function_followup.sql in this conversation",
+  "receivedOn": "2026-11-03",
+  "executedByAgent": false,
+  "buckets": [],
+  "api_roles": [
+    {"rolname":"authenticated","rolsuper":false,"rolcreatedb":false,"rolbypassrls":false,"rolcreaterole":false},
+    {"rolname":"anon","rolsuper":false,"rolcreatedb":false,"rolbypassrls":false,"rolcreaterole":false},
+    {"rolname":"service_role","rolsuper":false,"rolcreatedb":false,"rolbypassrls":true,"rolcreaterole":false}
+  ],
+  "event_triggers": [{"name":"ensure_rls","tags":["CREATE TABLE","CREATE TABLE AS","SELECT INTO"],"event":"ddl_command_end","owner":"postgres","enabled":"O","function":"rls_auto_enable()"}],
+  "auto_rls_function": [{"acl":null,"owner":"postgres","returns":"event_trigger","signature":"rls_auto_enable()","anon_execute":true,"authenticated_execute":true,"security_definer":true,"configuration":["search_path=pg_catalog"],"definition_transcription":"tests/fixtures/audited-auto-rls.sql"}],
+  "other_user_relations": [],
+  "public_create_permissions":{"anon":false,"authenticated":false,"public_pseudo_role":false}
+}

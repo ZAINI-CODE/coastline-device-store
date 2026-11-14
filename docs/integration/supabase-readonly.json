@@ -1,0 +1,211 @@
+{
+  "checkedAt": "2026-10-31T20:21:06.275Z",
+  "projectHost": "roamotmagssiipntchgh.supabase.co",
+  "mode": "read-only; no account creation, migrations or database writes",
+  "checks": [
+    {
+      "name": "auth_health",
+      "status": 200,
+      "error": null
+    },
+    {
+      "name": "unauthenticated_user",
+      "status": 401,
+      "error": "no_authorization"
+    }
+  ],
+  "auth": {
+    "status": 200,
+    "providers": {
+      "anonymous_users": false,
+      "apple": false,
+      "azure": false,
+      "bitbucket": false,
+      "discord": false,
+      "facebook": false,
+      "snapchat": false,
+      "figma": false,
+      "fly": false,
+      "github": false,
+      "gitlab": false,
+      "google": true,
+      "keycloak": false,
+      "kakao": false,
+      "linkedin": false,
+      "linkedin_oidc": false,
+      "notion": false,
+      "spotify": false,
+      "slack": false,
+      "slack_oidc": false,
+      "workos": false,
+      "twitch": false,
+      "twitter": false,
+      "email": true,
+      "phone": false,
+      "zoom": false
+    },
+    "emailSignupDisabled": false,
+    "emailConfirmationAutoconfirm": false,
+    "error": null
+  },
+  "googleAuthorization": {
+    "status": 400,
+    "destinationOrigin": null,
+    "callbackOrigin": null,
+    "completedSignIn": false,
+    "error": {
+      "code": 400,
+      "message": "Unsupported provider: missing OAuth secret"
+    }
+  },
+  "databaseMetadata": {
+    "status": 401,
+    "error": "Secret API key required",
+    "tables": [],
+    "rpcs": []
+  },
+  "tables": [
+    {
+      "table": "profiles",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.profiles' in the schema cache"
+    },
+    {
+      "table": "products",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.products' in the schema cache"
+    },
+    {
+      "table": "product_variants",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.product_variants' in the schema cache"
+    },
+    {
+      "table": "categories",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.categories' in the schema cache"
+    },
+    {
+      "table": "inventory",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.inventory' in the schema cache"
+    },
+    {
+      "table": "shipping_rules",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.shipping_rules' in the schema cache"
+    },
+    {
+      "table": "orders",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.orders' in the schema cache"
+    },
+    {
+      "table": "order_items",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.order_items' in the schema cache"
+    },
+    {
+      "table": "payments",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.payments' in the schema cache"
+    },
+    {
+      "table": "order_status_history",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.order_status_history' in the schema cache"
+    },
+    {
+      "table": "reviews",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.reviews' in the schema cache"
+    },
+    {
+      "table": "promotions",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.promotions' in the schema cache"
+    },
+    {
+      "table": "promotion_products",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.promotion_products' in the schema cache"
+    },
+    {
+      "table": "customer_addresses",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.customer_addresses' in the schema cache"
+    },
+    {
+      "table": "admin_audit_logs",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.admin_audit_logs' in the schema cache"
+    },
+    {
+      "table": "carts",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.carts' in the schema cache"
+    },
+    {
+      "table": "store_settings",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.store_settings' in the schema cache"
+    },
+    {
+      "table": "refunds",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.refunds' in the schema cache"
+    },
+    {
+      "table": "contact_messages",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.contact_messages' in the schema cache"
+    },
+    {
+      "table": "review_reports",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.review_reports' in the schema cache"
+    },
+    {
+      "table": "admin_members",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.admin_members' in the schema cache"
+    },
+    {
+      "table": "webhook_events",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.webhook_events' in the schema cache"
+    },
+    {
+      "table": "request_limits",
+      "status": 404,
+      "code": "PGRST205",
+      "message": "Could not find the table 'public.request_limits' in the schema cache"
+    }
+  ],
+  "rls": {
+    "verified": false,
+    "note": "Public key requests cannot inspect pg_class/pg_policies or prove cross-user isolation. Run the supplied read-only SQL audit in an authorized administrator session and test two authenticated customers."
+  }
+}

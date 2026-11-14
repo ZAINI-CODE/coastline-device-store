@@ -1,0 +1,210 @@
+{
+  "checked_on": "2026-11-06",
+  "original_files_preserved": 114,
+  "selected_images": 76,
+  "review_product_count": 13,
+  "review_variants": 30,
+  "published_products": 0,
+  "commercial_permission": "unconfirmed",
+  "withheld": [
+    {
+      "file": "iphone models/Apple iPhone 16, 128GB, Black.jpg",
+      "review_status": "low_resolution"
+    },
+    {
+      "file": "iphone models/iPhone Air.jpg",
+      "review_status": "low_resolution"
+    },
+    {
+      "file": "iphone models/iphone 16 ultramarine.png",
+      "review_status": "low_resolution"
+    },
+    {
+      "file": "iphone models/iphone-17-finish-select-202509-sage_.webp",
+      "review_status": "duplicate",
+      "duplicate_of": "iphone models/iphone-17-finish-select-202509-sage.webp"
+    },
+    {
+      "file": "iphone models/iphone_17.jpg",
+      "review_status": "low_resolution"
+    },
+    {
+      "file": "airbuds/airpods-max2-select-202409-blue_FV1.jpg",
+      "review_status": "generation_confirmation_required",
+      "match_note": "Filename says Max2 but date 202409 matches 2024 USB-C assets. Do not infer generation from appearance."
+    },
+    {
+      "file": "airbuds/airpods-max2-select-202409-midnight_FV1.jpg",
+      "review_status": "generation_confirmation_required",
+      "match_note": "Filename says Max2 but date 202409 matches 2024 USB-C assets. Do not infer generation from appearance."
+    },
+    {
+      "file": "airbuds/airpods-max2-select-202409-purple_FV1.jpg",
+      "review_status": "generation_confirmation_required",
+      "match_note": "Filename says Max2 but date 202409 matches 2024 USB-C assets. Do not infer generation from appearance."
+    },
+    {
+      "file": "airbuds/airpods-max2-select-202409-starlight_FV1.jpg",
+      "review_status": "generation_confirmation_required",
+      "match_note": "Filename says Max2 but date 202409 matches 2024 USB-C assets. Do not infer generation from appearance."
+    },
+    {
+      "file": "PC/AMD Ryzen Starter Gaming PC/Main pic.avif",
+      "review_status": "exact_build_mismatch",
+      "match_note": "Main and side assets show liquid cooling and multiple DIMMs, whereas supplied build specifies AC5 air cooling and one 16GB DIMM. Case-only views cannot verify the exact system. Promotional text appears on the lifestyle asset. No PC asset assigned to the product gallery."
+    },
+    {
+      "file": "PC/AMD Ryzen Starter Gaming PC/Scale-Black-Dimensions-09-2400.avif",
+      "review_status": "exact_build_mismatch",
+      "match_note": "Main and side assets show liquid cooling and multiple DIMMs, whereas supplied build specifies AC5 air cooling and one 16GB DIMM. Case-only views cannot verify the exact system. Promotional text appears on the lifestyle asset. No PC asset assigned to the product gallery."
+    },
+    {
+      "file": "PC/AMD Ryzen Starter Gaming PC/gaming-pc-02-Scale-front-2400.avif",
+      "review_status": "exact_build_mismatch",
+      "match_note": "Main and side assets show liquid cooling and multiple DIMMs, whereas supplied build specifies AC5 air cooling and one 16GB DIMM. Case-only views cannot verify the exact system. Promotional text appears on the lifestyle asset. No PC asset assigned to the product gallery."
+    },
+    {
+      "file": "PC/AMD Ryzen Starter Gaming PC/gaming-pc-03-Scale-side-2400.avif",
+      "review_status": "exact_build_mismatch",
+      "match_note": "Main and side assets show liquid cooling and multiple DIMMs, whereas supplied build specifies AC5 air cooling and one 16GB DIMM. Case-only views cannot verify the exact system. Promotional text appears on the lifestyle asset. No PC asset assigned to the product gallery."
+    },
+    {
+      "file": "PC/AMD Ryzen Starter Gaming PC/gaming-pc-05-Scale-TopFront-2400-V1.avif",
+      "review_status": "exact_build_mismatch",
+      "match_note": "Main and side assets show liquid cooling and multiple DIMMs, whereas supplied build specifies AC5 air cooling and one 16GB DIMM. Case-only views cannot verify the exact system. Promotional text appears on the lifestyle asset. No PC asset assigned to the product gallery."
+    },
+    {
+      "file": "PC/AMD Ryzen Starter Gaming PC/gaming-pc-08-Scale-Lifestyle01-2400.avif",
+      "review_status": "exact_build_mismatch",
+      "match_note": "Main and side assets show liquid cooling and multiple DIMMs, whereas supplied build specifies AC5 air cooling and one 16GB DIMM. Case-only views cannot verify the exact system. Promotional text appears on the lifestyle asset. No PC asset assigned to the product gallery."
+    },
+    {
+      "file": "Pc Data.zip/PC/AMD Ryzen Starter Gaming PC/gaming-pc-02-Scale-front-2400.avif",
+      "review_status": "exact_build_mismatch",
+      "match_note": "Same Scale-case assets previously reviewed: liquid cooling/multiple DIMMs differ from supplied AC5 air cooler/one DIMM; exact SKU unconfirmed. Not displayed.",
+      "duplicate_of": "PC/AMD Ryzen Starter Gaming PC/gaming-pc-02-Scale-front-2400.avif"
+    },
+    {
+      "file": "Pc Data.zip/PC/AMD Ryzen Starter Gaming PC/gaming-pc-03-Scale-side-2400.avif",
+      "review_status": "exact_build_mismatch",
+      "match_note": "Same Scale-case assets previously reviewed: liquid cooling/multiple DIMMs differ from supplied AC5 air cooler/one DIMM; exact SKU unconfirmed. Not displayed.",
+      "duplicate_of": "PC/AMD Ryzen Starter Gaming PC/gaming-pc-03-Scale-side-2400.avif"
+    },
+    {
+      "file": "Pc Data.zip/PC/AMD Ryzen Starter Gaming PC/gaming-pc-05-Scale-TopFront-2400-V1.avif",
+      "review_status": "exact_build_mismatch",
+      "match_note": "Same Scale-case assets previously reviewed: liquid cooling/multiple DIMMs differ from supplied AC5 air cooler/one DIMM; exact SKU unconfirmed. Not displayed.",
+      "duplicate_of": "PC/AMD Ryzen Starter Gaming PC/gaming-pc-05-Scale-TopFront-2400-V1.avif"
+    },
+    {
+      "file": "Pc Data.zip/PC/AMD Ryzen Starter Gaming PC/gaming-pc-08-Scale-Lifestyle01-2400.avif",
+      "review_status": "exact_build_mismatch",
+      "match_note": "Same Scale-case assets previously reviewed: liquid cooling/multiple DIMMs differ from supplied AC5 air cooler/one DIMM; exact SKU unconfirmed. Not displayed.",
+      "duplicate_of": "PC/AMD Ryzen Starter Gaming PC/gaming-pc-08-Scale-Lifestyle01-2400.avif"
+    },
+    {
+      "file": "Pc Data.zip/PC/AMD Ryzen Starter Gaming PC/Main pic.avif",
+      "review_status": "exact_build_mismatch",
+      "match_note": "Same Scale-case assets previously reviewed: liquid cooling/multiple DIMMs differ from supplied AC5 air cooler/one DIMM; exact SKU unconfirmed. Not displayed.",
+      "duplicate_of": "PC/AMD Ryzen Starter Gaming PC/Main pic.avif"
+    },
+    {
+      "file": "Pc Data.zip/PC/AMD Ryzen Starter Gaming PC/Scale-Black-Dimensions-09-2400.avif",
+      "review_status": "exact_build_mismatch",
+      "match_note": "Same Scale-case assets previously reviewed: liquid cooling/multiple DIMMs differ from supplied AC5 air cooler/one DIMM; exact SKU unconfirmed. Not displayed.",
+      "duplicate_of": "PC/AMD Ryzen Starter Gaming PC/Scale-Black-Dimensions-09-2400.avif"
+    },
+    {
+      "file": "Pc Data.zip/PC/Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti/processer.avif",
+      "review_status": "duplicate",
+      "match_note": "Byte-identical duplicate; not repeated in the gallery.",
+      "duplicate_of": "Pc Data.zip/PC/Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti/main pic.avif"
+    },
+    {
+      "file": "Pc Data.zip/PC/Nitro 85 Gaming Desktop - N85-100-UR35/fornyt.webp",
+      "review_status": "low_resolution",
+      "match_note": "Only 500×500; preserved without enlargement, withheld from the HD product gallery."
+    },
+    {
+      "file": "Pc Data.zip/PC/Nitro 85 Gaming Desktop - N85-100-UR35/main pic.webp",
+      "review_status": "low_resolution",
+      "match_note": "Only 500×500; preserved without enlargement, withheld from the HD product gallery."
+    },
+    {
+      "file": "Pc Data.zip/PC/Nitro 85 Gaming Desktop - N85-100-UR35/show.webp",
+      "review_status": "low_resolution",
+      "match_note": "Only 500×500; preserved without enlargement, withheld from the HD product gallery."
+    },
+    {
+      "file": "Pc Data.zip/PC/Nitro 85 Gaming Desktop - N85-100-UR35/side pic.webp",
+      "review_status": "low_resolution",
+      "match_note": "Only 500×500; preserved without enlargement, withheld from the HD product gallery."
+    },
+    {
+      "file": "Pc Data.zip/PC/Prebuilt PC GML 99707/01_400.webp",
+      "review_status": "low_resolution",
+      "match_note": "Only 400×400; preserved without enlargement, withheld from the HD product gallery."
+    },
+    {
+      "file": "Pc Data.zip/PC/Prebuilt PC GML 99707/02_400.webp",
+      "review_status": "low_resolution",
+      "match_note": "Only 400×400; preserved without enlargement, withheld from the HD product gallery."
+    },
+    {
+      "file": "Pc Data.zip/PC/Prebuilt PC GML 99707/04_400.webp",
+      "review_status": "low_resolution",
+      "match_note": "Only 400×400; preserved without enlargement, withheld from the HD product gallery."
+    },
+    {
+      "file": "Pc Data.zip/PC/Prebuilt PC GML 99707/05_400.webp",
+      "review_status": "low_resolution",
+      "match_note": "Only 400×400; preserved without enlargement, withheld from the HD product gallery."
+    },
+    {
+      "file": "Pc Data.zip/PC/Prebuilt PC GML 99707/main_400.webp",
+      "review_status": "low_resolution",
+      "match_note": "Only 400×400; preserved without enlargement, withheld from the HD product gallery."
+    },
+    {
+      "file": "Pc Data.zip/PC/PS5 pro/ps5-pro-Hero-1-angled.webp",
+      "review_status": "low_resolution",
+      "match_note": "Only 96×96; preserved without enlargement, withheld from the HD product gallery."
+    },
+    {
+      "file": "Pc Data.zip/PC/PS5 pro/ps5-pro-Hero-2-forward-facing.webp",
+      "review_status": "low_resolution",
+      "match_note": "Only 580×580; preserved without enlargement, withheld from the HD product gallery."
+    },
+    {
+      "file": "Pc Data.zip/PC/PS5 pro/ps5-pro-Hero-4-laying-flat.webp",
+      "review_status": "low_resolution",
+      "match_note": "Only 96×96; preserved without enlargement, withheld from the HD product gallery."
+    },
+    {
+      "file": "Pc Data.zip/PC/PS5 pro/ps5-pro-Hero-5-forward-facing-with-dualsense.webp",
+      "review_status": "low_resolution",
+      "match_note": "Only 96×96; preserved without enlargement, withheld from the HD product gallery."
+    },
+    {
+      "file": "Pc Data.zip/PC/PS5 pro/ps5-pro-Hero-7-angled-console.webp",
+      "review_status": "low_resolution",
+      "match_note": "Only 96×96; preserved without enlargement, withheld from the HD product gallery."
+    },
+    {
+      "file": "Pc Data.zip/PC/PS5 pro/ps5-pro-Hero-8-colourful-background.webp",
+      "review_status": "low_resolution",
+      "match_note": "Only 96×96; preserved without enlargement, withheld from the HD product gallery."
+    },
+    {
+      "file": "Pc Data.zip/PC/PS5 pro/PS5PRO-hero-Packshot-US-2025.webp",
+      "review_status": "low_resolution",
+      "match_note": "Only 96×96; preserved without enlargement, withheld from the HD product gallery."
+    }
+  ],
+  "missing_requested_gaming_images": [
+    "cyberpowerpc-et99707",
+    "ibuypower-ryzen-5-9500f",
+    "acer-nitro-85-n85-100-ur35",
+    "ps5-pro-2tb"
+  ]
+}

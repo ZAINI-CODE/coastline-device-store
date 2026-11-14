@@ -1,0 +1,441 @@
+[
+  {
+    "id": "airpods-5",
+    "name": "Apple AirPods 5",
+    "brand": "Apple",
+    "category": "Apple Products and Headphones",
+    "description": "AirPods 5 product family, verified in Apple US catalogue. Owner case variant, condition, inventory and sale price are pending.",
+    "keywords": [
+      "airpods-5"
+    ],
+    "variants": [
+      {
+        "id": "1a4e671b-126b-84e5-8c7a-b939968daada",
+        "color": "White",
+        "image_path": "images/products/owner-airpods-5-white-27e51ba62e2afe06-960.webp",
+        "gallery_paths": [
+          "images/products/owner-airpods-5-white-7e49eb639ac68ec2-960.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "airpods-pro-3",
+    "name": "Apple AirPods Pro 3",
+    "brand": "Apple",
+    "category": "Apple Products and Headphones",
+    "description": "AirPods Pro introduced in 2025 with an H2 chip and MagSafe Charging Case.",
+    "keywords": [
+      "airpods-pro-3"
+    ],
+    "variants": [
+      {
+        "id": "6915b457-d871-8630-b390-b35729630ee4",
+        "color": "White",
+        "image_path": "images/products/owner-airpods-pro-3-white-35aee945c7be91ed-960.webp",
+        "gallery_paths": [
+          "images/products/owner-airpods-pro-3-white-94d9f7bdcc5a3a5d-960.webp",
+          "images/products/owner-airpods-pro-3-white-98958645344f2591-960.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "iphone-16",
+    "name": "Apple iPhone 16",
+    "brand": "Apple",
+    "category": "Apple iPhones",
+    "description": "Apple smartphone with Camera Control and an A18 chip.",
+    "keywords": [
+      "iphone-16"
+    ],
+    "variants": [
+      {
+        "id": "b5219c26-0e43-86f3-8ad1-0e07e7f6949a",
+        "color": "Black",
+        "image_path": "images/products/owner-iphone-16-c91b259d2951833f.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-16-black-11e528837b26a3f4-960.webp",
+          "images/products/owner-iphone-16-black-c619161110c17bf4-960.webp"
+        ]
+      },
+      {
+        "id": "8d8cca99-12b6-8097-b903-39de5001d114",
+        "color": "Pink",
+        "image_path": "images/products/owner-iphone-16-pink-644413691842dde9-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-16-pink-946c645b78b2da6a-960.webp",
+          "images/products/owner-iphone-16-pink-a8c69ae5f0ab565f-960.webp"
+        ]
+      },
+      {
+        "id": "7aab3d02-43a6-8e4c-9509-2aa077c73e73",
+        "color": "Teal",
+        "image_path": "images/products/owner-iphone-16-teal-b71cb00c4cb48358-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-16-teal-31816583915ed0e1-960.webp",
+          "images/products/owner-iphone-16-teal-1ad1a81fab2cd47a-960.webp"
+        ]
+      },
+      {
+        "id": "acbe732e-7327-8b6c-80a2-7207a1fbc68e",
+        "color": "Ultramarine",
+        "image_path": "images/products/owner-iphone-16-ultramarine-055b2cf3d75bbcc9-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-16-ultramarine-990c698c1124f2b5-960.webp"
+        ]
+      },
+      {
+        "id": "c46cf2ff-4949-8bb1-9162-a6548f958a63",
+        "color": "White",
+        "image_path": "images/products/owner-iphone-16-white-000e9191ffe9568b-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-16-white-e2d4a0ec993bbdcf-960.webp",
+          "images/products/owner-iphone-16-white-7410209e8af4a841-960.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "iphone-17",
+    "name": "Apple iPhone 17",
+    "brand": "Apple",
+    "category": "Apple iPhones",
+    "description": "Apple smartphone featuring A19 and a Center Stage front camera.",
+    "keywords": [
+      "iphone-17"
+    ],
+    "variants": [
+      {
+        "id": "54ebfd3c-2fb7-863d-9395-31099cc61113",
+        "color": "Black",
+        "image_path": "images/products/owner-iphone-17-black-9cad583bea888958-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-17-black-6bcc5fd3b9a39bc2-960.webp"
+        ]
+      },
+      {
+        "id": "a0fd0ae7-6ffe-8fc6-9eb7-cfaa449aad43",
+        "color": "Lavender",
+        "image_path": "images/products/owner-iphone-17-lavender-9b977fa47be19d2b-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-17-f04415251b8c254a.webp",
+          "images/products/owner-iphone-17-lavender-531ecae16f8a4071-960.webp",
+          "images/products/owner-iphone-17-lavender-ed062bc7dbcd3596-960.webp"
+        ]
+      },
+      {
+        "id": "d9ecafc5-8297-8e0e-9160-2c6821adb4fa",
+        "color": "Mist Blue",
+        "image_path": "images/products/owner-iphone-17-mist-blue-70b9934a0220ed9c-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-17-mist-blue-9e241efe48c83e83-960.webp",
+          "images/products/owner-iphone-17-mist-blue-195c4b4034924468-960.webp"
+        ]
+      },
+      {
+        "id": "450acd75-c5ec-8994-b018-b07415c88064",
+        "color": "Sage",
+        "image_path": "images/products/owner-iphone-17-sage-c5167023c1ee687d-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-17-sage-40e3030e259b1513-960.webp",
+          "images/products/owner-iphone-17-sage-ccd17be28e6d7f3f-960.webp"
+        ]
+      },
+      {
+        "id": "60e88a23-4cc4-8984-b5a2-68aad20ed87c",
+        "color": "White",
+        "image_path": "images/products/owner-iphone-17-white-98c3d5aa9241e478-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-17-white-8fe0d39e87e39555-960.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "iphone-17e",
+    "name": "Apple iPhone 17e",
+    "brand": "Apple",
+    "category": "Apple iPhones",
+    "description": "Apple smartphone currently listed in the US purchase catalogue. Exact retail configuration and owner availability are pending.",
+    "keywords": [
+      "iphone-17e"
+    ],
+    "variants": [
+      {
+        "id": "31c0a6ff-41a1-83db-9545-7954c3d1a8c8",
+        "color": "Black",
+        "image_path": "images/products/owner-iphone-17e-black-160e7e160aef5fa8-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-17e-black-24effd70563bfa30-960.webp",
+          "images/products/owner-iphone-17e-black-c26fa3c92a934735-960.webp"
+        ]
+      },
+      {
+        "id": "d6e0d029-94ae-8acd-880f-fe7765bf3764",
+        "color": "Soft Pink",
+        "image_path": "images/products/owner-iphone-17e-soft-pink-3f8613fc64368d93-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-17e-soft-pink-f1db42d3c828e1f8-960.webp",
+          "images/products/owner-iphone-17e-soft-pink-6fbe73c59cbb3802-960.webp"
+        ]
+      },
+      {
+        "id": "432ec300-997b-86ca-9dc4-6b3546dfe7f2",
+        "color": "White",
+        "image_path": "images/products/owner-iphone-17e-white-1d2e79614fb0642b-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-17e-white-97ac572923ec0883-960.webp",
+          "images/products/owner-iphone-17e-white-c89f5b3319f2f67e-960.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "iphone-18-pro",
+    "name": "Apple iPhone 18 Pro",
+    "brand": "Apple",
+    "category": "Apple iPhones",
+    "description": "Apple Pro smartphone introduced in September 2026.",
+    "keywords": [
+      "iphone-18-pro"
+    ],
+    "variants": [
+      {
+        "id": "c6b9922d-7daf-87de-af70-6e47bd199ced",
+        "color": "Black",
+        "image_path": "images/products/owner-iphone-18-pro-black-1b3e082e470ad6c8-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-18-pro-black-1e36d99704a8c51e-960.webp",
+          "images/products/owner-iphone-18-pro-black-fa36ee7db8f04133-960.webp"
+        ]
+      },
+      {
+        "id": "7b790d44-24fa-890d-89ee-c465c0e871c2",
+        "color": "Burgundy",
+        "image_path": "images/products/owner-iphone-18-pro-burgundy-c6ad3b02aeb1c96d-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-18-pro-burgundy-c3d20b5ff012339f-960.webp",
+          "images/products/owner-iphone-18-pro-burgundy-ac49eb6dc2160658-960.webp"
+        ]
+      },
+      {
+        "id": "db1934a8-d417-8852-8232-463061db9cd0",
+        "color": "Glacier",
+        "image_path": "images/products/owner-iphone-18-pro-glacier-2ad0e798c4e29740-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-18-pro-glacier-efed471fab58a105-960.webp",
+          "images/products/owner-iphone-18-pro-glacier-577a83f92f90302b-960.webp"
+        ]
+      },
+      {
+        "id": "242fcd43-f0d1-87b1-be62-3ff9bf95a1bc",
+        "color": "Silver",
+        "image_path": "images/products/owner-iphone-18-pro-silver-53a1b86e618c39ac-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-18-pro-silver-2ce5eaeec9c61b84-960.webp",
+          "images/products/owner-iphone-18-pro-silver-26a4b7121516a9c8-960.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "iphone-air",
+    "name": "Apple iPhone Air",
+    "brand": "Apple",
+    "category": "Apple iPhones",
+    "description": "Apple smartphone currently listed in the US purchase catalogue. Exact retail configuration and owner availability are pending.",
+    "keywords": [
+      "iphone-air"
+    ],
+    "variants": [
+      {
+        "id": "d4a24af1-5e06-82cb-a251-06089cf2128e",
+        "color": "Cloud White",
+        "image_path": "images/products/owner-iphone-air-cloud-white-2ef737581bbe35d0-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-air-cloud-white-e91fa9307c0a1b82-960.webp",
+          "images/products/owner-iphone-air-cloud-white-c416941c59131993-960.webp"
+        ]
+      },
+      {
+        "id": "a62201db-7c04-8198-99be-08a2dacfb649",
+        "color": "Light Gold",
+        "image_path": "images/products/owner-iphone-air-light-gold-e673f9cdc10f5163-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-air-light-gold-7a0f0eeaa132dd93-960.webp",
+          "images/products/owner-iphone-air-light-gold-e4154d7ede95b4b1-960.webp"
+        ]
+      },
+      {
+        "id": "b25b511f-8b43-8fac-8444-62045f77b195",
+        "color": "Sky Blue",
+        "image_path": "images/products/owner-iphone-air-sky-blue-ee7f0229c636c620-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-air-3a23bc983a193044.webp",
+          "images/products/owner-iphone-air-sky-blue-25a25a23edce1848-960.webp",
+          "images/products/owner-iphone-air-sky-blue-8af41af151490d95-960.webp"
+        ]
+      },
+      {
+        "id": "d5f08648-2915-8f19-b628-341593c63494",
+        "color": "Space Black",
+        "image_path": "images/products/owner-iphone-air-space-black-d230641574756171-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-air-space-black-880a73abf641d5f9-960.webp",
+          "images/products/owner-iphone-air-space-black-a384c8dafa8ff6ce-960.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "iphone-duo",
+    "name": "Apple iPhone Duo",
+    "brand": "Apple",
+    "category": "Apple iPhones",
+    "description": "Apple smartphone currently listed in the US purchase catalogue. Exact retail configuration and owner availability are pending.",
+    "keywords": [
+      "iphone-duo"
+    ],
+    "variants": [
+      {
+        "id": "7da616f5-acc9-83fe-859d-f1a712a36d0f",
+        "color": "Night Sky",
+        "image_path": "images/products/owner-iphone-duo-night-sky-fe0841878185a289-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-duo-night-sky-470ddf338d2f3b57-960.webp",
+          "images/products/owner-iphone-duo-night-sky-33851ad146454cc6-960.webp"
+        ]
+      },
+      {
+        "id": "15b126ea-9737-8bc9-8e13-5f032808c330",
+        "color": "Star White",
+        "image_path": "images/products/owner-iphone-duo-star-white-f08661b08e86f6cc-960.webp",
+        "gallery_paths": [
+          "images/products/owner-iphone-duo-star-white-a1154197a87aaade-960.webp",
+          "images/products/owner-iphone-duo-star-white-df3aa5dc37532c3e-960.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "acer-nitro-85-n85-100-ur35",
+    "name": "Acer Nitro 85 Gaming Desktop — N85-100-UR35",
+    "brand": "Acer",
+    "category": "Gaming PCs",
+    "description": "Acer Nitro 85 gaming desktop with AMD Ryzen 7 8700F, NVIDIA GeForce RTX 5070 12GB GDDR7 graphics, 16GB DDR5 memory, and 1TB PCIe 4.0 NVMe SSD.",
+    "keywords": [
+      "acer-nitro-85-n85-100-ur35"
+    ],
+    "variants": [
+      {
+        "id": "9210f089-ca2d-8d96-982c-e1dc7d866ed3",
+        "color": "Colour to confirm",
+        "image_path": "images/products/owner-acer-nitro-85-n85-100-ur35-a9623226d495bfa7.webp",
+        "gallery_paths": [
+          "images/products/owner-acer-nitro-85-n85-100-ur35-318c46fd194d482d.webp",
+          "images/products/owner-acer-nitro-85-n85-100-ur35-29bb23b9d08616fb.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cyberpowerpc-et99707",
+    "name": "CyberPowerPC Prebuilt Gaming Desktop — ET99707",
+    "brand": "CyberPowerPC",
+    "category": "Gaming PCs",
+    "description": "Prebuilt gaming desktop with AMD Ryzen 7 8700F, GeForce RTX 5060 Ti 16GB graphics, 32GB DDR5 memory, and 2TB PCIe Gen4 NVMe SSD.",
+    "keywords": [
+      "cyberpowerpc-et99707"
+    ],
+    "variants": [
+      {
+        "id": "4293ae28-b8d1-8060-bb4a-c07039994efa",
+        "color": "Colour to confirm",
+        "image_path": "images/products/owner-cyberpowerpc-et99707-d29e5ba91f5bd7cf.webp",
+        "gallery_paths": [
+          "images/products/owner-cyberpowerpc-et99707-b834ed5f3387b961.webp",
+          "images/products/owner-cyberpowerpc-et99707-2d3017f4094fd790.webp",
+          "images/products/owner-cyberpowerpc-et99707-bd999f4023684d58.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lenovo-legion-tower-5-gen-10-rtx-5070-ti",
+    "name": "Lenovo Legion Tower 5 Gen 10 — RTX 5070 Ti",
+    "brand": "Lenovo",
+    "category": "Gaming PCs",
+    "description": "Lenovo Legion Tower 5 Gen 10 gaming desktop with AMD Ryzen 7 7800X3D, GeForce RTX 5070 Ti 16GB graphics, 32GB DDR5-5600 memory, and 1TB PCIe Gen4 SSD.",
+    "keywords": [
+      "lenovo-legion-tower-5-gen-10-rtx-5070-ti"
+    ],
+    "variants": [
+      {
+        "id": "832bb31d-c15a-879f-a9c0-296c479088e0",
+        "color": "Black",
+        "image_path": "images/products/owner-lenovo-legion-tower-5-gen-10-rtx-5070-ti-black-ac15c3d80719c0ad-960.webp",
+        "gallery_paths": [
+          "images/products/owner-lenovo-legion-tower-5-gen-10-rtx-5070-ti-black-5d99a8ac547fb0a0-960.webp",
+          "images/products/owner-lenovo-legion-tower-5-gen-10-rtx-5070-ti-black-53f248a2659287c4-960.webp",
+          "images/products/owner-lenovo-legion-tower-5-gen-10-rtx-5070-ti-black-b2ffd81dab7c8502-960.webp",
+          "images/products/owner-lenovo-legion-tower-5-gen-10-rtx-5070-ti-black-4278a120a7abdf0b-960.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ps5-pro-2tb",
+    "name": "Sony PlayStation 5 Pro Console — 2TB",
+    "brand": "Sony",
+    "category": "Gaming Consoles",
+    "description": "All-digital PlayStation 5 Pro console with 2TB SSD, advanced ray tracing, PlayStation Spectral Super Resolution, and enhanced performance for supported games.",
+    "keywords": [
+      "ps5-pro-2tb"
+    ],
+    "variants": [
+      {
+        "id": "c61021a4-ce8e-8ac4-a0d1-227b89e98650",
+        "color": "Colour to confirm",
+        "image_path": "images/products/owner-ps5-pro-2tb-aff69e8567bbe071.webp",
+        "gallery_paths": []
+      }
+    ]
+  },
+  {
+    "id": "airpods-max-2",
+    "name": "Apple AirPods Max 2",
+    "brand": "Apple",
+    "category": "Apple Products and Headphones",
+    "description": "Apple over-ear headphones with USB-C charging.",
+    "keywords": [
+      "airpods-max-2"
+    ],
+    "variants": [
+      {
+        "id": "airpods-max-2-blue",
+        "color": "Blue",
+        "image_path": "images/products/owner-airpods-max-2-blue-639b8dfb5e93510f.webp",
+        "gallery_paths": []
+      },
+      {
+        "id": "airpods-max-2-midnight",
+        "color": "Midnight",
+        "image_path": "images/products/owner-airpods-max-2-midnight-be933786b631c81d.webp",
+        "gallery_paths": []
+      },
+      {
+        "id": "airpods-max-2-purple",
+        "color": "Purple",
+        "image_path": "images/products/owner-airpods-max-2-purple-ece772a9f0278b07.webp",
+        "gallery_paths": []
+      },
+      {
+        "id": "airpods-max-2-starlight",
+        "color": "Starlight",
+        "image_path": "images/products/owner-airpods-max-2-starlight-c2113fa031e07942.webp",
+        "gallery_paths": []
+      }
+    ]
+  }
+]

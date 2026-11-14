@@ -1,0 +1,29 @@
+# Launch acceptance — all unchecked items block the relevant launch capability
+
+- [x] Vanilla HTML/CSS/JavaScript source and minified static build.
+- [x] Source-only secrets separated from public build configuration.
+- [x] Local PostgreSQL and payment-verification rule tests.
+- [x] Owner MFA enforced by the database.
+- [x] Browser-responsive storefront and honest unconfigured states.
+- [x] Source-backed image manifest; rejected image kept out of publication.
+- [x] Guided owner forms, paginated records and aggregate database summaries.
+- [x] Validated atomic JSON resource imports and live bundle-selection estimates.
+- [x] Saved-address checkout, payment rechecks and refund/reservation regression tests.
+- [x] Static informational pages and Product/Offer/Breadcrumb metadata generation.
+- [ ] Real Supabase staging project, all migrations and RLS verified with two customer accounts and an MFA owner.
+- [ ] Real concurrent checkout stock tests, repeat capture/webhook tests and expiry Cron observed.
+- [ ] Email verification/recovery, SMTP, Google and Apple configured and tested.
+- [ ] Real product models, variants, prices, image accuracy, rights and stock reviewed; catalogue target addressed.
+- [ ] Business identity, support and fulfilment/return address supplied.
+- [ ] Shipping and actual tax obligations configured and approved.
+- [ ] Policies approved, including proposed return terms and warranty limits.
+- [ ] PayPal Sandbox approval/cancel/failure/capture/webhook/refund/reconciliation acceptance.
+- [ ] Zelle recipient eligibility confirmed; actual bank verification procedure documented and exercised.
+- [ ] Manual reversal/chargeback and uncertain processing-payment/refund reconciliation procedures.
+- [ ] Partial refund and interactive bundle requirements resolved or explicitly deferred by the owner.
+- [ ] Authenticated browser acceptance for new owner/catalogue workflows; remaining notifications/uploads requirements reviewed.
+- [ ] Privacy retention/deletion process and backup/restore drill approved and tested.
+- [ ] Production browser CSP, accessibility, mobile checkout and Core Web Vitals checked.
+- [ ] Real domain/TLS, redirects, canonical product exports and sitemap verified.
+- [ ] Remove noindex/robots block only after launch approval.
+- [ ] Enable database checkout gate and public approved-policies flag only after relevant acceptance.

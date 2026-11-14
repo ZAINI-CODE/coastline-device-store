@@ -1,0 +1,332 @@
+{
+  "contact": {
+    "title": "Contact us",
+    "paragraphs": [
+      "For product questions, delivery issues, returns, or account support, sign in to send a private message."
+    ]
+  },
+  "shipping": {
+    "title": "Shipping policy",
+    "paragraphs": [
+      "Free shipping on eligible U.S. orders."
+    ],
+    "sections": [
+      {
+        "title": "Shipping Coverage",
+        "text": "We ship eligible products to all 50 U.S. states, including Alaska and Hawaii.\n\nAll eligible orders qualify for free shipping, with no minimum purchase requirement."
+      },
+      {
+        "title": "Shipping Methods and Delivery Estimates",
+        "text": "We work with multiple shipping carriers depending on the customer's delivery location and shipping requirements.\n\nOur estimated delivery time is 5–7 business days.\n\nDelivery estimates begin after payment has been successfully verified and the order has been dispatched. Actual delivery times may vary depending on the destination, carrier operations, weather conditions and other circumstances beyond our control."
+      },
+      {
+        "title": "Order Processing and Dispatch",
+        "text": "Orders are generally processed and dispatched within 24 hours after successful payment verification.\n\nOrders cannot enter the processing and dispatch stage until the required payment has been received and verified.\n\nCustomers will receive an order confirmation once their payment has been successfully verified."
+      },
+      {
+        "title": "Order Tracking",
+        "text": "Once an order has been shipped, customers will receive an email containing their shipment tracking information.\n\nCustomers can use the provided tracking number to monitor the progress of their delivery through the relevant shipping carrier.\n\nPlease ensure that your email address is correct when placing an order so that shipping notifications can be delivered successfully."
+      },
+      {
+        "title": "Shipping Address Accuracy",
+        "text": "Customers are responsible for providing a complete and accurate shipping address, including:\n\n- Full recipient name\n- Street address and apartment or unit number, where applicable\n- City, state and ZIP code\n- Valid contact information\n\nWe are not responsible for delivery problems caused by incomplete or incorrect shipping information provided by the customer.\n\nPlease contact customer support as soon as possible if you notice an error in your shipping details."
+      },
+      {
+        "title": "Delayed Deliveries",
+        "text": "Although we aim to meet our estimated delivery times, occasional delays may occur due to carrier operations, weather conditions or other unexpected circumstances.\n\nIf your order has not arrived within the estimated delivery period, please contact our customer support team for assistance."
+      },
+      {
+        "title": "Lost Shipments",
+        "text": "If a shipment appears to be lost, customers should contact our support team.\n\nWe will investigate the shipment status with the relevant shipping carrier.\n\nIf the package is confirmed to be lost, we will issue a refund for the affected order."
+      },
+      {
+        "title": "Damaged or Incorrect Deliveries",
+        "text": "If you receive a damaged or incorrect product, you must notify us within 7 days of delivery.\n\nPlease provide:\n\n- Your order ID or proof of purchase.\n- Clear photographs showing the damaged or incorrect product.\n- Photographs of the original packaging, where relevant.\n- A brief description of the issue.\n\nOur support team will review the information and guide you through the resolution process.\n\nEligible cases will be handled according to our Returns and Refunds Policy."
+      },
+      {
+        "title": "Contact Information",
+        "text": "For shipping questions, delayed deliveries or tracking assistance, please contact our customer support team.\n\n\nBusiness location: Fort Lauderdale, Florida, USA"
+      }
+    ]
+  },
+  "returns": {
+    "title": "Returns, refunds and cancellations",
+    "paragraphs": [
+      "Request a return through Order Support before sending anything back."
+    ],
+    "sections": [
+      {
+        "title": "Return Window",
+        "text": "We offer a 14-day return request period from the date of delivery for eligible products.\n\nCustomers must contact our support team or submit an online return request within this period.\n\nA valid order ID or proof of purchase is required for all return requests."
+      },
+      {
+        "title": "Eligible Returns",
+        "text": "Returns are accepted for the following situations:\n\n- Defective products.\n- Products damaged during delivery.\n- Incorrect products received.\n- Products that do not match the item ordered due to an error by our store.\n\nOpened electronics may qualify for a return only when they are defective or damaged, or when an incorrect product has been supplied.\n\nOrdinary change-of-mind returns are not included in our standard return eligibility."
+      },
+      {
+        "title": "Product Condition Requirements",
+        "text": "Returned products must include:\n\n- Original packaging.\n- All original accessories.\n- Included components and documentation.\n- Any other items supplied with the original product.\n\nProducts will be inspected before a return or refund is approved.\n\nFor defective, damaged or incorrect products, customers should retain the product and its original packaging until the return process has been completed."
+      },
+      {
+        "title": "Non-Eligible Return Conditions",
+        "text": "Returns may be rejected when a product shows signs of:\n\n- Physical damage caused after delivery.\n- Liquid damage.\n- Misuse or improper handling.\n- Unauthorized repairs or modifications.\n- Missing original accessories or included components.\n- Damage unrelated to the reported issue.\n\nAll return decisions are subject to product inspection and applicable consumer protection requirements."
+      },
+      {
+        "title": "How to Request a Return",
+        "text": "To request a return:\n\n1. Contact our customer support team or submit an online return request.\n2. Provide your order ID or proof of purchase.\n3. Explain the reason for the return.\n4. Attach clear photographs or other requested evidence when applicable.\n5. Wait for return instructions and authorization.\n\nCustomers must not ship products back without receiving return authorization from our support team.\n\nUnauthorized returns may be delayed or refused."
+      },
+      {
+        "title": "Return Shipping Costs",
+        "text": "For eligible returns involving defective, damaged or incorrect products, our store will cover the applicable return shipping costs.\n\nFor any separately approved return outside these categories, the customer may be responsible for return shipping costs.\n\nAny applicable return shipping arrangements will be communicated before the product is shipped back."
+      },
+      {
+        "title": "Product Inspection",
+        "text": "All returned products are subject to inspection.\n\nIf a returned product does not meet the applicable return conditions, we will contact the customer and explain the inspection findings before making a final decision.\n\nRefunds are processed only after the returned product has been inspected and approved."
+      },
+      {
+        "title": "Refund Methods",
+        "text": "Approved refunds may be issued through:\n\n- The original payment method, where supported.\n- Store credit, where agreed with the customer.\n- Another mutually agreed refund method where necessary.\n\nFor Zelle payments, an alternative refund method will be agreed upon with the customer."
+      },
+      {
+        "title": "Refund Processing Time",
+        "text": "Once a returned product has been inspected and the refund has been approved, refunds are generally processed within 5–7 business days.\n\nThe time required for the funds to appear in the customer's account may vary depending on the payment provider or financial institution."
+      },
+      {
+        "title": "Shipping Charges",
+        "text": "Any shipping charges paid by the customer are generally non-refundable unless the return results from an error by our store or applicable law requires otherwise.\n\nOur standard eligible products currently qualify for free shipping."
+      },
+      {
+        "title": "Order Cancellations",
+        "text": "Customers may request order cancellation before the order has been dispatched.\n\nOnce an order has been dispatched, it can no longer be cancelled under this pre-dispatch cancellation process.\n\nCustomers may contact support for assistance with any eligible post-dispatch return.\n\nIf an eligible cancellation is approved after payment has been received, the applicable refund will be processed through an agreed refund method."
+      },
+      {
+        "title": "Contact Information",
+        "text": "For return requests, refund questions or cancellation assistance:\n\n\nBusiness location: Fort Lauderdale, Florida, USA"
+      }
+    ]
+  },
+  "warranty": {
+    "title": "Warranty policy",
+    "paragraphs": [
+      "Manufacturer warranty coverage applies where available."
+    ],
+    "sections": [
+      {
+        "title": "Warranty Coverage",
+        "text": "Our store provides manufacturer warranty coverage where available.\n\nWe do not provide a separate additional store warranty.\n\nWarranty coverage and duration vary depending on the product and its manufacturer.\n\nCustomers should review the individual product listing before purchasing to determine whether manufacturer warranty coverage is available.\n\nProducts without manufacturer warranty coverage will be clearly identified on their respective product pages."
+      },
+      {
+        "title": "Warranty Duration",
+        "text": "Warranty periods are determined by the applicable manufacturer's warranty terms.\n\nThe duration may vary between products, brands and product categories.\n\nCustomers should refer to the product listing and applicable manufacturer warranty documentation for specific coverage details."
+      },
+      {
+        "title": "Warranty Start Date",
+        "text": "Unless the manufacturer specifies otherwise, the warranty period begins on the product's delivery date.\n\nThe delivery date may be used to establish the beginning of the applicable warranty period."
+      },
+      {
+        "title": "Submitting a Warranty Claim",
+        "text": "If you experience a product issue that may qualify for manufacturer warranty coverage, contact our customer support team.\n\nPlease provide:\n\n- Your order ID or proof of purchase.\n- The product's serial number.\n- A description of the issue.\n- Additional photographs or information if requested.\n\nOur support team will review the information and guide you through the applicable manufacturer warranty procedure."
+      },
+      {
+        "title": "Warranty Claim Inspection",
+        "text": "All warranty claims are subject to inspection and the manufacturer's warranty conditions.\n\nThe manufacturer may require additional information, product testing or physical inspection before approving a claim.\n\nSubmitting a warranty request does not automatically guarantee repair, replacement or another warranty resolution."
+      },
+      {
+        "title": "Warranty Exclusions",
+        "text": "Manufacturer warranty coverage generally does not include the following circumstances, subject to the specific manufacturer's terms:\n\n- Physical damage.\n- Accidental damage.\n- Liquid or water damage.\n- Unauthorized repairs or modifications.\n- Damage resulting from misuse or improper handling.\n- Normal wear and tear.\n- Cosmetic damage that does not affect product functionality.\n\nAdditional exclusions may apply depending on the manufacturer's warranty documentation."
+      },
+      {
+        "title": "Warranty Resolution",
+        "text": "Approved warranty claims will be handled according to the manufacturer's applicable warranty procedure.\n\nDepending on the manufacturer and product, available resolutions may include:\n\n- Product repair.\n- Product replacement.\n- Another resolution provided under the manufacturer's warranty terms.\n\nThe availability of each resolution depends on the applicable warranty conditions."
+      },
+      {
+        "title": "Warranty Shipping Costs",
+        "text": "Shipping expenses associated with warranty claims will be determined according to the manufacturer's warranty terms.\n\nCustomers will be informed of the applicable shipping arrangements during the claim process."
+      },
+      {
+        "title": "Rejected Warranty Claims",
+        "text": "If a warranty claim is rejected, we will explain the reason for the rejection to the customer.\n\nThe product will be returned to the customer according to the applicable manufacturer procedure and shipping arrangements.\n\nA rejected warranty claim does not automatically qualify for a return or refund under our Returns and Refunds Policy."
+      },
+      {
+        "title": "Contact Information",
+        "text": "For warranty assistance or questions about manufacturer coverage:\n\n\nBusiness location: Fort Lauderdale, Florida, USA"
+      }
+    ]
+  },
+  "payment": {
+    "title": "Payment policy",
+    "paragraphs": [
+      "Zelle is available at checkout with manual bank verification. PayPal is Temporarily Unavailable."
+    ],
+    "sections": [
+      {
+        "title": "Accepted Payment Methods",
+        "text": "Customers can pay using Zelle with manual verification. Follow the recipient instructions and exact order total shown during checkout, then submit your transaction reference. Full payment must be verified in the business bank account before processing begins. PayPal is visible at checkout as Temporarily Unavailable and cannot be submitted. Credit/debit card payments are unavailable."
+      },
+      {
+        "title": "Zelle Payment Verification",
+        "text": "Customers choosing Zelle as their payment method must complete the payment using the payment instructions provided during checkout or by our store.\n\nCustomers may be asked to provide a payment screenshot or transaction confirmation for verification.\n\nA submitted screenshot alone does not constitute successful payment.\n\nOur team must manually verify that the payment has been successfully received before confirming the order.\n\nCustomers should never send payments to an unverified payment recipient."
+      },
+      {
+        "title": "Order Confirmation",
+        "text": "An order is considered confirmed after successful payment verification.\n\nPayment verification is required before an order enters the processing and dispatch stage.\n\nCustomers will receive an order confirmation once the payment has been verified.\n\nAll orders remain subject to product availability, pricing accuracy and our order acceptance terms."
+      },
+      {
+        "title": "Pending Payments",
+        "text": "If a payment cannot be verified, the order will remain pending until the payment is successfully confirmed.\n\nCustomers may be contacted if additional payment information or clarification is required.\n\nOrders will not be processed or dispatched while payment remains unverified."
+      },
+      {
+        "title": "Refunds and Payment Methods",
+        "text": "Approved refunds follow our Returns, Refunds and Cancellations Policy. For Zelle payments, support will agree on a refund method with the customer. Posting times vary by financial institution."
+      },
+      {
+        "title": "Zelle Payment Notice",
+        "text": "Zelle is a payment service and does not provide purchase protection for ordinary purchases of goods and services.\n\nCustomers should review the payment instructions carefully and ensure they are paying the correct recipient.\n\nOur store's return, refund and warranty policies apply independently of the payment service's features and limitations."
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "paragraphs": [
+      "This policy describes how the store handles customer information."
+    ],
+    "sections": [
+      {
+        "title": "Information We Collect",
+        "text": "We may collect the following customer information when customers visit our website, place orders or contact our support team:\n\n- Full name.\n- Email address.\n- Phone number.\n- Shipping address.\n- Order information and purchase history.\n- Payment transaction details and payment verification information.\n- Information provided through customer support requests.\n- Information required to process returns, refunds and warranty claims.\n\nWe collect information necessary to operate our store and provide our services."
+      },
+      {
+        "title": "How We Use Customer Information",
+        "text": "Customer information is used for legitimate store operations, including:\n\n- Processing and managing orders.\n- Verifying payments.\n- Arranging shipping and delivery.\n- Sending order confirmations and tracking notifications.\n- Responding to customer support inquiries.\n- Processing returns and refunds.\n- Handling manufacturer warranty claims.\n- Maintaining transaction and order records.\n\nWe do not use customer information for purposes unrelated to our store operations without an appropriate legal basis."
+      },
+      {
+        "title": "Sharing Customer Information",
+        "text": "We do not sell customer personal information to third parties.\n\nHowever, certain information may be shared with service providers when necessary to operate our store, including:\n\n- Payment processors.\n- Shipping and delivery carriers.\n- Website hosting and technical service providers.\n- Services required for store operations and customer support.\n\nSuch information is shared only to the extent necessary for the relevant service or business operation.\n\nService providers may process information according to their own applicable privacy policies and contractual obligations."
+      },
+      {
+        "title": "Payment Information",
+        "text": "Zelle transfers are completed through the customer’s bank. The store may retain transaction references and relevant payment information for verification, order records, refunds and financial administration."
+      },
+      {
+        "title": "Promotional Emails",
+        "text": "We may send customers promotional emails about products, offers and store updates.\n\nPromotional emails will include an unsubscribe option.\n\nCustomers may unsubscribe from promotional communications at any time.\n\nUnsubscribing from marketing emails will not prevent us from sending necessary transactional communications, such as order confirmations, shipping updates and warranty-related notifications."
+      },
+      {
+        "title": "Information Security",
+        "text": "We take reasonable steps to protect customer information against unauthorized access, disclosure, alteration and misuse.\n\nHowever, no electronic storage or internet transmission method can be guaranteed to be completely secure.\n\nCustomers should avoid sharing sensitive payment information through unsecured communication channels."
+      },
+      {
+        "title": "Customer Privacy Requests",
+        "text": "Customers may contact our support team to ask questions about their personal information or request assistance with applicable privacy rights.\n\nRequests will be handled in accordance with applicable privacy laws."
+      },
+      {
+        "title": "Changes to This Privacy Policy",
+        "text": "We may update this Privacy Policy when our business practices, services or applicable legal requirements change.\n\nAny updated version will be published on our website with a revised Last Updated date."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of service",
+    "paragraphs": [
+      "These terms apply alongside the store’s shipping, returns, payment and warranty policies."
+    ],
+    "sections": [
+      {
+        "title": "Acceptance of Terms",
+        "text": "By accessing or using our website and purchasing products from our store, customers agree to comply with these Terms of Service and the applicable store policies.\n\nThese terms should be read together with our Shipping, Returns and Refunds, and Warranty Policies."
+      },
+      {
+        "title": "Product Information",
+        "text": "We make reasonable efforts to ensure that product descriptions, images, specifications and prices displayed on our website are accurate.\n\nHowever, product information may occasionally change or contain errors.\n\nCustomers are encouraged to review product specifications and individual warranty details before placing an order."
+      },
+      {
+        "title": "Pricing and Availability",
+        "text": "All products are subject to availability.\n\nWe reserve the right to correct pricing errors, update product information and modify product availability.\n\nIf a product is listed at an incorrect price or is unavailable, we may cancel the affected order.\n\nIf payment has already been received for an order that is cancelled for these reasons, an applicable refund will be issued."
+      },
+      {
+        "title": "Payment and Order Acceptance",
+        "text": "Full payment is required before order processing.\n\nAn order is considered confirmed after successful payment verification.\n\nHowever, all orders remain subject to availability, accurate pricing and review for suspected fraudulent activity.\n\nWe reserve the right to reject or cancel an order where there is an incorrect price, unavailable stock or suspected fraudulent activity.\n\nCustomers will be notified if an order cannot be fulfilled."
+      },
+      {
+        "title": "Customer Responsibilities",
+        "text": "Customers are responsible for providing accurate and complete information when placing an order.\n\nThis includes:\n\n- Correct name and contact details.\n- Valid email address.\n- Complete shipping address.\n- Accurate order and payment information.\n\nWe are not responsible for delivery problems resulting from incorrect information supplied by the customer."
+      },
+      {
+        "title": "Order Cancellation",
+        "text": "Customers may request cancellation before their order has been dispatched.\n\nOnce an order has been dispatched, the cancellation process is no longer available.\n\nAny eligible post-dispatch return must follow our Returns and Refunds Policy."
+      },
+      {
+        "title": "Intellectual Property",
+        "text": "Unless otherwise stated, website content, including product descriptions, graphics, logos, text and website design elements, may be protected by applicable intellectual property laws.\n\nCustomers may not reproduce or commercially use protected website content without appropriate authorization."
+      },
+      {
+        "title": "Limitation of Responsibility",
+        "text": "We are not responsible for circumstances beyond our reasonable control that affect delivery or service availability, including carrier disruptions, severe weather and other unexpected operational interruptions.\n\nNothing in these Terms is intended to exclude or limit rights or remedies that cannot legally be excluded or limited under applicable law."
+      },
+      {
+        "title": "Changes to These Terms",
+        "text": "We reserve the right to update these Terms of Service when necessary.\n\nChanges will be published on our website, together with an updated Last Updated date.\n\nContinued use of the website after updated terms become effective is subject to applicable law."
+      },
+      {
+        "title": "Applicable Law",
+        "text": "These Terms are intended for customers purchasing from our United States-serving online store.\n\nApplicable consumer protection laws and other mandatory legal requirements will govern where they apply.\n\nThe governing law and dispute resolution provisions will be specified once the store's legal business details have been finalized."
+      },
+      {
+        "title": "Contact and Business Information",
+        "text": "Use the website contact form for questions about payments, privacy, orders or these terms.\n\nBusiness location: Fort Lauderdale, Florida, USA."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "paragraphs": [
+      "Find quick answers about accounts, orders, delivery and product support."
+    ],
+    "sections": [
+      {
+        "title": "How do I place an order?",
+        "text": "You can browse without signing in. When ordering is available, choose a purchasable option, add it to the cart, and sign in to review shipping and the final total."
+      },
+      {
+        "title": "How do I sign in?",
+        "text": "Use your email and password or choose Google on the account page. If you register by email, follow the verification link sent to your inbox."
+      },
+      {
+        "title": "Which payment methods can I use?",
+        "text": "Zelle is available with manual bank verification. PayPal is Temporarily Unavailable and cannot be selected for payment. The payment selector shows the methods available for your order."
+      },
+      {
+        "title": "Does an order number mean my payment is confirmed?",
+        "text": "An order reference identifies your order. Open Order Support to see the separately verified payment status."
+      },
+      {
+        "title": "How do I track a shipment?",
+        "text": "Sign in and open your order history. Carrier and tracking details appear when they are available for your order."
+      },
+      {
+        "title": "How do I request a return or refund?",
+        "text": "Send a private message with your order number and reason. Support will explain eligibility and the return instructions for that order."
+      },
+      {
+        "title": "What warranty applies to my item?",
+        "text": "Coverage depends on the exact product and the terms that apply to your order. Keep your proof of purchase and use Order Support to ask about a claim."
+      },
+      {
+        "title": "How do I contact support?",
+        "text": "Sign in and use the private contact form. Include your order number when asking about an order."
+      }
+    ]
+  },
+  "about": {
+    "title": "A considered approach to technology",
+    "paragraphs": [
+      "Electronics is an independent store focused on phones, Apple audio and accessories, PlayStation hardware, gaming desktops, and processors."
+    ],
+    "sections": [
+      {
+        "title": "Find the right fit",
+        "text": "Compare models, finishes, configurations, and specifications in one place. For a question about a product or an order, use the private contact form."
+      }
+    ]
+  }
+}

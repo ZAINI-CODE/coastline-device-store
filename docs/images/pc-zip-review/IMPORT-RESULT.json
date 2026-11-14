@@ -1,0 +1,247 @@
+{
+  "archive": "Pc Data.zip",
+  "archive_sha256": "e5ff71983b84328da5fd310014d7ccf7c7fd8ff4b395a6e95bb96ef719565d90",
+  "files_preserved": 28,
+  "selected": 5,
+  "permission": "commercial use unconfirmed; local review only",
+  "products": [
+    {
+      "folder": "AMD Ryzen Starter Gaming PC",
+      "product_id": "ibuypower-ryzen-5-9500f",
+      "selected": 0,
+      "files": [
+        {
+          "file": "Pc Data.zip/PC/AMD Ryzen Starter Gaming PC/gaming-pc-02-Scale-front-2400.avif",
+          "width": 1080,
+          "height": 1080,
+          "review_status": "exact_build_mismatch",
+          "match_note": "Same Scale-case assets previously reviewed: liquid cooling/multiple DIMMs differ from supplied AC5 air cooler/one DIMM; exact SKU unconfirmed. Not displayed.",
+          "duplicate_of": "PC/AMD Ryzen Starter Gaming PC/gaming-pc-02-Scale-front-2400.avif"
+        },
+        {
+          "file": "Pc Data.zip/PC/AMD Ryzen Starter Gaming PC/gaming-pc-03-Scale-side-2400.avif",
+          "width": 1080,
+          "height": 1080,
+          "review_status": "exact_build_mismatch",
+          "match_note": "Same Scale-case assets previously reviewed: liquid cooling/multiple DIMMs differ from supplied AC5 air cooler/one DIMM; exact SKU unconfirmed. Not displayed.",
+          "duplicate_of": "PC/AMD Ryzen Starter Gaming PC/gaming-pc-03-Scale-side-2400.avif"
+        },
+        {
+          "file": "Pc Data.zip/PC/AMD Ryzen Starter Gaming PC/gaming-pc-05-Scale-TopFront-2400-V1.avif",
+          "width": 1080,
+          "height": 1080,
+          "review_status": "exact_build_mismatch",
+          "match_note": "Same Scale-case assets previously reviewed: liquid cooling/multiple DIMMs differ from supplied AC5 air cooler/one DIMM; exact SKU unconfirmed. Not displayed.",
+          "duplicate_of": "PC/AMD Ryzen Starter Gaming PC/gaming-pc-05-Scale-TopFront-2400-V1.avif"
+        },
+        {
+          "file": "Pc Data.zip/PC/AMD Ryzen Starter Gaming PC/gaming-pc-08-Scale-Lifestyle01-2400.avif",
+          "width": 1080,
+          "height": 1080,
+          "review_status": "exact_build_mismatch",
+          "match_note": "Same Scale-case assets previously reviewed: liquid cooling/multiple DIMMs differ from supplied AC5 air cooler/one DIMM; exact SKU unconfirmed. Not displayed.",
+          "duplicate_of": "PC/AMD Ryzen Starter Gaming PC/gaming-pc-08-Scale-Lifestyle01-2400.avif"
+        },
+        {
+          "file": "Pc Data.zip/PC/AMD Ryzen Starter Gaming PC/Main pic.avif",
+          "width": 1080,
+          "height": 1080,
+          "review_status": "exact_build_mismatch",
+          "match_note": "Same Scale-case assets previously reviewed: liquid cooling/multiple DIMMs differ from supplied AC5 air cooler/one DIMM; exact SKU unconfirmed. Not displayed.",
+          "duplicate_of": "PC/AMD Ryzen Starter Gaming PC/Main pic.avif"
+        },
+        {
+          "file": "Pc Data.zip/PC/AMD Ryzen Starter Gaming PC/Scale-Black-Dimensions-09-2400.avif",
+          "width": 1080,
+          "height": 1080,
+          "review_status": "exact_build_mismatch",
+          "match_note": "Same Scale-case assets previously reviewed: liquid cooling/multiple DIMMs differ from supplied AC5 air cooler/one DIMM; exact SKU unconfirmed. Not displayed.",
+          "duplicate_of": "PC/AMD Ryzen Starter Gaming PC/Scale-Black-Dimensions-09-2400.avif"
+        }
+      ]
+    },
+    {
+      "folder": "Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti",
+      "product_id": "lenovo-legion-tower-5-gen-10-rtx-5070-ti",
+      "selected": 5,
+      "files": [
+        {
+          "file": "Pc Data.zip/PC/Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti/back.avif",
+          "width": 1200,
+          "height": 1200,
+          "review_status": "matched_for_local_review",
+          "match_note": "Supplied Legion Tower 5 Gen 10 30L AMD images match the confirmed model family and black case. Photos alone do not prove internal component part numbers or commercial reuse rights."
+        },
+        {
+          "file": "Pc Data.zip/PC/Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti/fromt.avif",
+          "width": 1200,
+          "height": 1200,
+          "review_status": "matched_for_local_review",
+          "match_note": "Supplied Legion Tower 5 Gen 10 30L AMD images match the confirmed model family and black case. Photos alone do not prove internal component part numbers or commercial reuse rights."
+        },
+        {
+          "file": "Pc Data.zip/PC/Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti/logo.avif",
+          "width": 1200,
+          "height": 1200,
+          "review_status": "matched_for_local_review",
+          "match_note": "Supplied Legion Tower 5 Gen 10 30L AMD images match the confirmed model family and black case. Photos alone do not prove internal component part numbers or commercial reuse rights."
+        },
+        {
+          "file": "Pc Data.zip/PC/Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti/main pic.avif",
+          "width": 1200,
+          "height": 1200,
+          "review_status": "matched_for_local_review",
+          "match_note": "Supplied Legion Tower 5 Gen 10 30L AMD images match the confirmed model family and black case. Photos alone do not prove internal component part numbers or commercial reuse rights."
+        },
+        {
+          "file": "Pc Data.zip/PC/Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti/pr498so56u301fynn23uijzhil87lv400340.avif",
+          "width": 1200,
+          "height": 1200,
+          "review_status": "matched_for_local_review",
+          "match_note": "Supplied Legion Tower 5 Gen 10 30L AMD images match the confirmed model family and black case. Photos alone do not prove internal component part numbers or commercial reuse rights."
+        },
+        {
+          "file": "Pc Data.zip/PC/Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti/processer.avif",
+          "width": 1200,
+          "height": 1200,
+          "review_status": "duplicate",
+          "match_note": "Byte-identical duplicate; not repeated in the gallery.",
+          "duplicate_of": "Pc Data.zip/PC/Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti/main pic.avif"
+        }
+      ]
+    },
+    {
+      "folder": "Nitro 85 Gaming Desktop - N85-100-UR35",
+      "product_id": "acer-nitro-85-n85-100-ur35",
+      "selected": 0,
+      "files": [
+        {
+          "file": "Pc Data.zip/PC/Nitro 85 Gaming Desktop - N85-100-UR35/fornyt.webp",
+          "width": 500,
+          "height": 500,
+          "review_status": "low_resolution",
+          "match_note": "Only 500×500; preserved without enlargement, withheld from the HD product gallery."
+        },
+        {
+          "file": "Pc Data.zip/PC/Nitro 85 Gaming Desktop - N85-100-UR35/main pic.webp",
+          "width": 500,
+          "height": 500,
+          "review_status": "low_resolution",
+          "match_note": "Only 500×500; preserved without enlargement, withheld from the HD product gallery."
+        },
+        {
+          "file": "Pc Data.zip/PC/Nitro 85 Gaming Desktop - N85-100-UR35/show.webp",
+          "width": 500,
+          "height": 500,
+          "review_status": "low_resolution",
+          "match_note": "Only 500×500; preserved without enlargement, withheld from the HD product gallery."
+        },
+        {
+          "file": "Pc Data.zip/PC/Nitro 85 Gaming Desktop - N85-100-UR35/side pic.webp",
+          "width": 500,
+          "height": 500,
+          "review_status": "low_resolution",
+          "match_note": "Only 500×500; preserved without enlargement, withheld from the HD product gallery."
+        }
+      ]
+    },
+    {
+      "folder": "Prebuilt PC GML 99707",
+      "product_id": "cyberpowerpc-et99707",
+      "selected": 0,
+      "files": [
+        {
+          "file": "Pc Data.zip/PC/Prebuilt PC GML 99707/01_400.webp",
+          "width": 400,
+          "height": 400,
+          "review_status": "low_resolution",
+          "match_note": "Only 400×400; preserved without enlargement, withheld from the HD product gallery."
+        },
+        {
+          "file": "Pc Data.zip/PC/Prebuilt PC GML 99707/02_400.webp",
+          "width": 400,
+          "height": 400,
+          "review_status": "low_resolution",
+          "match_note": "Only 400×400; preserved without enlargement, withheld from the HD product gallery."
+        },
+        {
+          "file": "Pc Data.zip/PC/Prebuilt PC GML 99707/04_400.webp",
+          "width": 400,
+          "height": 400,
+          "review_status": "low_resolution",
+          "match_note": "Only 400×400; preserved without enlargement, withheld from the HD product gallery."
+        },
+        {
+          "file": "Pc Data.zip/PC/Prebuilt PC GML 99707/05_400.webp",
+          "width": 400,
+          "height": 400,
+          "review_status": "low_resolution",
+          "match_note": "Only 400×400; preserved without enlargement, withheld from the HD product gallery."
+        },
+        {
+          "file": "Pc Data.zip/PC/Prebuilt PC GML 99707/main_400.webp",
+          "width": 400,
+          "height": 400,
+          "review_status": "low_resolution",
+          "match_note": "Only 400×400; preserved without enlargement, withheld from the HD product gallery."
+        }
+      ]
+    },
+    {
+      "folder": "PS5 pro",
+      "product_id": "ps5-pro-2tb",
+      "selected": 0,
+      "files": [
+        {
+          "file": "Pc Data.zip/PC/PS5 pro/ps5-pro-Hero-1-angled.webp",
+          "width": 96,
+          "height": 96,
+          "review_status": "low_resolution",
+          "match_note": "Only 96×96; preserved without enlargement, withheld from the HD product gallery."
+        },
+        {
+          "file": "Pc Data.zip/PC/PS5 pro/ps5-pro-Hero-2-forward-facing.webp",
+          "width": 580,
+          "height": 580,
+          "review_status": "low_resolution",
+          "match_note": "Only 580×580; preserved without enlargement, withheld from the HD product gallery."
+        },
+        {
+          "file": "Pc Data.zip/PC/PS5 pro/ps5-pro-Hero-4-laying-flat.webp",
+          "width": 96,
+          "height": 96,
+          "review_status": "low_resolution",
+          "match_note": "Only 96×96; preserved without enlargement, withheld from the HD product gallery."
+        },
+        {
+          "file": "Pc Data.zip/PC/PS5 pro/ps5-pro-Hero-5-forward-facing-with-dualsense.webp",
+          "width": 96,
+          "height": 96,
+          "review_status": "low_resolution",
+          "match_note": "Only 96×96; preserved without enlargement, withheld from the HD product gallery."
+        },
+        {
+          "file": "Pc Data.zip/PC/PS5 pro/ps5-pro-Hero-7-angled-console.webp",
+          "width": 96,
+          "height": 96,
+          "review_status": "low_resolution",
+          "match_note": "Only 96×96; preserved without enlargement, withheld from the HD product gallery."
+        },
+        {
+          "file": "Pc Data.zip/PC/PS5 pro/ps5-pro-Hero-8-colourful-background.webp",
+          "width": 96,
+          "height": 96,
+          "review_status": "low_resolution",
+          "match_note": "Only 96×96; preserved without enlargement, withheld from the HD product gallery."
+        },
+        {
+          "file": "Pc Data.zip/PC/PS5 pro/PS5PRO-hero-Packshot-US-2025.webp",
+          "width": 96,
+          "height": 96,
+          "review_status": "low_resolution",
+          "match_note": "Only 96×96; preserved without enlargement, withheld from the HD product gallery."
+        }
+      ]
+    }
+  ]
+}

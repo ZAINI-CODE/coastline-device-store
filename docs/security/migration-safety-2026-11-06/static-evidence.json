@@ -1,0 +1,22 @@
+{
+  "reviewedOn": "2026-11-06",
+  "mode": "filesystem-only; no SQL executed; no hosted connections",
+  "sha256": "7750584909226e1e0497ab925614f5b976a86a1b4473cf38ef4c3dbba3325cc1",
+  "sourceBodiesMatch": true,
+  "counts": {
+    "tables": 23,
+    "columns": 153,
+    "constraints": 196,
+    "indexes": 39,
+    "triggers": 17,
+    "functions": 17,
+    "policies": 31
+  },
+  "foreignKeys": 24,
+  "authUserForeignKeys": 10,
+  "topLevelStatements": 172,
+  "grantRevokeStatements": 48,
+  "alterStatements": 30,
+  "topLevelDestructiveStatements": 0,
+  "rerunMode": "fail closed on existing application objects; not no-op idempotent"
+}

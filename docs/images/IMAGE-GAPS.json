@@ -1,0 +1,420 @@
+{
+  "checked_on": "2026-11-06",
+  "research_count": 53,
+  "approved_photograph_count": 4,
+  "unpublished_count": 53,
+  "products": [
+    {
+      "product_id": "iphone-16-plus",
+      "name": "Apple iPhone 16 Plus",
+      "category": "Apple iPhones",
+      "manufacturer_source": "https://www.apple.com/newsroom/2024/09/apple-introduces-iphone-16-and-iphone-16-plus/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "iphone-16-pro",
+      "name": "Apple iPhone 16 Pro",
+      "category": "Apple iPhones",
+      "manufacturer_source": "https://www.apple.com/newsroom/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "iphone-16-pro-max",
+      "name": "Apple iPhone 16 Pro Max",
+      "category": "Apple iPhones",
+      "manufacturer_source": "https://www.apple.com/newsroom/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "iphone-16e",
+      "name": "Apple iPhone 16e",
+      "category": "Apple iPhones",
+      "manufacturer_source": "https://www.apple.com/newsroom/2025/02/apple-debuts-iphone-16e-a-powerful-new-member-of-the-iphone-16-family/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "iphone-17",
+      "name": "Apple iPhone 17",
+      "category": "Apple iPhones",
+      "manufacturer_source": "https://www.apple.com/newsroom/2025/09/apple-debuts-iphone-17/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "iphone-17-pro",
+      "name": "Apple iPhone 17 Pro",
+      "category": "Apple iPhones",
+      "manufacturer_source": "https://www.apple.com/newsroom/2025/09/apple-unveils-iphone-17-pro-and-iphone-17-pro-max/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "iphone-17-pro-max",
+      "name": "Apple iPhone 17 Pro Max",
+      "category": "Apple iPhones",
+      "manufacturer_source": "https://www.apple.com/newsroom/2025/09/apple-unveils-iphone-17-pro-and-iphone-17-pro-max/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "iphone-18-pro",
+      "name": "Apple iPhone 18 Pro",
+      "category": "Apple iPhones",
+      "manufacturer_source": "https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "iphone-18-pro-max",
+      "name": "Apple iPhone 18 Pro Max",
+      "category": "Apple iPhones",
+      "manufacturer_source": "https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "airpods-4",
+      "name": "Apple AirPods 4",
+      "category": "Apple Products and Headphones",
+      "manufacturer_source": "https://www.apple.com/newsroom/2024/09/apple-introduces-airpods-4-and-a-hearing-health-experience-with-airpods-pro-2/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "airpods-4-anc",
+      "name": "Apple AirPods 4 with Active Noise Cancellation",
+      "category": "Apple Products and Headphones",
+      "manufacturer_source": "https://www.apple.com/newsroom/2024/09/apple-introduces-airpods-4-and-a-hearing-health-experience-with-airpods-pro-2/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "airpods-pro-2-usbc",
+      "name": "Apple AirPods Pro 2 — USB-C",
+      "category": "Apple Products and Headphones",
+      "manufacturer_source": "https://www.apple.com/newsroom/2023/09/apple-upgrades-airpods-pro-2nd-generation-with-usb-c-charging/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "airpods-pro-3",
+      "name": "Apple AirPods Pro 3",
+      "category": "Apple Products and Headphones",
+      "manufacturer_source": "https://support.apple.com/en-us/125135",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "airpods-max-usbc",
+      "name": "Apple AirPods Max — USB-C (2024)",
+      "category": "Apple Products and Headphones",
+      "manufacturer_source": "https://www.apple.com/newsroom/2024/09/apple-introduces-airpods-4-and-a-hearing-health-experience-with-airpods-pro-2/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "apple-20w-usbc-adapter",
+      "name": "Apple 20W USB-C Power Adapter",
+      "category": "Apple Products and Headphones",
+      "manufacturer_source": "https://www.apple.com/shop/product/mwvv3am/a/20w-usb-c-power-adapter",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "apple-35w-dual-compact-adapter",
+      "name": "Apple 35W Dual USB-C Port Compact Power Adapter",
+      "category": "Apple Products and Headphones",
+      "manufacturer_source": "https://www.apple.com/shop/product/mw2h3am/a/35w-dual-usb-c-port-compact-power-adapter",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "apple-70w-usbc-adapter",
+      "name": "Apple 70W USB-C Power Adapter",
+      "category": "Apple Products and Headphones",
+      "manufacturer_source": "https://www.apple.com/shop/accessories/all/chargers-adapters/adapters-apple",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "apple-40w-dynamic-adapter",
+      "name": "Apple 40W Dynamic Power Adapter with 60W Max",
+      "category": "Apple Products and Headphones",
+      "manufacturer_source": "https://www.apple.com/shop/product/mgkn4am/a/40w-dynamic-power-adapter-with-60w-max",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "apple-60w-usbc-cable-1m",
+      "name": "Apple 60W USB-C Charge Cable — 1 m",
+      "category": "Apple Products and Headphones",
+      "manufacturer_source": "https://www.apple.com/shop/product/mw493am/a/60w-usb-c-charge-cable-1-m",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "apple-240w-usbc-cable-2m",
+      "name": "Apple 240W USB-C Charge Cable — 2 m",
+      "category": "Apple Products and Headphones",
+      "manufacturer_source": "https://www.apple.com/shop/product/myqt3am/a/240w-usb-c-charge-cable-2-m",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "ps5-original-digital",
+      "name": "Sony PlayStation 5 — original Digital Edition",
+      "category": "Gaming Consoles",
+      "manufacturer_source": "https://blog.playstation.com/2020/11/09/ps5-the-ultimate-faq/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "ps5-slim-disc",
+      "name": "Sony PlayStation 5 — Slim Disc Edition (2023)",
+      "category": "Gaming Consoles",
+      "manufacturer_source": "https://blog.playstation.com/2023/10/10/new-look-for-ps5-console-this-holiday-season/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "ps5-slim-digital",
+      "name": "Sony PlayStation 5 — Slim Digital Edition (2023)",
+      "category": "Gaming Consoles",
+      "manufacturer_source": "https://blog.playstation.com/2023/10/10/new-look-for-ps5-console-this-holiday-season/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "dualsense-midnight-black",
+      "name": "Sony DualSense wireless controller — Midnight Black",
+      "category": "Gaming Controllers",
+      "manufacturer_source": "https://www.playstation.com/en-us/accessories/dualsense-wireless-controller/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "dualsense-cosmic-red",
+      "name": "Sony DualSense wireless controller — Cosmic Red",
+      "category": "Gaming Controllers",
+      "manufacturer_source": "https://www.playstation.com/en-us/accessories/dualsense-wireless-controller/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "dualsense-charging-station",
+      "name": "Sony DualSense Charging Station",
+      "category": "Gaming Controllers",
+      "manufacturer_source": "https://direct.playstation.com/en-us/buy-accessories/dualsense-charging-station",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "playstation-portal-white",
+      "name": "Sony PlayStation Portal Remote Player — White",
+      "category": "Gaming Controllers",
+      "manufacturer_source": "https://www.playstation.com/en-us/accessories/playstation-portal-remote-player/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "ps5-media-remote",
+      "name": "Sony PS5 Media Remote",
+      "category": "Gaming Controllers",
+      "manufacturer_source": "https://direct.playstation.com/en-us/buy-accessories/media-remote",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "ryzen-7-9700x",
+      "name": "AMD Ryzen 7 9700X",
+      "category": "Processors and CPUs",
+      "manufacturer_source": "https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-7-9700X.html",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "ryzen-5-9600x",
+      "name": "AMD Ryzen 5 9600X",
+      "category": "Processors and CPUs",
+      "manufacturer_source": "https://www.amd.com/en/partner/articles/ryzen-9000-series-processors.html",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "ryzen-9-9900x",
+      "name": "AMD Ryzen 9 9900X",
+      "category": "Processors and CPUs",
+      "manufacturer_source": "https://www.amd.com/en/partner/articles/ryzen-9000-series-processors.html",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "ryzen-9-9950x",
+      "name": "AMD Ryzen 9 9950X",
+      "category": "Processors and CPUs",
+      "manufacturer_source": "https://www.amd.com/en/partner/articles/ryzen-9000-series-processors.html",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "ryzen-7-9800x3d",
+      "name": "AMD Ryzen 7 9800X3D",
+      "category": "Processors and CPUs",
+      "manufacturer_source": "https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-7-9800x3d.html",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "core-ultra-5-245k",
+      "name": "Intel Core Ultra 5 245K",
+      "category": "Processors and CPUs",
+      "manufacturer_source": "https://www.intel.com/content/www/us/en/products/sku/241067/intel-core-ultra-5-processor-245k-24m-cache-up-to-5-20-ghz/specifications.html",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "core-ultra-7-265k",
+      "name": "Intel Core Ultra 7 265K",
+      "category": "Processors and CPUs",
+      "manufacturer_source": "https://www.intel.com/content/www/us/en/products/sku/241063/intel-core-ultra-7-processor-265k-30m-cache-up-to-5-50-ghz/specifications.html",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "core-ultra-9-285k",
+      "name": "Intel Core Ultra 9 285K",
+      "category": "Processors and CPUs",
+      "manufacturer_source": "https://www.intel.com/content/www/us/en/products/sku/241060/intel-core-ultra-9-processor-285k-36m-cache-up-to-5-70-ghz/specifications.html",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "core-i5-14600k",
+      "name": "Intel Core i5-14600K",
+      "category": "Processors and CPUs",
+      "manufacturer_source": "https://www.intel.com/content/www/us/en/products/sku/236799/intel-core-i5-processor-14600k-24m-cache-up-to-5-30-ghz/specifications.html",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "core-i7-14700k",
+      "name": "Intel Core i7-14700K",
+      "category": "Processors and CPUs",
+      "manufacturer_source": "https://www.intel.com/content/www/us/en/newsroom/news/intel-core-14th-gen-desktop-processors.html",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "core-i9-14900k",
+      "name": "Intel Core i9-14900K",
+      "category": "Processors and CPUs",
+      "manufacturer_source": "https://www.intel.com/content/www/us/en/newsroom/news/intel-core-14th-gen-desktop-processors.html",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "corsair-vengeance-a7500-cs-9050121-na",
+      "name": "CORSAIR VENGEANCE a7500 — Ryzen 7 9800X3D / RTX 5080",
+      "category": "Gaming PCs",
+      "manufacturer_source": "https://www.corsair.com/us/en/p/gaming-computers/cs-9050121-na/vengeance-a7500-gaming-pc-amd-ryzen-7-9800x3d-geforce-rtx-5080-32gb-ddr5-2tb-ssd-win11-home-cs-9050121-na",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "cyberpowerpc-et99707",
+      "name": "CyberPowerPC Prebuilt Gaming Desktop — ET99707",
+      "category": "Gaming PCs",
+      "manufacturer_source": "https://www.cyberpowerpc.com/system/Prebuilt-PC-GML-99707",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "ibuypower-ryzen-5-9500f",
+      "name": "iBUYPOWER Gaming Desktop — Ryzen 5 9500F",
+      "category": "Gaming PCs",
+      "manufacturer_source": "https://www.ibuypower.com/store/amd-ryzen-starter-gaming-pc",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "acer-nitro-85-n85-100-ur35",
+      "name": "Acer Nitro 85 Gaming Desktop — N85-100-UR35",
+      "category": "Gaming PCs",
+      "manufacturer_source": "https://store.acer.com/en-us/nitro-85-gaming-desktop-n85-100-ur35",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "lenovo-legion-tower-5-gen-10-rtx-5070-ti",
+      "name": "Lenovo Legion Tower 5 Gen 10 — RTX 5070 Ti",
+      "category": "Gaming PCs",
+      "manufacturer_source": "https://www.lenovo.com/us/en/p/desktops/legion-desktops/legion-t-series-towers/len102g0011/90yj001lus",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "ps5-pro-2tb",
+      "name": "Sony PlayStation 5 Pro Console — 2TB",
+      "category": "Gaming Consoles",
+      "manufacturer_source": "https://www.playstation.com/en-us/ps5/ps5-pro/",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "airpods-5",
+      "name": "Apple AirPods 5",
+      "category": "Apple Products and Headphones",
+      "manufacturer_source": "https://www.apple.com/shop/buy-airpods/airpods-5",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "iphone-17e",
+      "name": "Apple iPhone 17e",
+      "category": "Apple iPhones",
+      "manufacturer_source": "https://www.apple.com/shop/buy-iphone/iphone-17e",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "iphone-air",
+      "name": "Apple iPhone Air",
+      "category": "Apple iPhones",
+      "manufacturer_source": "https://www.apple.com/shop/buy-iphone/iphone-air",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    },
+    {
+      "product_id": "iphone-duo",
+      "name": "Apple iPhone Duo",
+      "category": "Apple iPhones",
+      "manufacturer_source": "https://www.apple.com/shop/buy-iphone/iphone-duo",
+      "status": "unpublished",
+      "reason": "No exact-model, suitable-quality genuine photograph with confirmed commercial reuse rights has been approved. Manufacturer product-page presence is not a licence."
+    }
+  ],
+  "excluded": [
+    {
+      "name": "Alienware Area-51 — RTX 5090 configuration",
+      "category": "Gaming PCs",
+      "source": "https://www.dell.com/en-us/shop/gaming-desktops/spd/alienwarearea51aat2250",
+      "status": "excluded_until_exact_offer_sku_and_availability_verified",
+      "observed_at": "2026-11-03T01:56:15Z",
+      "reason": "US page defaults to an RTX 5080 configuration and mixes RTX 5090 configuration cards. The $6,499.99 heading belongs to the default RTX 5080 configuration; RTX 5090 cards show $10,499.99 (32GB/2TB) and $13,499.99 (64GB/4TB). No exact matching order offer/SKU and reliable stock confirmation was established. No different configuration substituted."
+    },
+    {
+      "name": "iPhone 18 / iPhone 18 Plus / iPhone 18 mini",
+      "status": "excluded_not_officially_verified",
+      "reason": "Only iPhone 18 Pro and Pro Max were verified in Apple’s official release source; no base/Plus/mini assumptions."
+    },
+    {
+      "name": "OS4 PCs, laptops and ordinary desktop PCs",
+      "status": "excluded_by_owner_scope",
+      "reason": "Owner narrowed sixth category to only the two specified premium gaming-PC configurations. No OS4 interpretation, laptops or ordinary desktops included."
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "archive_sha256": "e5ff71983b84328da5fd310014d7ccf7c7fd8ff4b395a6e95bb96ef719565d90",
+  "extraction_root": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84",
+  "records": [
+    {
+      "file": "PC/AMD Ryzen Starter Gaming PC/gaming-pc-02-Scale-front-2400.avif",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\AMD Ryzen Starter Gaming PC\\gaming-pc-02-Scale-front-2400.avif",
+      "bytes": 80854,
+      "sha256": "351702a71ce0e8a224159f582e358d0e2a61dc6955e856668977a327cd352bf1",
+      "width": 1080,
+      "height": 1080,
+      "inspection": "docs/images/pc-zip-review/image-01.jpg"
+    },
+    {
+      "file": "PC/AMD Ryzen Starter Gaming PC/gaming-pc-03-Scale-side-2400.avif",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\AMD Ryzen Starter Gaming PC\\gaming-pc-03-Scale-side-2400.avif",
+      "bytes": 53096,
+      "sha256": "51e2c2309e52dd2d1c57a1df20c4b3872414534d06c6dedaf0dfd0bc20f88246",
+      "width": 1080,
+      "height": 1080,
+      "inspection": "docs/images/pc-zip-review/image-02.jpg"
+    },
+    {
+      "file": "PC/AMD Ryzen Starter Gaming PC/gaming-pc-05-Scale-TopFront-2400-V1.avif",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\AMD Ryzen Starter Gaming PC\\gaming-pc-05-Scale-TopFront-2400-V1.avif",
+      "bytes": 83316,
+      "sha256": "fa287b4ebaa590450c8f5552c2bd465a619d97ca11a727c646424d31108b947a",
+      "width": 1080,
+      "height": 1080,
+      "inspection": "docs/images/pc-zip-review/image-03.jpg"
+    },
+    {
+      "file": "PC/AMD Ryzen Starter Gaming PC/gaming-pc-08-Scale-Lifestyle01-2400.avif",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\AMD Ryzen Starter Gaming PC\\gaming-pc-08-Scale-Lifestyle01-2400.avif",
+      "bytes": 117697,
+      "sha256": "faf138aebcf1a345f8024880bac46e9bfd59b534ff3371f30803f1b46ae7cd05",
+      "width": 1080,
+      "height": 1080,
+      "inspection": "docs/images/pc-zip-review/image-04.jpg"
+    },
+    {
+      "file": "PC/AMD Ryzen Starter Gaming PC/Main pic.avif",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\AMD Ryzen Starter Gaming PC\\Main pic.avif",
+      "bytes": 120293,
+      "sha256": "9e089ce07d5b03c9f1d3c3ede68965d6f67d2f9c5d1f5a201a1cac418f05ac64",
+      "width": 1080,
+      "height": 1080,
+      "inspection": "docs/images/pc-zip-review/image-05.jpg"
+    },
+    {
+      "file": "PC/AMD Ryzen Starter Gaming PC/Scale-Black-Dimensions-09-2400.avif",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\AMD Ryzen Starter Gaming PC\\Scale-Black-Dimensions-09-2400.avif",
+      "bytes": 87303,
+      "sha256": "527e43681419737a44a13a4e4a8ed59c1bd99fc818e61033648c65c7a592cf1c",
+      "width": 1080,
+      "height": 1080,
+      "inspection": "docs/images/pc-zip-review/image-06.jpg"
+    },
+    {
+      "file": "PC/Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti/back.avif",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti\\back.avif",
+      "bytes": 8638,
+      "sha256": "53f248a2659287c4a00dcbed6457de18605fd45019a113f1ef458f84cc4307de",
+      "width": 1200,
+      "height": 1200,
+      "inspection": "docs/images/pc-zip-review/image-07.jpg"
+    },
+    {
+      "file": "PC/Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti/fromt.avif",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti\\fromt.avif",
+      "bytes": 46503,
+      "sha256": "b2ffd81dab7c8502cff34d086b2657956637631934e48f75b2d2222a72ad042e",
+      "width": 1200,
+      "height": 1200,
+      "inspection": "docs/images/pc-zip-review/image-08.jpg"
+    },
+    {
+      "file": "PC/Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti/logo.avif",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti\\logo.avif",
+      "bytes": 36532,
+      "sha256": "4278a120a7abdf0bc62cc8536978368271f07a9805fca05cc606ed1e547ff98a",
+      "width": 1200,
+      "height": 1200,
+      "inspection": "docs/images/pc-zip-review/image-09.jpg"
+    },
+    {
+      "file": "PC/Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti/main pic.avif",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti\\main pic.avif",
+      "bytes": 63621,
+      "sha256": "ac15c3d80719c0ad8ba0676927edbc46714a301d6db04e9e120e218fd6ed6720",
+      "width": 1200,
+      "height": 1200,
+      "inspection": "docs/images/pc-zip-review/image-10.jpg"
+    },
+    {
+      "file": "PC/Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti/pr498so56u301fynn23uijzhil87lv400340.avif",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti\\pr498so56u301fynn23uijzhil87lv400340.avif",
+      "bytes": 50544,
+      "sha256": "5d99a8ac547fb0a014ca6863cca7ffa95cecc188aeaa08fd34f26d6eb65646e4",
+      "width": 1200,
+      "height": 1200,
+      "inspection": "docs/images/pc-zip-review/image-11.jpg"
+    },
+    {
+      "file": "PC/Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti/processer.avif",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\Legion Tower 5 Gen 10 30L (AMD) with RTX 5070Ti\\processer.avif",
+      "bytes": 63621,
+      "sha256": "ac15c3d80719c0ad8ba0676927edbc46714a301d6db04e9e120e218fd6ed6720",
+      "width": 1200,
+      "height": 1200,
+      "inspection": "docs/images/pc-zip-review/image-12.jpg"
+    },
+    {
+      "file": "PC/Nitro 85 Gaming Desktop - N85-100-UR35/fornyt.webp",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\Nitro 85 Gaming Desktop - N85-100-UR35\\fornyt.webp",
+      "bytes": 13592,
+      "sha256": "318c46fd194d482d6973a5cff50a9226875f3c35b409c3050a311f1a5688b0d8",
+      "width": 500,
+      "height": 500,
+      "inspection": "docs/images/pc-zip-review/image-13.jpg"
+    },
+    {
+      "file": "PC/Nitro 85 Gaming Desktop - N85-100-UR35/main pic.webp",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\Nitro 85 Gaming Desktop - N85-100-UR35\\main pic.webp",
+      "bytes": 18620,
+      "sha256": "8118376d444a6c3e60bf7c1ef0c7c3b97d78916ce9fffd6da3b2308ef7a13ea2",
+      "width": 500,
+      "height": 500,
+      "inspection": "docs/images/pc-zip-review/image-14.jpg"
+    },
+    {
+      "file": "PC/Nitro 85 Gaming Desktop - N85-100-UR35/show.webp",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\Nitro 85 Gaming Desktop - N85-100-UR35\\show.webp",
+      "bytes": 7474,
+      "sha256": "29bb23b9d08616fb1da92271824ae4e47ccc409e93f0bcd44ce40404538a760f",
+      "width": 500,
+      "height": 500,
+      "inspection": "docs/images/pc-zip-review/image-15.jpg"
+    },
+    {
+      "file": "PC/Nitro 85 Gaming Desktop - N85-100-UR35/side pic.webp",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\Nitro 85 Gaming Desktop - N85-100-UR35\\side pic.webp",
+      "bytes": 15460,
+      "sha256": "a9623226d495bfa7ca2a6d951bbdb178941a5b27992d1c3166b8740977eb2239",
+      "width": 500,
+      "height": 500,
+      "inspection": "docs/images/pc-zip-review/image-16.jpg"
+    },
+    {
+      "file": "PC/Prebuilt PC GML 99707/01_400.webp",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\Prebuilt PC GML 99707\\01_400.webp",
+      "bytes": 13544,
+      "sha256": "b834ed5f3387b9617768f6f49b22f8136b630f45553ab2e03f4fa62c1f5ba2fc",
+      "width": 400,
+      "height": 400,
+      "inspection": "docs/images/pc-zip-review/image-17.jpg"
+    },
+    {
+      "file": "PC/Prebuilt PC GML 99707/02_400.webp",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\Prebuilt PC GML 99707\\02_400.webp",
+      "bytes": 5694,
+      "sha256": "2d3017f4094fd790dfe69fb2f58dafd00f8f6615a4cc2d565fdf150fa19a1b7d",
+      "width": 400,
+      "height": 400,
+      "inspection": "docs/images/pc-zip-review/image-18.jpg"
+    },
+    {
+      "file": "PC/Prebuilt PC GML 99707/04_400.webp",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\Prebuilt PC GML 99707\\04_400.webp",
+      "bytes": 8096,
+      "sha256": "d29e5ba91f5bd7cfb4b7dd90bdbc7b4810bd9523a5d77dc77f99354b1155de07",
+      "width": 400,
+      "height": 400,
+      "inspection": "docs/images/pc-zip-review/image-19.jpg"
+    },
+    {
+      "file": "PC/Prebuilt PC GML 99707/05_400.webp",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\Prebuilt PC GML 99707\\05_400.webp",
+      "bytes": 17074,
+      "sha256": "bd999f4023684d58fbc3440afa60b598d9c5e2032e809d5593277857e3ceed16",
+      "width": 400,
+      "height": 400,
+      "inspection": "docs/images/pc-zip-review/image-20.jpg"
+    },
+    {
+      "file": "PC/Prebuilt PC GML 99707/main_400.webp",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\Prebuilt PC GML 99707\\main_400.webp",
+      "bytes": 17642,
+      "sha256": "d59cf17cbcce209284d6541eb9c47ee3ae1cf1d6dc17b8b0160e5c442077702d",
+      "width": 400,
+      "height": 400,
+      "inspection": "docs/images/pc-zip-review/image-21.jpg"
+    },
+    {
+      "file": "PC/PS5 pro/ps5-pro-Hero-1-angled.webp",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\PS5 pro\\ps5-pro-Hero-1-angled.webp",
+      "bytes": 2092,
+      "sha256": "17977daeffb81ae787abd277c9bdf733318175e0759dcd28e3a0a3755c3f464a",
+      "width": 96,
+      "height": 96,
+      "inspection": "docs/images/pc-zip-review/image-22.jpg"
+    },
+    {
+      "file": "PC/PS5 pro/ps5-pro-Hero-2-forward-facing.webp",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\PS5 pro\\ps5-pro-Hero-2-forward-facing.webp",
+      "bytes": 7114,
+      "sha256": "aff69e8567bbe0719b0a6b83ac9098abdb03edccd4ff7cd87a3d504bf90ae16c",
+      "width": 580,
+      "height": 580,
+      "inspection": "docs/images/pc-zip-review/image-23.jpg"
+    },
+    {
+      "file": "PC/PS5 pro/ps5-pro-Hero-4-laying-flat.webp",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\PS5 pro\\ps5-pro-Hero-4-laying-flat.webp",
+      "bytes": 720,
+      "sha256": "7fad88e9ecda60b7e4c0b4cf3724c074a2c2696b2a60cd53003ec3cc7eae5bdf",
+      "width": 96,
+      "height": 96,
+      "inspection": "docs/images/pc-zip-review/image-24.jpg"
+    },
+    {
+      "file": "PC/PS5 pro/ps5-pro-Hero-5-forward-facing-with-dualsense.webp",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\PS5 pro\\ps5-pro-Hero-5-forward-facing-with-dualsense.webp",
+      "bytes": 820,
+      "sha256": "17fdb0942d117f0855559371a96492bf7e9466b59f2d2a3c9c394b4585b5b5aa",
+      "width": 96,
+      "height": 96,
+      "inspection": "docs/images/pc-zip-review/image-25.jpg"
+    },
+    {
+      "file": "PC/PS5 pro/ps5-pro-Hero-7-angled-console.webp",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\PS5 pro\\ps5-pro-Hero-7-angled-console.webp",
+      "bytes": 932,
+      "sha256": "dca8ee0d468ee66fdd13365e1a88f9a10d6942d64d0d97a1f6cf7265c878b93c",
+      "width": 96,
+      "height": 96,
+      "inspection": "docs/images/pc-zip-review/image-26.jpg"
+    },
+    {
+      "file": "PC/PS5 pro/ps5-pro-Hero-8-colourful-background.webp",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\PS5 pro\\ps5-pro-Hero-8-colourful-background.webp",
+      "bytes": 2682,
+      "sha256": "dedc8e7d369107c8b2b43213528237a7f750b8be487904a55b1d479a6866398f",
+      "width": 96,
+      "height": 96,
+      "inspection": "docs/images/pc-zip-review/image-27.jpg"
+    },
+    {
+      "file": "PC/PS5 pro/PS5PRO-hero-Packshot-US-2025.webp",
+      "path": "C:\\Users\\Administrator\\OneDrive\\Documents\\ChatGPT\\Prodcut Website\\images\\originals\\imports\\pc-data-e5ff71983b84\\PC\\PS5 pro\\PS5PRO-hero-Packshot-US-2025.webp",
+      "bytes": 2308,
+      "sha256": "c554008fb6b9f859aa21c13391d7a97d5470bd6c5ef1b7d7d6aeada5ab7a4aa6",
+      "width": 96,
+      "height": 96,
+      "inspection": "docs/images/pc-zip-review/image-28.jpg"
+    }
+  ]
+}
