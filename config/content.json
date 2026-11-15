@@ -314,18 +314,66 @@
       {
         "title": "How do I contact support?",
         "text": "Sign in and use the private contact form. Include your order number when asking about an order."
+      },
+      {
+        "title": "Where can I find current deals?",
+        "text": "Open Deals & bundles or look for a promotional price on an eligible product. Offers depend on the selected model, variant, stock and campaign dates. The checkout server checks eligibility again before payment."
+      },
+      {
+        "title": "How much is the iPhone discount?",
+        "text": "During the approved campaign, eligible iPhones receive 15% off their regular selling price. The product page shows the savings for your selected variant. An expired or unavailable offer is not applied."
+      },
+      {
+        "title": "Can I combine discounts?",
+        "text": "No. Promotions do not stack. Checkout applies the best eligible offer to your selection; adding several products does not automatically create an extra discount."
+      },
+      {
+        "title": "Why does a Daily Deal timer reset?",
+        "text": "Daily Deal timers count down to midnight Eastern Time and reset each day while the campaign is active. The current campaign ends at midnight Eastern on January 2, 2027, so January 1 is included. The daily timer does not mean an additional discount."
+      },
+      {
+        "title": "Will my selected colour or storage change the deal price?",
+        "text": "It may change the regular price and available stock. Choose your colour and storage first, then review the corresponding regular price, discounted price and savings. Only available variants can be ordered."
+      },
+      {
+        "title": "Does a sale change shipping charges?",
+        "text": "Standard shipping is free to all 50 U.S. states. Fast delivery adds $25 per order. Review the final order total before making your payment."
+      },
+      {
+        "title": "Is my discount reserved just by browsing or adding to cart?",
+        "text": "No. Browsing and cart prices are estimates. Offers must still be active and eligible when your order is placed. Review the final order total and payment instructions before sending funds."
       }
     ]
   },
   "about": {
-    "title": "A considered approach to technology",
+    "title": "Good technology. A clearer choice.",
     "paragraphs": [
-      "Electronics is an independent store focused on phones, Apple audio and accessories, PlayStation hardware, gaming desktops, and processors."
+      "Coastline Device Co. brings phones, Apple audio, gaming PCs and PlayStation hardware together in one considered collection. Our aim is simple: help you understand what you are buying and choose the technology that fits your everyday life."
     ],
     "sections": [
       {
-        "title": "Find the right fit",
-        "text": "Compare models, finishes, configurations, and specifications in one place. For a question about a product or an order, use the private contact form."
+        "title": "Quality starts with the details",
+        "text": "The right product starts with the right information. Explore each model’s specifications, storage, finish and configuration before choosing. Product photographs help you take a closer look, while the selected variant determines the price and availability shown on the page.\n\nIf a detail matters to your purchase, ask us before ordering. We would rather help you make an informed choice than leave you guessing."
+      },
+      {
+        "title": "Trust through clear information",
+        "text": "A good shopping experience should feel straightforward. We show your order total before payment, explain the available delivery options and keep your order status in your account. Promotional prices show the regular price and savings so you can understand the offer.\n\nFor Zelle orders, submitting a reference is separate from confirming payment. Our team verifies receipt of funds before marking an order paid and beginning processing."
+      },
+      {
+        "title": "Support beyond your selection",
+        "text": "Questions about a model, an order or a delivery deserve a clear next step. Sign in to use our private contact form and include your order number when you need order support. Shipping, returns and warranty information are available before you buy.\n\nOur focus is on useful products, accurate details and communication you can follow—from your first comparison to checking your shipment."
+      }
+    ],
+    "images": [
+      {
+        "path": "images/products/iphone-16-ultramarine-960.webp",
+        "alt": "Apple iPhone 16",
+        "caption": "Take a closer look. Compare the finish, storage and specifications before you choose."
+      },
+      {
+        "path": "images/products/owner-airpods-pro-3-white-35aee945c7be91ed-960.webp",
+        "alt": "Apple AirPods Pro 3",
+        "caption": "Find your everyday fit. Explore the details of our Apple audio collection."
       }
     ]
   }

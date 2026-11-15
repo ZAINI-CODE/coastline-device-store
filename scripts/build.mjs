@@ -8,6 +8,7 @@ await loadLocalEnv();
 await mkdir("dist", { recursive: true });
 for (const path of ["index.html", "google8e2f4d9e478d7709.html", "css", "robots.txt", "favicon.ico", "favicon.svg", "favicon-16x16.png", "favicon-32x32.png", "apple-touch-icon.png", "android-chrome-192x192.png", "android-chrome-512x512.png", "site.webmanifest"]) await cp(path, `dist/${path}`, { recursive: true });
 await cp('images/branding','dist/images/branding',{recursive:true});
+await cp('node_modules/country-flag-icons/3x2','dist/images/flags',{recursive:true});
 await mkdir('dist/config',{recursive:true});
 for(const path of ['config/store.json','config/content.json'])await cp(path,'dist/'+path);
 try { await unlink('dist/config/shipping.json'); } catch (error) { if(error.code!=='ENOENT')throw error; }
@@ -39,6 +40,7 @@ await build({entryPoints:['js/theme-init.js'],bundle:true,minify:true,format:'ii
 await build({ entryPoints: ["js/app.js"], bundle: true, minify: true, format: "esm", outfile: "dist/js/app.js", target: ["es2022"] });
 for (const file of await readdir("css")) if (file.endsWith(".css")) await writeFile("dist/css/" + file, (await transform(await readFile("css/" + file, "utf8"), { loader: "css", minify: true })).code);
 const store = JSON.parse(await readFile("config/store.json", "utf8"));
+await cp('THIRD-PARTY-LICENSES.txt','dist/THIRD-PARTY-LICENSES.txt');
 await writeFile("dist/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${store.domain ? `<url><loc>${new URL("/", store.domain).href}</loc></url>` : ""}</urlset>`);
 const seoCatalogue=await fetchPublishedCatalogue(publicConfig());
 await buildSEO(store,seoCatalogue);

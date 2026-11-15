@@ -1,3 +1,4 @@
+import {interfaceIcon} from './interface-icons.js';
 import {zelleInstructions,wireZelleForms} from './zelle-checkout.js';
 import { connectionPage, wireConnection } from "./connection.js";
 import { addressPicker, shippingFields, wireCheckoutAddresses } from "./checkout-addresses.js";
@@ -91,7 +92,7 @@ function shop(params) {
     return {...p,variants,price:!p.review_only&&prices.length?Math.min(...prices):null};
   });
   const items=filterProducts(matching,{q:filters.q,category:filters.category,brand:filters.brand,type:filters.type,sort:filters.sort});
-  return `<section class="wrap page"><span class="eyebrow">EXPLORE THE COLLECTION</span><h1>${e(params.get("category") || "All electronics")}</h1><p class="intro">Your next connection starts here.</p><form id="filters" class="filters"><label>Search<input name="q" value="${e(filters.q || "")}" placeholder="Product, brand or model"></label><label>Category<select name="category"><option value="">All categories</option>${store.categories.map((c) => `<option ${filters.category === c ? "selected" : ""}>${e(c)}</option>`).join("")}</select></label><label>Brand<select name="brand"><option value="">All brands</option>${[...new Set(products.map((p) => p.brand))].map((b) => `<option ${filters.brand === b ? "selected" : ""}>${e(b)}</option>`).join("")}</select></label>${attributeFilters(filters)}<label>Min price<input name="min" type="number" min="0" value="${e(filters.min || "")}" placeholder="$0"></label><label>Max price<input name="max" type="number" min="0" value="${e(filters.max || "")}" placeholder="Any"></label><label>Sort<select name="sort">${[["featured", "Featured"], ["newest", "Newest"], ["low", "Price: low to high"], ["high", "Price: high to low"], ["name", "Name"], ...products.some((p) => p.review_count > 0) ? [["rating", "Customer rating"]] : []].map(([v, l]) => `<option value="${v}" ${filters.sort === v ? "selected" : ""}>${l}</option>`).join("")}</select></label><label class="check"><input type="checkbox" name="available" ${filters.available ? "checked" : ""}> In stock</label><button class="button">Apply filters</button><a href="#/shop">Reset</a></form><p class="result-count">${items.length} products</p>${items.length ? `<div class="product-grid">${items.map(card).join("")}</div>` : empty(products.length ? "No matching products." : void 0, products.length ? "Try another search or adjust your filters." : void 0)}</section>`;
+  return `<section class="wrap page"><span class="eyebrow">EXPLORE THE COLLECTION</span><h1>${e(params.get("category") || "All electronics")}</h1><p class="intro">Your next connection starts here.</p><form id="filters" class="filters"><label>Search<input name="q" value="${e(filters.q || "")}" placeholder="Product, brand or model"></label><label>Category<select name="category"><option value="">All categories</option>${store.categories.map((c) => `<option ${filters.category === c ? "selected" : ""}>${e(c)}</option>`).join("")}</select></label><label>Brand<select name="brand"><option value="">All brands</option>${[...new Set(products.map((p) => p.brand))].map((b) => `<option ${filters.brand === b ? "selected" : ""}>${e(b)}</option>`).join("")}</select></label>${attributeFilters(filters)}<label>Min price<input name="min" type="number" min="0" value="${e(filters.min || "")}" placeholder="$0"></label><label>Max price<input name="max" type="number" min="0" value="${e(filters.max || "")}" placeholder="Any"></label><label>Sort<select name="sort">${[["", "Choose sorting"], ["featured", "Featured"], ["newest", "Newest"], ["low", "Price: low to high"], ["high", "Price: high to low"], ["name", "Name"], ...products.some((p) => p.review_count > 0) ? [["rating", "Customer rating"]] : []].map(([v, l]) => `<option value="${v}" ${filters.sort === v ? "selected" : ""}>${l}</option>`).join("")}</select></label><label class="check"><input type="checkbox" name="available" ${filters.available ? "checked" : ""}> In stock</label><button class="button">Apply filters</button><a href="#/shop">Reset</a></form><p class="result-count">${items.length} products</p>${items.length ? `<div class="product-grid">${items.map(card).join("")}</div>` : empty(products.length ? "No matching products." : void 0, products.length ? "Try another search or adjust your filters." : void 0)}</section>`;
 }
 async function product(id) {
   const p = products.find((p2) => p2.id === id);
@@ -128,14 +129,14 @@ async function checkout() {
     location.hash = "/account";
     return "";
   }
-  if (new URLSearchParams(location.hash.split("?")[1] || "").get("order")) return `<section class="wrap page"><h1>Review your order</h1><div class="panel" id="payment"></div><a class="text-link" href="#/account">Return to your order history</a></section>`;
+  if (new URLSearchParams(location.hash.split("?")[1] || "").get("order")) return `<section class="wrap page"><h1>Order & payment</h1><div class="panel payment-panel" id="payment"></div><a class="text-link" href="#/account">Return to your order history</a></section>`;
   const launch=await unwrap(db.from("store_settings").select("checkout_enabled,policies_approved,zelle_enabled,paypal_enabled").single());
   if(!store.policiesApproved||!launch.policies_approved||!launch.checkout_enabled)return closed;
   const methods=await invoke("payment_methods");
   if(!methods.zelle&&!methods.paypal)return closed;
   if(cart.some(line=>{const p=products.find(p=>p.variants.some(v=>v.id===line.variant_id));return line.quantity>purchaseLimit(p,p?.variants.find(v=>v.id===line.variant_id));}))return '<section class="wrap page"><h1>Checkout</h1><p role="alert">Your cart contains unavailable items. Review your selection before continuing.</p><a class="button" href="#/cart">Review cart</a></section>';
   const [rules, addresses] = await Promise.all([unwrap(db.from("shipping_rules").select("*").eq("approved", true)), unwrap(db.from("customer_addresses").select("*"))]);
-  return `<section class="wrap page"><h1>Checkout</h1><div class="checkout-grid"><form id="checkout" class="panel"><h2>Shipping details</h2>${addressPicker(addresses, rules)}${shippingFields()}<label>Payment method<select name="method" required>${methods.zelle?'<option value="zelle">Zelle · manual bank verification</option>':''}<option value="paypal" disabled>PayPal — Temporarily Unavailable</option><option disabled>Credit/debit cards — unavailable</option></select></label><label class="check"><input type="checkbox" required> I have reviewed the store policies.</label><button class="button" ${!cart.length || !rules.length ? "disabled" : ""}>Continue to payment</button></form><aside class="panel"><h2>Payment details</h2><div id="payment"></div></aside></div></section>`;
+  return `<section class="wrap page checkout-page"><span class="eyebrow">YOUR NEXT CONNECTION</span><h1>Checkout</h1><div class="checkout-steps" aria-label="Checkout steps"><span class="current">${interfaceIcon("pin")} Shipping</span><span>${interfaceIcon("card")} Payment</span><span>${interfaceIcon("check")} Confirmation</span></div><div class="checkout-grid"><form id="checkout" class="panel"><h2 class="checkout-heading">${interfaceIcon("truck")} Shipping details</h2>${addressPicker(addresses, rules)}${shippingFields()}<label>Payment method<select name="method" required>${methods.zelle?'<option value="zelle">Zelle · manual bank verification</option>':''}<option value="paypal" disabled>PayPal — Temporarily Unavailable</option><option disabled>Credit/debit cards — unavailable</option></select></label><label class="check"><input type="checkbox" required> I have reviewed the store policies.</label><button class="button" ${!cart.length || !rules.length ? "disabled" : ""}>Continue to payment</button></form><aside class="panel checkout-assurance"><span class="checkout-assurance-icon">${interfaceIcon("shield")}</span><h2>One step closer.</h2><p>Choose your delivery, then review the exact total before sending your Zelle payment.</p><div class="checkout-detail">${interfaceIcon("truck")} Standard shipping is free<br>Fast delivery is $25</div><div class="checkout-detail">${interfaceIcon("shield")} Bank receipt verified before processing</div><div id="payment"></div></aside></div></section>`;
 }
 async function render() {
   main.setAttribute("aria-busy","true");
@@ -196,7 +197,7 @@ function wire(path) {
   if(path==='/')cleanupShowcase=wireShowcase(main.querySelector('.product-showcase'));
   if(path==='/shop'){
     const form=document.querySelector('#filters'),disclosure=document.createElement('details'),summary=document.createElement('summary');
-    disclosure.className='filters-disclosure';disclosure.open=!matchMedia('(max-width:760px)').matches;summary.textContent='Filter & sort';
+    disclosure.className='filters-disclosure';summary.textContent='Filter & sort';
     form.before(disclosure);disclosure.append(summary,form);
   }
   if (path === "/connection" && settings.localTools) wireConnection();
@@ -330,6 +331,7 @@ function wire(path) {
       const f = Object.fromEntries(new FormData(ev.target));
       if (!ev.target.reportValidity() || !f.shipping) return;
       delete f.shipping_method;
+      delete f.phone_display;
       const request = sessionStorage.getItem("checkout-request") || crypto.randomUUID();
       sessionStorage.setItem("checkout-request", request);
       const result = await invoke("place_order", { items: cart, address: f, shipping: f.shipping, method: f.method, request });
@@ -373,6 +375,7 @@ async function showPayment(id) {
     const result = await invoke("zelle_instructions", { id });
     box.querySelector("p").textContent="Order number: "+o.id;
     box.querySelector("p").nextElementSibling.remove();
+    if(result.submitted){box.innerHTML=zelleInstructions(o,result);return;}
     box.insertAdjacentHTML("beforeend", zelleInstructions(o,result));
     wireZelleForms(box);
     return;

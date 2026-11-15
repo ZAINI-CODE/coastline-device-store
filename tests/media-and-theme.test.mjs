@@ -6,8 +6,8 @@ import {resolve,join,sep,basename} from 'node:path';
 import {productImages,mediaImage,mediaShape} from '../js/product-media.js';
 import {resolveTheme} from '../js/theme-state.js';
 import {importProductImages} from '../scripts/import-product-images.mjs';
-test('theme respects saved choices and falls back to the system preference',()=>{
- assert.equal(resolveTheme(null,true),'dark');assert.equal(resolveTheme(null,false),'light');assert.equal(resolveTheme('light',true),'light');assert.equal(resolveTheme('dark',false),'dark');assert.equal(resolveTheme('invalid',true),'dark');
+test('theme defaults to white even on dark systems and respects explicit saved choices',()=>{
+ assert.equal(resolveTheme(null,true),'light');assert.equal(resolveTheme(null,false),'light');assert.equal(resolveTheme('light',true),'light');assert.equal(resolveTheme('dark',false),'dark');assert.equal(resolveTheme('invalid',true),'light');
 });
 test('gallery removes duplicate derivatives and rejects foreign/unapproved variant images',()=>{
  const p={id:'phone',name:'Exact phone',product_type:'Smartphone'},v={color:'Blue',configuration:'128GB',variant_key:'blue-128',images:[

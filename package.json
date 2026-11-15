@@ -14,7 +14,10 @@
     "qa:fixture": "node tests/qa-server.mjs"
   },
   "dependencies": {
-    "@supabase/supabase-js": "2.81.1"
+    "@supabase/supabase-js": "2.81.1",
+    "country-flag-icons": "1.6.20",
+    "libphonenumber-js": "1.13.16",
+    "lucide": "1.73.0"
   },
   "devDependencies": {
     "@electric-sql/pglite": "^0.5.14",

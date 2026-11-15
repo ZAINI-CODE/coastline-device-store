@@ -7,7 +7,7 @@ export function initializeTheme(){
   button?.setAttribute('aria-label',`Switch to ${theme==='dark'?'light':'dark'} theme`);
   button?.setAttribute('aria-pressed',String(theme==='dark'));
   if(button)button.title=theme==='dark'?'Switch to light theme':'Switch to dark theme';
-  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',theme==='dark'?'#0c0d0f':'#faf9f6');
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',theme==='dark'?'#0c0d0f':'#ffffff');
  }
  apply(saved);
  button?.addEventListener('click',()=>{saved=document.documentElement.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('store-theme',saved);}catch{}apply(saved);});

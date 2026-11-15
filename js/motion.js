@@ -13,7 +13,7 @@ export function initializeMotion(){
   if(!('IntersectionObserver' in window)){animate(root);return;}
   animate(root);
   observer=new IntersectionObserver(entries=>{let order=0;for(const entry of entries)if(entry.isIntersecting){observer.unobserve(entry.target);if(seen.has(entry.target))continue;seen.add(entry.target);if(entry.target.matches('.hero-copy'))[...entry.target.children].forEach((child,i)=>animate(child,i*55));else animate(entry.target,Math.min(order++*30,90));}},{threshold:.08,rootMargin:'0px 0px -12px 0px'});
-  root.querySelectorAll('.hero-copy,.hero-device,.hero-product-caption,.category,.section-head,.product-card,.gaming,.split-section>a,.page>.panel,.account-grid>.panel,.directory-row,.editorial-tile,.collection-callout,.specification-group,dialog').forEach(element=>observer.observe(element));
+  root.querySelectorAll('.hero-copy,.hero-device,.hero-product-caption,.category,.section-head,.product-card,.gaming,.split-section>a,.page>.panel,.account-grid>.panel,.directory-row,.editorial-tile,.collection-callout,.specification-group,.about-gallery figure,.about-page .policy-section,.iphone-deal,dialog').forEach(element=>observer.observe(element));
   const footer=document.querySelector('footer');if(footer&&!seen.has(footer))observer.observe(footer);
   heroObserver=new IntersectionObserver(entries=>{for(const entry of entries)entry.target.classList.toggle('is-inview',entry.isIntersecting);},{threshold:.01});
   root.querySelectorAll('.hero-showcase').forEach(element=>heroObserver.observe(element));

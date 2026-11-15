@@ -1,4 +1,5 @@
-import { escapeHTML as e } from "./core.js";
+import { escapeHTML as e, safeImage } from "./core.js";
+import {mediaImage} from './product-media.js';
 const supportLinks = '<nav class="policy-links" aria-label="Customer support"><a class="text-link" href="#/contact">Contact us →</a><a class="text-link" href="#/account">Order support →</a></nav>';
 const policyContactPages = new Set(['contact', 'shipping', 'returns', 'warranty', 'payment', 'privacy', 'terms']);
 function policyText(text) {
@@ -23,7 +24,9 @@ function informationPage(key, content, store) {
   }).join('');
   const contact = policyContactPages.has(key) && store?.supportEmail
     ? `<p><strong>${e(store.name || 'Customer support')}</strong> · <a href="mailto:${e(store.supportEmail)}">${e(store.supportEmail)}</a></p>` : '';
-  return `<section class="wrap page prose policy-page"><span class="eyebrow">${key === "about" ? "THE STORE" : "CUSTOMER INFORMATION"}</span><h1>${e(page.title)}</h1>${page.paragraphs.map(text => `<p class="intro">${e(text)}</p>`).join('')}<div class="policy-sections">${sections}</div>${contact}${supportLinks}</section>`;
+  const images=key==='about'?(page.images||[]).filter(image=>safeImage(image.path)).slice(0,2):[];
+  const gallery=images.length?`<div class="about-gallery">${images.map(image=>`<figure>${mediaImage({path:image.path,alt:image.alt},{responsive:true})}<figcaption>${e(image.caption)}</figcaption></figure>`).join('')}</div>`:'';
+  return `<section class="wrap page prose policy-page${key==='about'?' about-page':''}"><span class="eyebrow">${key === "about" ? "THE STORE" : "CUSTOMER INFORMATION"}</span><h1>${e(page.title)}</h1>${page.paragraphs.map(text => `<p class="intro">${e(text)}</p>`).join('')}${gallery}<div class="policy-sections">${sections}</div>${contact}${supportLinks}</section>`;
 }
 export {
   informationPage

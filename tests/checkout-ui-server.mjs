@@ -1,0 +1,17 @@
+import http from 'node:http';
+import {readFile} from 'node:fs/promises';
+import {resolve,extname,sep} from 'node:path';
+import {build} from 'esbuild';
+const entry=`import {shippingFields,addressPicker,wireCheckoutAddresses,US_STATES} from './js/checkout-addresses.js';
+import {zelleInstructions,wireZelleForms} from './js/zelle-checkout.js';
+import {interfaceIcon as icon} from './js/interface-icons.js';
+const rules=US_STATES.flatMap(([state])=>[{id:state+'-standard',country:'US',state,method:'Standard shipping',price_cents:0,approved:true},{id:state+'-fast',country:'US',state,method:'Fast delivery',price_cents:2500,approved:true}]);
+addressPicker([],rules);
+document.querySelector('#fields').innerHTML=shippingFields();wireCheckoutAddresses();
+document.querySelector('#checkout').onsubmit=e=>{e.preventDefault();document.querySelector('#validation').textContent='Local validation passed. '+new FormData(e.target).get('phone')+' · '+new FormData(e.target).get('shipping');};
+document.querySelector('#payment').innerHTML=zelleInstructions({id:'LOCAL-TEST-ONLY'},{total_cents:10000,recipientName:'Local test fixture',recipient:'fixture@example.invalid'});
+wireZelleForms(document,async(action,body)=>{if(body.reference==='FAIL')throw Error('Local test: submission rejected');});
+for(const el of document.querySelectorAll('[data-icon]'))el.innerHTML=icon(el.dataset.icon);`;
+const bundle=await build({stdin:{contents:entry,resolveDir:process.cwd(),sourcefile:'checkout-ui-fixture.js'},bundle:true,format:'esm',write:false});
+const root=resolve('dist');
+http.createServer(async(req,res)=>{try{const path=new URL(req.url,'http://localhost').pathname;if(path==='/fixture.js'){res.setHeader('Content-Type','text/javascript');return res.end(bundle.outputFiles[0].text);}if(path==='/'){res.setHeader('Content-Type','text/html');return res.end(`<!doctype html><html lang="en"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Local checkout verification</title>${['store','media','theme','premium','product-experience','final-polish'].map(x=>'<link rel="stylesheet" href="/css/'+x+'.css">').join('')}<body><aside class="qa-banner">LOCAL DISPOSABLE UI TEST — no real orders, payments or customer data</aside><main class="wrap page checkout-page"><h1>Checkout</h1><div class="checkout-steps"><span class="current"><i data-icon="pin"></i>Shipping</span><span><i data-icon="card"></i>Payment</span><span><i data-icon="check"></i>Confirmation</span></div><div class="checkout-grid"><form id="checkout" class="panel"><h2 class="checkout-heading"><i data-icon="truck"></i>Shipping details</h2><div id="fields"></div><button class="button">Validate local address</button><p id="validation" role="status"></p></form><aside class="panel checkout-assurance"><span class="checkout-assurance-icon" data-icon="shield"></span><h2>One step closer.</h2><p>U.S. delivery only. Standard is free. Fast delivery is $25.</p></aside></div><div id="payment" class="panel payment-panel"></div></main><script type="module" src="/fixture.js"></script></body></html>`);}const file=resolve(root,'.'+decodeURIComponent(path));if(!file.startsWith(root+sep))throw Error('Forbidden');res.setHeader('Content-Type',({'.css':'text/css','.svg':'image/svg+xml','.js':'text/javascript','.png':'image/png','.webp':'image/webp'})[extname(file)]||'text/plain');res.end(await readFile(file));}catch(error){res.writeHead(404);res.end('Not found');}}).listen(4175,'127.0.0.1',()=>console.log('Local checkout UI fixture: http://127.0.0.1:4175. No external services.'));
