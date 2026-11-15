@@ -1,3 +1,4 @@
+import {styleActions} from './action-styles.js';
 import {interfaceIcon} from './interface-icons.js';
 import {zelleInstructions,wireZelleForms} from './zelle-checkout.js';
 import { connectionPage, wireConnection } from "./connection.js";
@@ -179,7 +180,7 @@ async function render() {
     const heading = main.querySelector("h1")?.textContent;
     if (path !== "/" && heading) document.title = heading + " \xB7 " + (store.name || "Electronics");
     if (loadError && !["/connection", "/account", "/admin"].includes(path)) main.insertAdjacentHTML("afterbegin", `<div class="error wrap" role="alert">${e(loadError)}</div>`);
-    wire(path);
+    wire(path);styleActions(main);
     if (path === '/' || path === '/shop' || path.startsWith('/product/')) cleanupPromotions=wireProductPromotions(main,products);
     revealPage(main);
     if(settings.frontendReview&&settings.localTools) main.insertAdjacentHTML('afterbegin','<div class="review-banner wrap" role="note">Collection preview · Product photography and details for review. Orders, accounts and payments are unavailable in this preview.</div>');
@@ -377,7 +378,7 @@ async function showPayment(id) {
     box.querySelector("p").nextElementSibling.remove();
     if(result.submitted){box.innerHTML=zelleInstructions(o,result);return;}
     box.insertAdjacentHTML("beforeend", zelleInstructions(o,result));
-    wireZelleForms(box);
+    wireZelleForms(box);styleActions(box);
     return;
   }
   throw new Error("PayPal is temporarily unavailable. Your order remains unpaid.");
