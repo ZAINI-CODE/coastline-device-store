@@ -2,7 +2,7 @@
 -- Guarded first installation for roamotmagssiipntchgh.supabase.co.
 -- Aborts on application object/function collisions; preserves Auth, Storage and unrelated objects.
 -- Checkout remains disabled. Seeds only categories and disabled store settings.
--- All 26 migrations execute in one transaction; any failure rolls back installation.
+-- All 30 migrations execute in one transaction; any failure rolls back installation.
 begin;
 set local search_path = pg_catalog, public, pg_temp;
 do $preflight$
@@ -11,7 +11,7 @@ begin
  perform pg_advisory_xact_lock(hashtextextended('electronics-store-schema-install',0));
  select string_agg(c.relname,', ' order by c.relname) into collisions from pg_class c join pg_namespace n on n.oid=c.relnamespace where n.nspname='public' and c.relname=any(array['admin_members','profiles','categories','products','product_variants','inventory','shipping_rules','promotions','promotion_products','customer_addresses','carts','orders','order_items','payments','order_status_history','reviews','review_reports','admin_audit_logs','webhook_events','request_limits','store_settings','contact_messages','refunds','product_costs','inventory_adjustments','catalogue_imports','payment_operations','order_email_outbox','review_likes']) and c.relkind in ('r','p','v','m','f');
  if collisions is not null then raise exception 'Installation stopped: existing application objects: %. No objects were changed; inspect and use additive migrations.',collisions;end if;
- select string_agg(distinct p.proname,', ') into collisions from pg_proc p join pg_namespace n on n.oid=p.pronamespace where n.nspname='public' and p.proname=any(array['is_admin','audit_change','record_order_status','place_order','release_order','expire_reservations','confirm_payment','submit_review','admin_order','limit_request','guard_product_publication','validate_order_insert','begin_capture','send_contact','request_full_refund','finish_paypal_refund','admin_store_summary','record_inventory_adjustment','guard_demo_order_item','adjust_inventory','import_store_catalogue','claim_payment_operation','finish_payment_operation','record_paypal_webhook_event','storefront_catalogue','review_eligibility','my_product_reviews','queue_order_email','claim_order_emails','has_recent_product_sales','product_review_likes','like_review','guard_payment_method','begin_zelle_payment','submit_zelle_payment','cancel_unreceived_zelle','guard_order_address','guard_order_item_readiness','set_order_email_admin','queue_zelle_submission_email','claim_admin_order_emails']);
+ select string_agg(distinct p.proname,', ') into collisions from pg_proc p join pg_namespace n on n.oid=p.pronamespace where n.nspname='public' and p.proname=any(array['is_admin','audit_change','record_order_status','place_order','release_order','expire_reservations','confirm_payment','submit_review','admin_order','limit_request','guard_product_publication','validate_order_insert','begin_capture','send_contact','request_full_refund','finish_paypal_refund','admin_store_summary','record_inventory_adjustment','guard_demo_order_item','adjust_inventory','import_store_catalogue','claim_payment_operation','finish_payment_operation','record_paypal_webhook_event','storefront_catalogue','review_eligibility','my_product_reviews','queue_order_email','claim_order_emails','has_recent_product_sales','product_review_likes','like_review','guard_payment_method','begin_zelle_payment','submit_zelle_payment','cancel_unreceived_zelle','guard_order_address','guard_order_item_readiness','set_order_email_admin','queue_zelle_submission_email','claim_admin_order_emails','store_variant_ready','sync_my_profile']);
  if collisions is not null then raise exception 'Installation stopped: existing application functions: %. No existing function will be replaced.',collisions;end if;
 end $preflight$;
 do $security$ begin
@@ -1398,6 +1398,145 @@ $$;
 revoke all on function public.set_order_email_admin(),public.queue_zelle_submission_email(),public.queue_order_email(),public.claim_admin_order_emails(uuid) from public,anon,authenticated;
 grant execute on function public.claim_admin_order_emails(uuid) to service_role;
 notify pgrst,'reload schema';
+
+-- Source: 027_checkout_shipping_contact.sql
+set local lock_timeout='5s';
+-- Add the requested fast option without changing existing shipping rules or orders.
+do $$ begin
+ if exists(select 1 from public.shipping_rules where country='US' and method='Fast delivery' and (price_cents<>2500 or free_over_cents is not null or tax_basis_points<>0 or not approved)) then raise exception 'Conflicting fast shipping rule; inspect before proceeding';end if;
+end $$;
+insert into public.shipping_rules(country,state,method,price_cents,tax_basis_points,approved,delivery_description)
+select 'US',s.state,'Fast delivery',2500,0,true,'Fast delivery'
+from (select distinct state from public.shipping_rules where country='US' and approved and method='Standard shipping' and price_cents=0) s
+where not exists(select 1 from public.shipping_rules r where r.country='US' and r.state=s.state and r.method='Fast delivery');
+create or replace function public.guard_order_address() returns trigger
+language plpgsql security definer set search_path=pg_catalog as $$
+declare field text;begin
+ foreach field in array array['full_name','line1','city','state','postal_code','country','phone'] loop
+  if jsonb_typeof(new.shipping_address->field) is distinct from 'string' or
+   length(trim(coalesce(new.shipping_address->>field,'')))=0 then raise exception 'Complete shipping address required';end if;
+ end loop;
+ if length(new.shipping_address->>'phone')>30 or length(regexp_replace(new.shipping_address->>'phone','[^0-9]','','g')) not between 10 and 15 or length(new.shipping_address->>'full_name')>100 or length(new.shipping_address->>'line1')>200 or
+ length(new.shipping_address->>'city')>100 or new.shipping_address->>'country'<>'US' or
+ new.shipping_address->>'state' !~ '^(AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY)$' or
+ new.shipping_address->>'postal_code' !~ '^[0-9]{5}(-[0-9]{4})?$' then raise exception 'Invalid US shipping address';end if;
+ return new;
+end$$;
+
+revoke all on function public.guard_order_address() from public,anon,authenticated;
+
+-- Source: 028_international_contact.sql
+set local lock_timeout='5s';
+-- International contact numbers; delivery remains restricted to the 50 US states.
+-- Only new-order validation changes. Existing orders and grants remain intact.
+create or replace function public.guard_order_address() returns trigger
+language plpgsql security definer set search_path=pg_catalog as $$
+declare field text;begin
+ foreach field in array array['full_name','line1','city','state','postal_code','country','phone'] loop
+  if jsonb_typeof(new.shipping_address->field) is distinct from 'string' or
+   length(trim(coalesce(new.shipping_address->>field,'')))=0 then raise exception 'Complete shipping address required';end if;
+ end loop;
+ if new.shipping_address->>'phone' !~ '^\+[1-9][0-9]{6,14}$' or length(new.shipping_address->>'full_name')>100 or length(new.shipping_address->>'line1')>200 or
+ length(new.shipping_address->>'city')>100 or new.shipping_address->>'country'<>'US' or
+ new.shipping_address->>'state' !~ '^(AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY)$' or
+ new.shipping_address->>'postal_code' !~ '^[0-9]{5}(-[0-9]{4})?$' then raise exception 'Invalid US shipping address';end if;
+ return new;
+end$$;
+
+revoke all on function public.guard_order_address() from public,anon,authenticated;
+
+-- Source: 029_purchase_readiness.sql
+set local lock_timeout='5s';
+-- A fixed PC configuration does not require an optional exterior-colour label.
+-- Keep all SKU, pricing, inventory and configuration checks in place.
+create or replace function public.store_variant_ready(p_variant uuid) returns boolean
+language sql stable security definer set search_path=pg_catalog as $$
+ select exists(select 1 from public.product_variants v
+ join public.products p on p.id=v.product_id
+ left join public.categories c on c.id=p.category_id
+ join public.inventory i on i.variant_id=v.id
+ where v.id=p_variant and p.published and not p.demo_only and v.active
+ and i.provisional is false and v.price_cents>0 and length(trim(v.sku))>0
+ and nullif(trim(v.price_source),'') is not null and v.price_verified_at is not null
+ and nullif(trim(v.configuration),'') is not null and v.configuration !~* '(pending|unknown|to confirm)'
+ and (coalesce(v.color,'') !~* '(pending|unknown|to confirm)' or
+   (c.name='Gaming PCs' and not exists(select 1 from public.product_variants other
+     where other.product_id=p.id and other.active and other.id<>v.id
+       and coalesce(other.color,'') is distinct from coalesce(v.color,''))))
+ and (v.image_path is null or (v.image_permission='approved' and v.image_verified_at is not null)))
+$$;
+create or replace function public.guard_order_item_readiness() returns trigger
+language plpgsql security definer set search_path=pg_catalog as $$begin
+ if not public.store_variant_ready(new.variant_id) or not exists(
+   select 1 from public.product_variants v where v.id=new.variant_id
+   and v.product_id=new.product_id and v.price_cents=new.unit_price_cents
+ ) then raise exception 'Product configuration unavailable for purchase. Please contact support.';end if;
+ return new;
+end$$;
+revoke all on function public.store_variant_ready(uuid),public.guard_order_item_readiness() from public,anon,authenticated;
+-- Update only the reviewed readiness clause in the existing public projection.
+-- Abort rather than overwrite an unfamiliar hosted definition.
+do $projection$
+declare definition text;clause text;normalized text;
+begin
+ definition:=pg_get_functiondef('public.storefront_catalogue()'::regprocedure);
+ if position('select public.store_variant_ready(x.id) as approved' in definition)>0 then return;end if;
+ clause:=substring(definition from '(?s)select not p\.demo_only and x\.active.*? as approved');
+ normalized:=trim(regexp_replace(clause,'[[:space:]]+',' ','g'));
+ if normalized is distinct from 'select not p.demo_only and x.active and (x.image_path is null or (x.image_permission = ''approved'' and x.image_verified_at is not null)) and nullif(trim(x.price_source), '''') is not null and x.price_verified_at is not null as approved' then
+ raise exception 'Storefront readiness differs from reviewed source; inspect before applying';end if;
+ execute replace(definition,clause,'select public.store_variant_ready(x.id) as approved');
+end $projection$;
+notify pgrst,'reload schema';
+
+-- Source: 030_customer_profiles.sql
+set local lock_timeout='5s';
+alter table public.profiles add column if not exists phone text;
+alter table public.profiles add column if not exists avatar_path text;
+alter table public.profiles add column if not exists avatar_mode text not null default 'google';
+alter table public.profiles add column if not exists google_avatar_url text;
+do $$begin
+ if not exists(select 1 from pg_constraint where conrelid='public.profiles'::regclass and conname='profile_contact_format') then
+ alter table public.profiles add constraint profile_contact_format check(phone is null or phone ~ '^\+[1-9][0-9]{6,14}$');end if;
+ if not exists(select 1 from pg_constraint where conrelid='public.profiles'::regclass and conname='profile_avatar_scope') then
+ alter table public.profiles add constraint profile_avatar_scope check(avatar_path is null or avatar_path ~ ('^'||id::text||'/[0-9a-f-]{36}\.webp$'));end if;
+ if not exists(select 1 from pg_constraint where conrelid='public.profiles'::regclass and conname='profile_avatar_mode') then
+ alter table public.profiles add constraint profile_avatar_mode check(avatar_mode in ('google','upload','none'));end if;
+ if not exists(select 1 from pg_constraint where conrelid='public.profiles'::regclass and conname='profile_google_avatar_host') then
+ alter table public.profiles add constraint profile_google_avatar_host check(google_avatar_url is null or (length(google_avatar_url)<=2048 and google_avatar_url ~ '^https://[a-zA-Z0-9-]+\.googleusercontent\.com/'));end if;
+end$$;
+create or replace function public.sync_my_profile() returns void
+language plpgsql security definer set search_path=pg_catalog as $$
+declare who uuid:=auth.uid();meta jsonb:=auth.jwt()->'user_metadata';photo text;person text;contact text;
+begin
+ if who is null then raise exception 'Sign in required';end if;
+ person:=left(coalesce(nullif(trim(meta->>'display_name'),''),nullif(trim(meta->>'full_name'),''),nullif(trim(meta->>'name'),'')),80);
+ contact:=meta->>'phone';if contact !~ '^\+[1-9][0-9]{6,14}$' then contact:=null;end if;
+ if auth.jwt()->'app_metadata'->>'provider'='google' or (auth.jwt()->'app_metadata'->'providers') ? 'google' then
+ photo:=coalesce(meta->>'avatar_url',meta->>'picture');
+ if photo !~ '^https://[a-zA-Z0-9-]+\.googleusercontent\.com/' or length(photo)>2048 then photo:=null;end if;
+ end if;
+ insert into public.profiles(id,display_name,phone,google_avatar_url) values(who,person,contact,photo)
+ on conflict(id) do update set
+ display_name=coalesce(nullif(trim(profiles.display_name),''),excluded.display_name),
+ phone=coalesce(profiles.phone,excluded.phone),
+ google_avatar_url=coalesce(excluded.google_avatar_url,profiles.google_avatar_url);
+end$$;
+revoke all on function public.sync_my_profile() from public,anon;
+grant execute on function public.sync_my_profile() to authenticated;
+-- Existing profile RLS continues to restrict all rows to auth.uid().
+insert into storage.buckets(id,name,public,file_size_limit,allowed_mime_types)
+values('profile-avatars','profile-avatars',false,2097152,array['image/webp']) on conflict(id) do nothing;
+do $$begin
+ if exists(select 1 from storage.buckets where id='profile-avatars' and (public or file_size_limit is distinct from 2097152 or allowed_mime_types is distinct from array['image/webp'])) then
+ raise exception 'Existing avatar bucket differs from reviewed private configuration';end if;
+ if not exists(select 1 from pg_policies where schemaname='storage' and tablename='objects' and policyname='own_avatar_read') then
+ create policy own_avatar_read on storage.objects for select to authenticated using(bucket_id='profile-avatars' and (storage.foldername(name))[1]=auth.uid()::text);end if;
+ if not exists(select 1 from pg_policies where schemaname='storage' and tablename='objects' and policyname='own_avatar_insert') then
+ create policy own_avatar_insert on storage.objects for insert to authenticated with check(bucket_id='profile-avatars' and name ~ ('^'||auth.uid()::text||'/[0-9a-f-]{36}\.webp$'));end if;
+ if not exists(select 1 from pg_policies where schemaname='storage' and tablename='objects' and policyname='own_avatar_delete') then
+ create policy own_avatar_delete on storage.objects for delete to authenticated using(bucket_id='profile-avatars' and (storage.foldername(name))[1]=auth.uid()::text);end if;
+end$$;
 do $verify$ begin
  if (select count(*) from pg_class c join pg_namespace n on n.oid=c.relnamespace where n.nspname='public' and c.relname=any(array['admin_members','profiles','categories','products','product_variants','inventory','shipping_rules','promotions','promotion_products','customer_addresses','carts','orders','order_items','payments','order_status_history','reviews','review_reports','admin_audit_logs','webhook_events','request_limits','store_settings','contact_messages','refunds','product_costs','inventory_adjustments','catalogue_imports','payment_operations','order_email_outbox','review_likes']) and c.relkind='r' and c.relrowsecurity) <> 29 then raise exception 'Application RLS postcondition failed';end if;
  if exists(select 1 from pg_class c join pg_namespace n on n.oid=c.relnamespace cross join (values ('anon'),('authenticated')) r(role_name) where n.nspname='public' and c.relname=any(array['admin_members','profiles','categories','products','product_variants','inventory','shipping_rules','promotions','promotion_products','customer_addresses','carts','orders','order_items','payments','order_status_history','reviews','review_reports','admin_audit_logs','webhook_events','request_limits','store_settings','contact_messages','refunds','product_costs','inventory_adjustments','catalogue_imports','payment_operations','order_email_outbox','review_likes']) and has_table_privilege(r.role_name,c.oid,'TRUNCATE')) then raise exception 'Unexpected client TRUNCATE privilege';end if;

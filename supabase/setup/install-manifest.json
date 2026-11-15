@@ -26,9 +26,13 @@
     "023_zelle_checkout.sql",
     "024_order_email_delivery.sql",
     "025_purchase_validation.sql",
-    "026_order_notifications.sql"
+    "026_order_notifications.sql",
+    "027_checkout_shipping_contact.sql",
+    "028_international_contact.sql",
+    "029_purchase_readiness.sql",
+    "030_customer_profiles.sql"
   ],
-  "sha256": "8a6318ab81fc2f3cdc1e55d8a706708ea1b1f6176367ae75a312079249e42381",
+  "sha256": "627c297976b7b526cbd2d3b8eae8eba60c8b48cd24bb5e909c52164cc4bd1ac4",
   "tables": [
     "admin_members",
     "profiles",
@@ -101,7 +105,9 @@
     "guard_order_item_readiness",
     "set_order_email_admin",
     "queue_zelle_submission_email",
-    "claim_admin_order_emails"
+    "claim_admin_order_emails",
+    "store_variant_ready",
+    "sync_my_profile"
   ],
   "checkoutEnabled": false,
   "approvalRequired": true,
