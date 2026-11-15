@@ -1,3 +1,4 @@
+import {storageFixture} from './storage-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile,readdir} from 'node:fs/promises';
@@ -10,6 +11,7 @@ const a='11111111-1111-4111-8111-111111111111',b='22222222-2222-4222-8222-222222
 export async function catalogueDatabase(){
  const db=new PGlite();
  await db.exec(`create role anon;create role authenticated;create role service_role bypassrls;create schema auth;create table auth.users(id uuid primary key);create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.uid',true),'')::uuid$$;create function auth.jwt() returns jsonb language sql stable as $$select jsonb_build_object('aal',coalesce(current_setting('request.aal',true),'aal1'))$$;grant usage on schema public,auth to anon,authenticated,service_role;`);
+ await storageFixture(db);
  for(const file of (await readdir('supabase/migrations')).filter(f=>/^\d.*\.sql$/.test(f)).sort())await db.exec(await readFile('supabase/migrations/'+file,'utf8'));
  // Existing payment tests explicitly enable both methods in this isolated fixture.
  await db.exec("update store_settings set zelle_enabled=true,paypal_enabled=true");
@@ -39,7 +41,7 @@ test('mixed-rate campaign checkout preserves base prices, matches line discounts
   const shipping=(await db.query("insert into shipping_rules(country,state,method,price_cents,tax_basis_points,approved,delivery_description) values('US','FL','Test',0,0,true,'Test') returning id")).rows[0].id;
   await db.query("select set_config('request.uid',$1,false)",[a]);
   await db.exec('set role authenticated');
-  const address={full_name:'Test Buyer',line1:'1 Test Street',city:'Test',postal_code:'00000',state:'FL',country:'US'};
+  const address={full_name:'Test Buyer',line1:'1 Test Street',city:'Test',postal_code:'00000',state:'FL',country:'US',phone:'+12025550123'};
   const request=crypto.randomUUID();
   const place=()=>db.query('select place_order($1::jsonb,$2::jsonb,$3,$4,$5) id',[JSON.stringify(items),JSON.stringify(address),shipping,'zelle',request]);
   const order=(await place()).rows[0].id;
@@ -66,7 +68,7 @@ test('recent sales exposes only a verified rolling seven-day threshold to anonym
     await db.query('insert into inventory(variant_id,quantity) values($1,100)',[variant]);
     async function addOrder(quantity, paymentStatus, ageHours, capture = true) {
       const [{id}] = (await db.query(`insert into orders(user_id,request_id,shipping_address,method,payment_status,subtotal_cents,discount_cents,shipping_cents,tax_cents,total_cents)
-        values ($1,gen_random_uuid(),'{"full_name":"Test Buyer","line1":"Test Street","city":"Test City","postal_code":"00000","state":"FL","country":"US"}','zelle',$2,1000,0,0,0,1000) returning id`, [a,paymentStatus])).rows;
+        values ($1,gen_random_uuid(),'{"full_name":"Test Buyer","line1":"Test Street","city":"Test City","postal_code":"00000","state":"FL","country":"US","phone":"+12025550123"}','zelle',$2,1000,0,0,0,1000) returning id`, [a,paymentStatus])).rows;
       await db.query(`insert into order_items(order_id,variant_id,product_id,product_name,sku,variant,quantity,unit_price_cents)
         values ($1,$2,$3,'Test item','TEST-SALES','Black',$4,1000)`, [id,variant,product,quantity]);
       await db.query(`insert into payments(order_id,capture_id,verified_at)
@@ -155,13 +157,13 @@ test('private costs, import authorization, MFA, inventory CAS and demo checkout 
   // Even an accidentally activated demo variant cannot reserve an order.
   await db.query("update product_variants set image_path='images/products/test.webp',image_permission='approved',image_verified_at=now(),active=true where id=$1",[v.id]);
   await db.exec('set role authenticated');
-  await assert.rejects(()=>db.query('select place_order($1,$2,$3,$4,$5)',[JSON.stringify([{variant_id:v.id,quantity:1}]),JSON.stringify({full_name:'Test',line1:'Test street',city:'Test',state:'FL',postal_code:'00000',country:'US'}),ship,'paypal','33333333-3333-4333-8333-333333333333']),/demo inventory/);
+  await assert.rejects(()=>db.query('select place_order($1,$2,$3,$4,$5)',[JSON.stringify([{variant_id:v.id,quantity:1}]),JSON.stringify({full_name:'Test',line1:'Test street',city:'Test',state:'FL',postal_code:'00000',country:'US',phone:'+12025550123'}),ship,'paypal','33333333-3333-4333-8333-333333333333']),/demo inventory/);
   assert.equal((await db.query('select count(*)::int n from orders')).rows[0].n,0);
   await db.exec('reset role');
   await db.query('update products set demo_only=false where id=$1',[p.id]);
   await db.exec('set role anon');
   const option=async()=>(await db.query('select storefront_catalogue() as product')).rows.find(row=>row.product.id===p.id).product.variants.find(x=>x.id===v.id);
-  assert.equal((await option()).price_cents,v.price_cents);
+  assert.equal((await option()).price_cents,null); // Provisional inventory is not purchase-ready.
   assert.equal((await option()).stock,null);
   await db.exec('reset role');
   await db.query('update inventory set provisional=false where variant_id=$1',[v.id]);
@@ -192,7 +194,7 @@ test('owner-approved prices preserve stock; signed-in reviews are moderated and 
   await db.exec('update store_settings set checkout_enabled=true,policies_approved=true');
   const order=(await db.query(`insert into orders
     (user_id,request_id,shipping_address,method,status,payment_status,subtotal_cents,discount_cents,shipping_cents,tax_cents,total_cents)
-    values($1,gen_random_uuid(),'{"full_name":"Test Buyer","line1":"1 Test Street","city":"Test","postal_code":"00000","state":"FL","country":"US"}','zelle','shipped','paid',62900,0,0,0,62900) returning id`,[a])).rows[0].id;
+    values($1,gen_random_uuid(),'{"full_name":"Test Buyer","line1":"1 Test Street","city":"Test","postal_code":"00000","state":"FL","country":"US","phone":"+12025550123"}','zelle','shipped','paid',62900,0,0,0,62900) returning id`,[a])).rows[0].id;
   await db.query(`insert into order_items
     (order_id,variant_id,product_id,product_name,sku,variant,quantity,unit_price_cents)
     values($1,$2,$3,'Apple iPhone 16',$4,'128GB',1,62900)`,[order,iphone.variants[0].id,iphone.id,iphone.variants[0].sku]);

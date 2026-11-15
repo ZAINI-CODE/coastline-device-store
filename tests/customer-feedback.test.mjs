@@ -1,3 +1,4 @@
+import {storageFixture} from './storage-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile,readdir} from 'node:fs/promises';
@@ -9,6 +10,7 @@ test('external feedback preserves content, supports half stars, deduplicates and
  const db=new PGlite();
  try{
  await db.exec(`create role anon;create role authenticated;create role service_role bypassrls;create schema auth;create table auth.users(id uuid primary key);create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.uid',true),'')::uuid$$;create function auth.jwt() returns jsonb language sql stable as $$select jsonb_build_object('aal',coalesce(current_setting('request.aal',true),'aal1'))$$;grant usage on schema public,auth to anon,authenticated,service_role;`);
+ await storageFixture(db);
  for(const f of (await readdir('supabase/migrations')).filter(f=>/^\d.*\.sql$/.test(f)).sort())await db.exec(await readFile('supabase/migrations/'+f,'utf8'));
  const product=(await db.query("insert into products(name,brand,model) values('Exact Product','Brand','Model') returning id")).rows[0];
  const source='Exact Product\n\nTotal Reviews: 1\n\nReview 1\nCustomer: O\'Brien <buyer>\nOrder ID: ORD-TEST\nRating: 4.5/5 ⭐⭐⭐⭐½\nFeedback: Exact customer feedback & punctuation.\n';

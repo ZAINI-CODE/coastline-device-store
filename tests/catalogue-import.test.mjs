@@ -1,3 +1,4 @@
+import {storageFixture} from './storage-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile,readdir} from 'node:fs/promises';
@@ -8,7 +9,7 @@ import {mediaShape} from '../js/product-media.js';
 
 test('catalogue plan preserves source details, maps stable UUIDs and never invents offers',async()=>{
  const products=JSON.parse(await readFile('data/products.json','utf8'));
- const store=JSON.parse(await readFile('config/store.json','utf8'));
+ const store={categories:[...new Set(products.map(p=>p.category))]}; // Historical private import fixture, independent of public navigation.
  const plan=catalogueImportPlan(products,store.categories);
  assert.deepEqual(plan,catalogueImportPlan(products,store.categories));
  assert.equal(plan.entries.length,products.length);assert.equal(plan.categories.length,6);
@@ -26,8 +27,9 @@ test('every planned product row fits the reviewed PostgreSQL schema and stays pr
  const db=new PGlite();
  try{
   await db.exec("create role anon;create role authenticated;create role service_role bypassrls;create schema auth;create table auth.users(id uuid primary key);create function auth.uid() returns uuid language sql stable as $$select null::uuid$$;create function auth.jwt() returns jsonb language sql stable as $$select '{}'::jsonb$$;grant usage on schema public,auth to anon,authenticated,service_role;");
+  await storageFixture(db);
   for(const file of (await readdir('supabase/migrations')).filter(f=>/^\d.*\.sql$/.test(f)).sort())await db.exec(await readFile('supabase/migrations/'+file,'utf8'));
-  const plan=catalogueImportPlan(JSON.parse(await readFile('data/products.json','utf8')),JSON.parse(await readFile('config/store.json','utf8')).categories);
+  const products=JSON.parse(await readFile('data/products.json','utf8'));const plan=catalogueImportPlan(products,[...new Set(products.map(p=>p.category))]);
   for(const c of plan.categories)await db.query('insert into categories(id,name) values($1,$2)',[c.id,c.name]);
   for(const {row} of plan.entries){const columns=Object.keys(row);await db.query(`insert into products(${columns.join(',')}) values(${columns.map((_,i)=>'$'+(i+1)).join(',')})`,Object.values(row).map((v,i)=>columns[i]==='specifications'?JSON.stringify(v):v));}
   assert.equal((await db.query('select count(*)::int as count from products')).rows[0].count,plan.entries.length);

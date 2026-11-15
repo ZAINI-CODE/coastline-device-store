@@ -1,3 +1,4 @@
+import {storageFixture} from './storage-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile,readdir} from 'node:fs/promises';
@@ -59,9 +60,10 @@ test('latest SQL enforces two-customer isolation, MFA, complete purchases, durab
   await db.exec(`create role anon;create role authenticated;create role service_role bypassrls;create schema auth;create table auth.users(id uuid primary key,email text);create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.uid',true),'')::uuid$$;create function auth.jwt() returns jsonb language sql stable as $$select jsonb_build_object('aal',coalesce(current_setting('request.aal',true),'aal1'))$$;grant usage on schema public,auth to anon,authenticated,service_role;`);
   // The hosted audit found 018 missing. Verify 024 installs its compatible queue
   // without running the fresh-database installer or relying on 018.
+  await storageFixture(db);
   for(const f of (await readdir('supabase/migrations')).filter(x=>/^\d.*\.sql$/.test(x)&&!x.startsWith('018_')).sort())await db.exec(await readFile('supabase/migrations/'+f,'utf8'));
   // Additive migrations may be repeated; do not duplicate queued jobs.
-  for(const f of ['024_order_email_delivery.sql','025_purchase_validation.sql','026_order_notifications.sql'])await db.exec(await readFile('supabase/migrations/'+f,'utf8'));
+  for(const f of ['024_order_email_delivery.sql','025_purchase_validation.sql','026_order_notifications.sql','028_international_contact.sql','029_purchase_readiness.sql','030_customer_profiles.sql'])await db.exec(await readFile('supabase/migrations/'+f,'utf8'));
   await db.query('insert into auth.users values($1,$2),($3,$4)',[id,'buyer@example.test',other,'other@example.test']);
   await db.exec('update store_settings set checkout_enabled=true,policies_approved=true,zelle_enabled=true');
   const p=(await db.query("insert into products(name,brand,model,published,verification_source,verified_at) values('Fixture','Test','T',true,'https://example.test',now()) returning id")).rows[0].id;
@@ -69,7 +71,7 @@ test('latest SQL enforces two-customer isolation, MFA, complete purchases, durab
   await db.query('insert into inventory(variant_id,quantity) values($1,3)',[v]);
   const shipping=(await db.query("insert into shipping_rules(country,state,method,price_cents,tax_basis_points,approved,delivery_description) values('US','FL','Fixture',0,0,true,'Test') returning id")).rows[0].id;
   await db.query("select set_config('request.uid',$1,false)",[id]);await db.exec('set role authenticated');
-  const address={full_name:'Fixture Buyer',line1:'1 Fixture Street',city:'Fixture',state:'FL',country:'US',postal_code:'00000'};
+  const address={full_name:'Fixture Buyer',line1:'1 Fixture Street',city:'Fixture',state:'FL',country:'US',phone:'+12025550123',postal_code:'00000'};
   await db.query("insert into profiles(id,display_name) values($1,'Private buyer') on conflict(id) do update set display_name=excluded.display_name",[id]);
   await db.query("insert into customer_addresses(user_id,full_name,line1,city,state,postal_code,country)values($1,'Private buyer','1 Fixture Street','Fixture','FL','00000','US')",[id]);
   await db.query('insert into carts(user_id,items)values($1,$2)',[id,JSON.stringify([{variant_id:v,quantity:1}])]);
@@ -77,10 +79,10 @@ test('latest SQL enforces two-customer isolation, MFA, complete purchases, durab
   await assert.rejects(()=>place({...address,full_name:undefined}),/address/i);
   await assert.rejects(()=>place({...address,postal_code:'abc'}),/address/i);
   await db.exec('reset role');await db.query('update inventory set provisional=true where variant_id=$1',[v]);await db.exec('set role authenticated');
-  await assert.rejects(()=>place(),/incomplete|Provisional/i);
+  await assert.rejects(()=>place(),/configuration unavailable|Provisional/i);
   await db.exec('reset role');await db.query('update inventory set provisional=false where variant_id=$1',[v]);
   await db.query("update product_variants set configuration='pending' where id=$1",[v]);await db.exec('set role authenticated');
-  await assert.rejects(()=>place(),/incomplete/i);await db.exec('reset role');
+  await assert.rejects(()=>place(),/configuration unavailable/i);await db.exec('reset role');
   await db.query("update product_variants set configuration='128GB' where id=$1",[v]);await db.exec('set role authenticated');
   const key=crypto.randomUUID(),order=(await place(address,key)).rows[0].id;assert.equal((await place(address,key)).rows[0].id,order);
   await assert.rejects(()=>db.query("update orders set payment_status='paid' where id=$1",[order]),/permission/);
