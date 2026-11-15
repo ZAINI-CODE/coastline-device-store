@@ -135,8 +135,8 @@ async function checkout() {
   const methods=await invoke("payment_methods");
   if(!methods.zelle&&!methods.paypal)return closed;
   if(cart.some(line=>{const p=products.find(p=>p.variants.some(v=>v.id===line.variant_id));return line.quantity>purchaseLimit(p,p?.variants.find(v=>v.id===line.variant_id));}))return '<section class="wrap page"><h1>Checkout</h1><p role="alert">Your cart contains unavailable items. Review your selection before continuing.</p><a class="button" href="#/cart">Review cart</a></section>';
-  const [rules, addresses] = await Promise.all([unwrap(db.from("shipping_rules").select("*").eq("approved", true)), unwrap(db.from("customer_addresses").select("*"))]);
-  return `<section class="wrap page checkout-page"><span class="eyebrow">YOUR NEXT CONNECTION</span><h1>Checkout</h1><div class="checkout-steps" aria-label="Checkout steps"><span class="current">${interfaceIcon("pin")} Shipping</span><span>${interfaceIcon("card")} Payment</span><span>${interfaceIcon("check")} Confirmation</span></div><div class="checkout-grid"><form id="checkout" class="panel"><h2 class="checkout-heading">${interfaceIcon("truck")} Shipping details</h2>${addressPicker(addresses, rules)}${shippingFields()}<label>Payment method<select name="method" required>${methods.zelle?'<option value="zelle">Zelle · manual bank verification</option>':''}<option value="paypal" disabled>PayPal — Temporarily Unavailable</option><option disabled>Credit/debit cards — unavailable</option></select></label><label class="check"><input type="checkbox" required> I have reviewed the store policies.</label><button class="button" ${!cart.length || !rules.length ? "disabled" : ""}>Continue to payment</button></form><aside class="panel checkout-assurance"><span class="checkout-assurance-icon">${interfaceIcon("shield")}</span><h2>One step closer.</h2><p>Choose your delivery, then review the exact total before sending your Zelle payment.</p><div class="checkout-detail">${interfaceIcon("truck")} Standard shipping is free<br>Fast delivery is $25</div><div class="checkout-detail">${interfaceIcon("shield")} Bank receipt verified before processing</div><div id="payment"></div></aside></div></section>`;
+  const [rules, addresses, profile] = await Promise.all([unwrap(db.from("shipping_rules").select("*").eq("approved", true)), unwrap(db.from("customer_addresses").select("*")),unwrap(db.from("profiles").select("*").eq("id",user.id).maybeSingle())]);
+  return `<section class="wrap page checkout-page"><span class="eyebrow">YOUR NEXT CONNECTION</span><h1>Checkout</h1><div class="checkout-steps" aria-label="Checkout steps"><span class="current">${interfaceIcon("pin")} Shipping</span><span>${interfaceIcon("card")} Payment</span><span>${interfaceIcon("check")} Confirmation</span></div><div class="checkout-grid"><form id="checkout" class="panel" data-contact-name="${e(profile?.display_name||user.user_metadata?.full_name||'')}" data-contact-phone="${e(profile?.phone||'')}"><h2 class="checkout-heading">${interfaceIcon("truck")} Shipping details</h2><label>Contact email<input type="email" value="${e(user.email)}" readonly required autocomplete="email"></label>${addressPicker(addresses, rules)}${shippingFields()}<label>Payment method<select name="method" required>${methods.zelle?'<option value="zelle">Zelle · manual bank verification</option>':''}<option value="paypal" disabled>PayPal — Temporarily Unavailable</option><option disabled>Credit/debit cards — unavailable</option></select></label><label class="check"><input type="checkbox" required> I have reviewed the store policies.</label><button type="submit" class="button action-positive" ${!cart.length || !rules.length ? "disabled" : ""}>Continue to payment</button></form><aside class="panel checkout-assurance"><span class="checkout-assurance-icon">${interfaceIcon("shield")}</span><h2>One step closer.</h2><p>Choose your delivery, then review the exact total before sending your Zelle payment.</p><div class="checkout-detail">${interfaceIcon("truck")} Standard shipping is free<br>Fast delivery is $25</div><div class="checkout-detail">${interfaceIcon("shield")} Bank receipt verified before processing</div><div id="payment"></div></aside></div></section>`;
 }
 async function render() {
   main.setAttribute("aria-busy","true");
@@ -325,7 +325,7 @@ function wire(path) {
   }
   document.querySelector("#checkout")?.addEventListener("submit", (ev) => safe(async () => {
     ev.preventDefault();
-    const button = ev.target.querySelector("button");
+    const button = ev.target.querySelector('button[type="submit"]');
     button.disabled = true;
     try {
       const f = Object.fromEntries(new FormData(ev.target));
@@ -448,6 +448,7 @@ if (db) db.auth.onAuthStateChange((event) => {
   if (event === "SIGNED_IN" || event === "INITIAL_SESSION") setTimeout(() => safe(async () => {
     const { data: { user } } = await db.auth.getUser();
     if (!user) return;
+    const profileSync=await db.rpc("sync_my_profile");if(profileSync.error)notify("Signed in. Profile synchronization is temporarily unavailable.");
     try {
       const saved = await unwrap(db.from("carts").select("items").eq("user_id", user.id).maybeSingle());
       const merged = new Map(cart.map((x) => [x.variant_id, x.quantity]));
