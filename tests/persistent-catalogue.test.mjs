@@ -27,7 +27,7 @@ test('mixed-rate campaign checkout preserves base prices, matches line discounts
   for(const [name,category,key,price] of [['Apple iPhone 16','Apple iPhones','iphone-16',66045],['Acer Nitro','Gaming PCs','acer-nitro-85-n85-100-ur35',209999],['Apple AirPods Pro 3','Apple Products and Headphones','airpods-pro-3',26145]]) {
    const cid=(await db.query('insert into categories(name) values($1) on conflict(name) do update set name=excluded.name returning id',[category])).rows[0].id;
    const pid=(await db.query("insert into products(name,brand,model,category_id,catalogue_key,published,verification_source,verified_at) values($1,'Test',$1,$2,$3,true,'https://example.com/test',now()) returning id",[name,cid,key])).rows[0].id;
-   const vid=(await db.query("insert into product_variants(product_id,sku,color,configuration,price_cents,active,price_source,price_verified_at) values($1::uuid,$1::uuid::text,'Black','Standard',$2,true,'https://example.com/test',now()) returning id",[pid,price])).rows[0].id;
+   const vid=(await db.query("insert into product_variants(product_id,sku,color,configuration,price_cents,active,price_source,price_verified_at) values($1::uuid,$1::uuid::text,$3,'Standard',$2,true,'https://example.com/test',now()) returning id",[pid,price,category==='Gaming PCs'?'Colour to confirm':'Black'])).rows[0].id;
    await db.query('insert into inventory(variant_id,quantity) values($1,15)',[vid]);
    items.push({variant_id:vid,quantity:items.length===0?2:1,price_cents:1});
   }
