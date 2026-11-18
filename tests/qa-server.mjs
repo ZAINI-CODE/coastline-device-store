@@ -5,7 +5,14 @@ const uid = "11111111-1111-4111-8111-111111111111", now = Math.floor(Date.now() 
 const token = encode({ alg: "HS256", typ: "JWT" }) + "." + encode({ sub: uid, role: "authenticated", aal: "aal2", exp: now + 3600, iat: now, aud: "authenticated" }) + ".local-qa-only";
 const user = { id: uid, aud: "authenticated", role: "authenticated", email: "owner@qa.invalid", email_confirmed_at: (/* @__PURE__ */ new Date()).toISOString(), app_metadata: { provider: "email" }, user_metadata: {}, created_at: (/* @__PURE__ */ new Date()).toISOString() };
 const tables = { products: [], product_variants: [], inventory: [], categories: [{ id: "22222222-2222-4222-8222-222222222222", name: "QA only \u2014 disposable category" }], promotions: [], promotion_products: [], orders: [], reviews: [], review_reports: [], admin_audit_logs: [], contact_messages: [], customer_addresses: [], profiles: [], carts: [], store_settings: [{ id: true, checkout_enabled: false, policies_approved: false }] };
-const root = resolve("dist"), types = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".json": "application/json", ".webp": "image/webp", ".png": "image/png", ".xml": "application/xml" };
+// Optional public-catalogue snapshot is used only by the isolated redesign checks.
+const catalogue = process.env.QA_CATALOGUE_FILE ? JSON.parse(await readFile(process.env.QA_CATALOGUE_FILE,'utf8')) : [];
+tables.inventory_adjustments=[];
+tables.shipping_rules=[];
+tables.product_costs=[];
+let confirmationSubmitted=false;
+if(catalogue.length)tables.orders=[{id:'66666666-6666-4666-8666-666666666666',user_id:uid,created_at:new Date().toISOString(),expires_at:new Date(Date.now()+3600000).toISOString(),method:'zelle',payment_status:'pending',status:'pending',stock_released:false,subtotal_cents:10000,total_cents:10000,discount_cents:0,shipping_cents:0,tax_cents:0,shipping_address:{full_name:'Local QA Customer',line1:'100 Test Street',city:'Anchorage',state:'AK',postal_code:'99501',country:'US'},order_items:[{product_name:'Local disposable selection',sku:'LOCAL-ONLY',variant:'Local UI fixture',quantity:1,unit_price_cents:10000,discount_cents:0}],order_status_history:[],payments:{reference:null}}];
+const root = resolve("dist"), types = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", ".css": "text/css", ".json": "application/json", ".svg":"image/svg+xml", ".ico":"image/x-icon", ".webp": "image/webp", ".png": "image/png", ".xml": "application/xml" };
 function send(res, data, status = 200, headers = {}) {
   res.writeHead(status, { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "*", "Access-Control-Allow-Methods": "*", ...headers });
   res.end(JSON.stringify(data));
@@ -26,9 +33,18 @@ http.createServer(async (req, res) => {
     if (url.pathname === "/config/public.json") return send(res, { supabaseUrl: "http://127.0.0.1:4174", supabaseKey: "local-qa-public-key", paypalClientId: "" });
     if (url.pathname === "/auth/v1/token") return send(res, { access_token: token, refresh_token: "local-qa-only", token_type: "bearer", expires_in: 3600, expires_at: now + 3600, user });
     if (url.pathname === "/auth/v1/user") return send(res, user);
+    if (url.pathname === "/auth/v1/recover") return send(res, {});
+    if (url.pathname === "/auth/v1/signup") return send(res, {user,session:null});
     if (url.pathname === "/auth/v1/logout") return send(res, {});
+    if (url.pathname === '/functions/v1/store-api'){
+      if(body.action==='zelle_instructions')return send(res,{recipientName:'Local UI fixture',recipient:'fixture@example.invalid',total_cents:10000,submitted:confirmationSubmitted,reference:confirmationSubmitted?'LOCAL-REFERENCE':null});
+      if(body.action==='zelle_reference'){confirmationSubmitted=true;return send(res,{});}
+      return send(res,{error:'Unsupported local UI action'},400);
+    }
     if (url.pathname === "/rest/v1/rpc/is_admin") return send(res, req.headers.authorization === "Bearer " + token);
-    if (url.pathname === "/rest/v1/rpc/storefront_catalogue") return send(res, []);
+    if (url.pathname === "/rest/v1/rpc/storefront_catalogue") return send(res, catalogue);
+    if (url.pathname === "/rest/v1/rpc/sync_my_profile") return send(res, null);
+    if (url.pathname === "/rest/v1/rpc/my_product_reviews") return send(res, []);
     if (url.pathname === "/rest/v1/rpc/send_contact") {
       if (req.headers.authorization !== "Bearer " + token) return send(res, {message:"Sign in"}, 401);
       tables.contact_messages.push({id:crypto.randomUUID(),user_id:uid,subject:body.p_subject,message:body.p_message,created_at:new Date().toISOString(),handled:false});
