@@ -6,6 +6,7 @@ import { safe, notify } from "./app.js";
 import { resources, loadLookups, editorPanel, wireEditor } from "./admin-editor.js";
 const pageSize = 20;
 let activeRows = [], currentResource = "products", factorId;
+const workspaceHints={overview:"Operational totals from your store records.",orders:"Review payments, fulfilment and shipment history.",catalogue:"Manage existing products, configurations and inventory.",promotions:"Manage promotion rules and eligible products.",shipping:"Review delivery regions and approved rates.",reviews:"Moderate customer feedback without changing their words.",messages:"Respond to customer support requests through your established support process.","inventory-history":"Trace recorded changes to stock quantities.",audit:"Inspect recorded administration activity.",settings:"Review the existing launch and payment controls."};
 const tabs = [["overview", "Overview"], ["orders", "Orders"], ["catalogue", "Catalogue & stock"], ["promotions", "Promotions"], ["shipping", "Shipping & tax"], ["reviews", "Reviews"], ["messages", "Messages"], ["inventory-history", "Inventory history"], ["audit", "Audit history"], ["settings", "Launch settings"]];
 function params() {
   return new URLSearchParams(location.hash.split("?")[1] || "");
@@ -68,7 +69,7 @@ async function adminPage() {
     const { rows, count } = await pageQuery(db.from("admin_audit_logs").select("*", { count: "exact" }).order("id", { ascending: false }), page);
     body = `<div class="audit-list">${rows.map((a) => `<p>${e(new Date(a.created_at).toLocaleString())} \xB7 ${e(a.action)} \xB7 ${e(a.record_id)} \xB7 ${e(a.actor || "Trusted backend")} \xB7 ${e(a.outcome)}</p>`).join("") || "<p>No audit entries.</p>"}</div>${pager(count, page, tab)}`;
   }
-  return `<section class="wrap page owner-workspace"><span class="eyebrow">OWNER WORKSPACE</span><h1>Store management</h1><div class="admin-nav" aria-label="Owner sections">${tabs.map(([t, label]) => `<a class="${t === tab ? "active" : ""}" href="${e(link(t))}" ${t === tab ? 'aria-current="page"' : ""}>${label}</a>`).join("")}</div>${body}</section>`;
+  return `<section class="wrap page owner-workspace"><span class="eyebrow">OWNER WORKSPACE</span><h1>Store management</h1><div class="admin-nav" aria-label="Owner sections">${tabs.map(([t, label]) => `<a class="${t === tab ? "active" : ""}" href="${e(link(t))}" ${t === tab ? 'aria-current="page"' : ""}>${label}</a>`).join("")}</div><div class="admin-stage"><div class="workspace-heading"><div><span class="eyebrow">MANAGE YOUR STORE</span><h2>${e(tabs.find(([t])=>t===tab)[1])}</h2><p>${e(workspaceHints[tab])}</p></div><span class="workspace-status">MFA-protected workspace</span></div>${body}</div></section>`;
 }
 function wireAdmin(render) {
   document.querySelector("#enroll")?.addEventListener("click", () => safe(async () => {

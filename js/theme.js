@@ -4,13 +4,18 @@ export function initializeTheme(){
  let saved;try{saved=localStorage.getItem('store-theme');}catch{}
  function apply(value){
   const theme=resolveTheme(value,system.matches);document.documentElement.dataset.theme=theme;
-  button?.setAttribute('aria-label',`Switch to ${theme==='dark'?'light':'dark'} theme`);
+  const mode=['light','dark','system'].includes(value)?value:'light';
+  button?.setAttribute('aria-label',`Appearance: ${mode}. Switch to ${mode==='light'?'dark':mode==='dark'?'system':'light'} mode`);
   button?.setAttribute('aria-pressed',String(theme==='dark'));
-  if(button)button.title=theme==='dark'?'Switch to light theme':'Switch to dark theme';
+  if(button)button.title=`Appearance: ${mode}`;
+  document.querySelectorAll('select[data-theme-mode]').forEach(select=>select.value=mode);
+  document.documentElement.dataset.themeMode=mode;
   document.querySelector('meta[name="theme-color"]')?.setAttribute('content',theme==='dark'?'#0c0d0f':'#ffffff');
  }
  apply(saved);
- button?.addEventListener('click',()=>{saved=document.documentElement.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('store-theme',saved);}catch{}apply(saved);});
- system.addEventListener('change',()=>{if(!['light','dark'].includes(saved))apply();});
+ function choose(value){saved=value;try{localStorage.setItem('store-theme',saved);}catch{}apply(saved);}
+ button?.addEventListener('click',()=>{const mode=document.documentElement.dataset.themeMode;choose(mode==='light'?'dark':mode==='dark'?'system':'light');});
+ document.querySelectorAll('select[data-theme-mode]').forEach(select=>select.addEventListener('change',()=>choose(select.value)));
+ system.addEventListener('change',()=>{if(saved==='system')apply(saved);});
  window.addEventListener('storage',event=>{if(event.key==='store-theme'){saved=event.newValue;apply(saved);}});
 }

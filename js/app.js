@@ -1,3 +1,5 @@
+import {designPage,initializeNavigation} from './experience.js';
+import {productImages,mediaImage} from './product-media.js';
 import {styleActions} from './action-styles.js';
 import {interfaceIcon} from './interface-icons.js';
 import {zelleInstructions,wireZelleForms} from './zelle-checkout.js';
@@ -105,7 +107,7 @@ async function product(id) {
     ]).catch(() => [null, null]),
     unwrap(db.rpc('has_recent_product_sales', {p_product:id})).catch(() => false)
   ]) : [[[], null], false];
-  return `<section class="wrap page"><a class="text-link" href="#/shop">\u2190 Back to the collection</a><div class="detail-grid"><div id="variant-image"></div><div><span class="eyebrow">${e(p.brand)}</span><h1>${e(p.name)}</h1><p>${e(p.description)}</p><div id="product-options"></div><label class="native-variant">Colour / configuration<select id="variant" tabindex="-1" aria-hidden="true">${p.variants.map((v) => `<option value="${e(v.id)}">${e([v.color,v.configuration].filter(Boolean).join(" / "))}</option>`).join("")}</select></label>${recentSalesMarkup(hasRecentSales)}<div id="variant-info" aria-live="polite"></div>${quantityStepper()}<button class="button" id="add">Add to cart \u2197</button> <button class="button" id="buy-now">Buy Now</button><p><a href="#/shipping">Shipping</a> · <a href="#/returns">Returns</a> · <a href="#/warranty">Warranty</a></p><div id="product-specifications"></div>${suppliedProductDetails(p)}<div id="variant-specs"></div></div></div>${productReviewsMarkup(reviews, eligibility)}<h2>Related products</h2><div class="product-grid">${products.filter((x) => x.id !== p.id && x.category === p.category).slice(0, 4).map(card).join("")}</div></section>`;
+  return `<section class="wrap page" data-product-family="${e(p.category)}"><a class="text-link" href="#/shop">\u2190 Back to the collection</a><div class="detail-grid"><div id="variant-image"></div><div><span class="eyebrow">${e(p.brand)}</span><h1>${e(p.name)}</h1><p>${e(p.description)}</p><div id="product-options"></div><label class="native-variant">Colour / configuration<select id="variant" tabindex="-1" aria-hidden="true">${p.variants.map((v) => `<option value="${e(v.id)}">${e([v.color,v.configuration].filter(Boolean).join(" / "))}</option>`).join("")}</select></label>${recentSalesMarkup(hasRecentSales)}<div id="variant-info" aria-live="polite"></div>${quantityStepper()}<button class="button" id="add">Add to cart \u2197</button> <button class="button" id="buy-now">Buy Now</button><p><a href="#/shipping">Shipping</a> · <a href="#/returns">Returns</a> · <a href="#/warranty">Warranty</a></p><div id="product-specifications"></div>${suppliedProductDetails(p)}<div id="variant-specs"></div></div></div>${productReviewsMarkup(reviews, eligibility)}<h2>Related products</h2><div class="product-grid">${products.filter((x) => x.id !== p.id && x.category === p.category).slice(0, 4).map(card).join("")}</div></section>`;
 }
 function cartPage() {
   let subtotal = 0, pricedItems = 0;
@@ -114,7 +116,8 @@ function cartPage() {
     const p = products.find((p2) => p2.variants.some((v2) => v2.id === line.variant_id)), v = p?.variants.find((v2) => v2.id === line.variant_id);
     if (Number.isInteger(v?.price_cents)) { subtotal += v.price_cents * line.quantity; pricedItems++; }
     if(!v||line.quantity>purchaseLimit(p,v))unresolved=true;
-    return `<article class="cart-row"><div><h3>${e(p?.name || "Unavailable product")}</h3><p>${e(v ? [v.color,v.configuration].filter(Boolean).join(' / ') : "This item is unavailable.")}</p>${Number.isInteger(v?.price_cents) ? money(v.price_cents) : ""}${v?`<p>${availability(v)}</p>`:''}</div><label>Quantity<input class="cart-quantity" data-id="${e(line.variant_id)}" type="number" min="1" max="99" value="${line.quantity}"></label><button class="remove" data-id="${e(line.variant_id)}">Remove</button></article>`;
+    const image=p&&v?productImages(p,v)[0]:null;
+    return `<article class="cart-row">${image?mediaImage(image,{className:"cart-photo"}):""}<div><h3>${e(p?.name || "Unavailable product")}</h3><p>${e(v ? [v.color,v.configuration].filter(Boolean).join(' / ') : "This item is unavailable.")}</p>${Number.isInteger(v?.price_cents) ? money(v.price_cents) : ""}${v?`<p>${availability(v)}</p>`:''}</div><label>Quantity<input class="cart-quantity" data-id="${e(line.variant_id)}" type="number" min="1" max="99" value="${line.quantity}"></label><button class="remove" data-id="${e(line.variant_id)}">Remove</button></article>`;
   }).join("");
   const lines=cart.map(line=>{const p=products.find(p=>p.variants.some(v=>v.id===line.variant_id));const v=p?.variants.find(v=>v.id===line.variant_id);return v&&Number.isInteger(v.price_cents)?{product_id:p.id,price_cents:v.price_cents,quantity:line.quantity}:null;}).filter(Boolean);
   const offers=[...new Map(products.flatMap(p=>p.promotions||[]).map(offer=>[offer.id,offer])).values()];
@@ -130,7 +133,7 @@ async function checkout() {
     location.hash = "/account";
     return "";
   }
-  if (new URLSearchParams(location.hash.split("?")[1] || "").get("order")) return `<section class="wrap page"><h1>Order & payment</h1><div class="panel payment-panel" id="payment"></div><a class="text-link" href="#/account">Return to your order history</a></section>`;
+  if (new URLSearchParams(location.hash.split("?")[1] || "").get("order")) return `<section class="wrap page"><h1>Order & payment</h1><div class="checkout-steps" aria-label="Checkout steps"><span>Shipping</span><span class="current">Payment</span><span>Confirmation</span></div><div class="panel payment-panel" id="payment"></div><a class="text-link" href="#/account">Return to your order history</a></section>`;
   const launch=await unwrap(db.from("store_settings").select("checkout_enabled,policies_approved,zelle_enabled,paypal_enabled").single());
   if(!store.policiesApproved||!launch.policies_approved||!launch.checkout_enabled)return closed;
   const methods=await invoke("payment_methods");
@@ -180,7 +183,7 @@ async function render() {
     const heading = main.querySelector("h1")?.textContent;
     if (path !== "/" && heading) document.title = heading + " \xB7 " + (store.name || "Electronics");
     if (loadError && !["/connection", "/account", "/admin"].includes(path)) main.insertAdjacentHTML("afterbegin", `<div class="error wrap" role="alert">${e(loadError)}</div>`);
-    wire(path);styleActions(main);
+    wire(path);designPage(main,path);styleActions(main);
     if (path === '/' || path === '/shop' || path.startsWith('/product/')) cleanupPromotions=wireProductPromotions(main,products);
     revealPage(main);
     if(settings.frontendReview&&settings.localTools) main.insertAdjacentHTML('afterbegin','<div class="review-banner wrap" role="note">Collection preview · Product photography and details for review. Orders, accounts and payments are unavailable in this preview.</div>');
@@ -190,7 +193,8 @@ async function render() {
     if(path.startsWith('/product/')&&params.get('review')==='1'&&reviewForm&&!reviewForm.hidden)reviewForm.scrollIntoView({block:'start',behavior:'instant'});
     else window.scrollTo(0, 0);
   } catch (error) {
-    main.innerHTML = `<section class="wrap page"><h1>Something needs attention.</h1><p role="alert">${path==='/admin'?e(error.message):'This page is temporarily unavailable. Please try again.'}</p><a href="#/">Return home</a></section>`;
+    main.innerHTML = `<section class="wrap page error-page"><span class="state-icon">${interfaceIcon("shield")}</span><h1>Something needs attention.</h1><p role="alert">${path==='/admin'?e(error.message):'This page is temporarily unavailable. Please try again.'}</p><button id="retry-page" class="button">Try again</button> <a class="text-link" href="#/">Return home</a></section>`;
+    designPage(main,path);document.querySelector("#retry-page").onclick=render;
   }
   finally {main.removeAttribute("aria-busy");}
 }
@@ -432,6 +436,7 @@ document.querySelector("#search").onsubmit = (ev) => {
   ev.preventDefault();
   location.hash = "/shop?q=" + encodeURIComponent(new FormData(ev.target).get("q"));
 };
+initializeNavigation(cartPage);
 document.querySelector("#menu").onclick = () => {
   const open = document.querySelector("#nav").classList.toggle("open");
   document.querySelector("#menu").setAttribute("aria-expanded", String(open));

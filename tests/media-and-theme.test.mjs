@@ -9,6 +9,13 @@ import {importProductImages} from '../scripts/import-product-images.mjs';
 test('theme defaults to white even on dark systems and respects explicit saved choices',()=>{
  assert.equal(resolveTheme(null,true),'light');assert.equal(resolveTheme(null,false),'light');assert.equal(resolveTheme('light',true),'light');assert.equal(resolveTheme('dark',false),'dark');assert.equal(resolveTheme('invalid',true),'light');
 });
+
+test('system appearance follows OS preference without changing explicit customer choices',()=>{
+ assert.equal(resolveTheme('system',true),'dark');
+ assert.equal(resolveTheme('system',false),'light');
+ assert.equal(resolveTheme('light',true),'light');
+ assert.equal(resolveTheme('dark',false),'dark');
+});
 test('gallery removes duplicate derivatives and rejects foreign/unapproved variant images',()=>{
  const p={id:'phone',name:'Exact phone',product_type:'Smartphone'},v={color:'Blue',configuration:'128GB',variant_key:'blue-128',images:[
   {path:'images/products/phone-960.webp',label:'Rear',product_id:'phone'},

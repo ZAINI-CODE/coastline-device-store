@@ -1,1 +1,1 @@
-export function resolveTheme(saved){return ['light','dark'].includes(saved)?saved:'light';}
+export function resolveTheme(saved,systemDark=false){return saved==='system'?(systemDark?'dark':'light'):['light','dark'].includes(saved)?saved:'light';}
