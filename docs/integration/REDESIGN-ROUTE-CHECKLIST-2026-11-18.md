@@ -43,3 +43,42 @@ The application is a hash router. Order details, saved addresses, security and p
 ## Verification record
 
 Implementation checkboxes above indicate presentation coverage, not successful live authentication, financial transactions or deployment. Running-browser results and remaining limitations are recorded separately after verification. Local QA uses disposable fixtures and never represents a real order or payment.
+
+### Completed verification
+
+- Production build generated the existing 13 published products and their crawlable pages.
+- 37 frontend regression tests passed, including explicit System appearance. Three additional action-colour/profile-security tests passed.
+- 78 browser acceptance checks passed against the local build. The same suite subsequently passed against the published public storefront; its authenticated admin/payment cases deliberately remained on isolated localhost fixtures.
+- 53 additional responsive/state checks passed: all 13 products on mobile, remaining public routes, local preview tools, every mobile admin tab/editor, disposable order details/reference confirmation, registration validation, password-recovery presentation and network-error retry.
+- All 36 generated direct product, category and information URLs passed live checks for their routed page, redesign stylesheet and first product image where present. Shared/direct links therefore received verification in addition to hash navigation.
+- Automated browser suites reported no uncaught application errors. These checks cover Chromium desktop and a 393 × 852 responsive viewport; they do not certify Safari, Firefox or physical-device performance.
+- A fresh live Google sign-out/sign-in returned the approved testing account to the account overview. The existing private profile picture loaded and the Edit Profile control opened its separate editor. No profile values were saved or pictures changed during this release.
+- Signed-in live checkout displayed the authenticated email/name, required contact/address fields, all 50 U.S. states, free standard shipping and $25 fast delivery. Alaska plus fast delivery selected a valid rule. Zelle was selectable; PayPal and cards remained disabled. The 393-pixel live checkout had no horizontal overflow. No order was submitted.
+- A before/after public-catalogue fingerprint covering product identities, variant records (including prices, stock and images), review totals and ratings was identical. The store still publishes 13 products. No migration, Edge Function deployment, price/stock/review write or permission change was performed.
+
+### Published release
+
+Netlify production deploy: `6afd52d42c30100eacaa9014` at https://coastline-device.netlify.app/.
+
+Published application revision: `cb63233`. JavaScript, theme initialization, redesign CSS and policy JSON matched the tested package byte for byte. Netlify post-processes the HTML by adding a hosting comment and rewriting some links, so raw HTML hashes differ. The existing CSP, `DENY` framing header and `nosniff` header remained present. No security protection was relaxed.
+
+Scoped commits pushed to the existing GitHub repository:
+
+- `08a3f94` — website-wide visual system and responsive components.
+- `9df45a6` — recovery dialog and password-reset editor presentation.
+- `ad5da20` — approved 15-day defective return/exchange copy.
+- `cb63233` — route checklist and isolated browser verification tooling.
+
+Private screenshots, JSON test results, catalogue snapshots, release hashes and deployment ZIP are under `.private/redesign/`, excluded from Git. Public deployment packaging contains only built storefront files and the existing security headers.
+
+### Verification limits
+
+- New live email registration, email delivery and an actual password-reset link were not exercised. Form handling and recovery/reset presentation passed isolated tests; fresh live Google callback passed.
+- Apple OAuth remains blocked by its existing unconfigured provider, as previously confirmed by the owner.
+- Real admin mutations were not performed. Every admin screen/editor was tested using isolated fixtures; existing hosted MFA/RLS were not changed or bypassed.
+- No real Zelle transfer, bank verification, order fulfilment, refund, shipment or delivery notification was generated. Disposable UI fixtures are not evidence of a real payment.
+- PayPal and card payment submissions remain unavailable by the approved configuration. This redesign does not certify end-to-end payment or email launch readiness.
+
+### Rollback
+
+Republish the prior Netlify deployment `6afc8ca97af803dafb9676ed` if a visual regression requires rollback. This release has no database migration or data rollback step. Retain all customer accounts, orders, reviews, prices and inventory.
