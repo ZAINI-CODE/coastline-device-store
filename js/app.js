@@ -451,6 +451,11 @@ document.querySelector("#cart-count").textContent = cart.reduce((n, x) => n + x.
 document.addEventListener('click',event=>{if(!event.target.closest('a[href="#/account"]')||!db)return;event.preventDefault();const target=validStoreReturn(location.hash);safe(async()=>{const {data:{user}}=await db.auth.getUser();if(!user&&target)sessionStorage.setItem('returnTo',target);else sessionStorage.removeItem('returnTo');location.hash='/account';});});
 window.addEventListener("hashchange", render);
 if (db) db.auth.onAuthStateChange((event) => {
+  if(event==='PASSWORD_RECOVERY'){
+    sessionStorage.setItem('passwordRecovery','1');
+    location.hash='/account';
+    setTimeout(()=>safe(render),0);
+  }
   if (event === "SIGNED_IN" || event === "INITIAL_SESSION") setTimeout(() => safe(async () => {
     const { data: { user } } = await db.auth.getUser();
     if (!user) return;
