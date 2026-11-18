@@ -41,7 +41,7 @@
       },
       {
         "title": "Damaged or Incorrect Deliveries",
-        "text": "If you receive a damaged or incorrect product, you must notify us within 7 days of delivery.\n\nPlease provide:\n\n- Your order ID or proof of purchase.\n- Clear photographs showing the damaged or incorrect product.\n- Photographs of the original packaging, where relevant.\n- A brief description of the issue.\n\nOur support team will review the information and guide you through the resolution process.\n\nEligible cases will be handled according to our Returns and Refunds Policy."
+        "text": "If you receive a damaged or incorrect product, you must notify us within 15 days of delivery.\n\nPlease provide:\n\n- Your order ID or proof of purchase.\n- Clear photographs showing the damaged or incorrect product.\n- Photographs of the original packaging, where relevant.\n- A brief description of the issue.\n\nOur support team will review the information and guide you through the resolution process.\n\nEligible cases will be handled according to our Returns and Refunds Policy."
       },
       {
         "title": "Contact Information",
@@ -50,18 +50,22 @@
     ]
   },
   "returns": {
-    "title": "Returns, refunds and cancellations",
+    "title": "Returns, exchanges and refunds",
     "paragraphs": [
       "Request a return through Order Support before sending anything back."
     ],
     "sections": [
       {
         "title": "Return Window",
-        "text": "We offer a 14-day return request period from the date of delivery for eligible products.\n\nCustomers must contact our support team or submit an online return request within this period.\n\nA valid order ID or proof of purchase is required for all return requests."
+        "text": "If your product is defective, damaged or incorrect, contact our support team within 15 days of delivery to request an eligible return or exchange.\n\nA valid order ID or proof of purchase is required. Please obtain return authorization before sending your product back."
       },
       {
         "title": "Eligible Returns",
         "text": "Returns are accepted for the following situations:\n\n- Defective products.\n- Products damaged during delivery.\n- Incorrect products received.\n- Products that do not match the item ordered due to an error by our store.\n\nOpened electronics may qualify for a return only when they are defective or damaged, or when an incorrect product has been supplied.\n\nOrdinary change-of-mind returns are not included in our standard return eligibility."
+      },
+      {
+        "title": "Exchanges",
+        "text": "Eligible defective, damaged or incorrect products may be exchanged after support review and inspection. Contact Order Support within 15 days of delivery. Exchanges depend on the availability of the correct replacement. Support will explain the return instructions and available resolution before you send anything back."
       },
       {
         "title": "Product Condition Requirements",
@@ -305,7 +309,7 @@
       },
       {
         "title": "How do I request a return or refund?",
-        "text": "Send a private message with your order number and reason. Support will explain eligibility and the return instructions for that order."
+        "text": "Contact Order Support within 15 days of delivery for a defective, damaged or incorrect product. Include your order number and a description of the issue. Support will explain return or exchange eligibility and provide instructions before you send anything back."
       },
       {
         "title": "What warranty applies to my item?",
