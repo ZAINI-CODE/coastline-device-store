@@ -1,3 +1,4 @@
+import {accountActionsMarkup,wireAccountActions} from './account-actions.js';
 import {orderHistoryMarkup,wireOrderHistory} from './order-history.js';
 import {profileOverview,profilePicture,wireProfile} from './profile.js';
 import {phoneFields,wirePhone} from './checkout-phone.js';
@@ -17,12 +18,12 @@ async function accountPage(authConfig={},catalogue=[]) {
     await unwrap(db.rpc("sync_my_profile"));
     accountRows = await Promise.all([unwrap(db.from("orders").select("*,order_items(product_id,variant_id,product_name,variant,quantity,unit_price_cents),order_status_history(status,payment_status,created_at)").eq("user_id", user.id).order("created_at", { ascending: false })), unwrap(db.from("customer_addresses").select("*")), unwrap(db.from("profiles").select("*").eq("id", user.id).maybeSingle()), unwrap(db.rpc("my_product_reviews"))]);
   } catch (error) {
-    return `<section class="wrap page"><h1>Your account</h1><div class="panel"><h2>Signed in</h2><p>${e(user.email)}</p><p>Your account details are temporarily unavailable. Try reloading this page.</p><button id="logout">Sign out</button></div></section>`;
+    return `<section class="wrap page"><h1>Your account</h1><div class="panel"><h2>Signed in</h2><p>${e(user.email)}</p><p>Your account details are temporarily unavailable. Try reloading this page.</p><button id="logout">Sign out</button></div>${accountActionsMarkup([],[],false)}</section>`;
   }
   const [orders, addresses, profile, reviews] = accountRows;
   currentProfile=profile;
   const picture=await profilePicture(db,profile,user);
-  return `<section class="wrap page"><div class="section-head"><div><span class="eyebrow">YOUR ACCOUNT</span><h1>Welcome back.</h1><p>${e(user.email)}</p></div><button id="logout">Sign out</button></div>${profileOverview(profile,user,picture)}<details class="panel account-security"><summary>Account security</summary><form id="password">${field("password", "New password (12+ characters)", "password")}<button class="button">Change password</button><p>Use this form after following a password recovery link.</p></form></details>${orderHistoryMarkup(orders,catalogue)}<h2>Saved addresses</h2><div class="account-grid">${addresses.map((a) => `<article class="panel"><p>${e(a.full_name)}<br>${e(a.line1)}<br>${e(a.city)}, ${e(a.state)} ${e(a.postal_code)}<br>${e(a.country)}</p><button data-delete-address="${e(a.id)}">Delete address</button></article>`).join("")}<form id="address" class="panel"><h3>Add an address</h3>${[["full_name", "Full name"], ["line1", "Street address"], ["city", "City"], ["state", "State / region"], ["postal_code", "ZIP / postal code"], ["country", "Country code"]].map(([n, l]) => field(n, l)).join("")}<button type="submit" class="button">Save address</button></form></div><h2>Your reviews</h2>${reviews.map((r) => `<article class="review"><p>${r.rating}/5 \xB7 ${r.approved ? "Published" : "Awaiting moderation"}</p><p>${e(r.body)}</p><a href="#/product/${e(r.product_id)}">View product</a></article>`).join("") || "<p>No reviews submitted.</p>"}</section>`;
+  return `<section class="wrap page"><div class="section-head"><div><span class="eyebrow">YOUR ACCOUNT</span><h1>Welcome back.</h1><p>${e(user.email)}</p></div><button id="logout">Sign out</button></div>${profileOverview(profile,user,picture)}<details class="panel account-security"><summary>Account security</summary><form id="password">${field("password", "New password (12+ characters)", "password")}<button class="button">Change password</button><p>Use this form after following a password recovery link.</p></form></details>${orderHistoryMarkup(orders,catalogue)}<h2>Saved addresses</h2><div class="account-grid">${addresses.map((a) => `<article class="panel"><p>${e(a.full_name)}<br>${e(a.line1)}<br>${e(a.city)}, ${e(a.state)} ${e(a.postal_code)}<br>${e(a.country)}</p><button data-delete-address="${e(a.id)}">Delete address</button></article>`).join("")}<form id="address" class="panel"><h3>Add an address</h3>${[["full_name", "Full name"], ["line1", "Street address"], ["city", "City"], ["state", "State / region"], ["postal_code", "ZIP / postal code"], ["country", "Country code"]].map(([n, l]) => field(n, l)).join("")}<button type="submit" class="button">Save address</button></form></div><h2>Your reviews</h2>${reviews.map((r) => `<article class="review"><p>${r.rating}/5 \xB7 ${r.approved ? "Published" : "Awaiting moderation"}</p><p>${e(r.body)}</p><a href="#/product/${e(r.product_id)}">View product</a></article>`).join("") || "<p>No reviews submitted.</p>"}${accountActionsMarkup(catalogue,reviews)}</section>`;
 }
 function wireAccount(render) {
   wireOrderHistory();
@@ -55,10 +56,7 @@ function wireAccount(render) {
     if (!config[b.dataset.provider + "Enabled"]) throw new Error("This sign-in provider is awaiting configuration.");
     await unwrap(db.auth.signInWithOAuth({ provider: b.dataset.provider, options: { redirectTo: reviewAuthRedirect() } }));
   }));
-  document.querySelector("#logout")?.addEventListener("click", () => safe(async () => {
-    await unwrap(db.auth.signOut());
-    render();
-  }));
+  wireAccountActions(async()=>{await unwrap(db.auth.signOut());await render();});
   document.querySelector("#password")?.addEventListener("submit", (ev) => safe(async () => {
     ev.preventDefault();
     const password = new FormData(ev.target).get("password");
