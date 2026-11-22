@@ -28,7 +28,7 @@ footer{background:var(--surface-soft);border-top:1px solid var(--line);padding-t
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.store-dialog[open]{animation:none}}
 
 /* Account actions: semantic hover/focus feedback and explicit sign-out confirmation. */
-.account-experience :is(button,.button):not(:disabled):not([aria-disabled=true]):is(:hover,:focus-visible){background:var(--action-color,var(--action-general));border-color:var(--action-color,var(--action-general));color:var(--action-foreground);box-shadow:0 5px 15px #162b4e14;transform:translateY(-1px)}
+.account-experience :is(button,.button):not(:disabled):not([aria-disabled=true]):is(:hover,:focus,:focus-visible){background:var(--action-color,var(--action-general));border-color:var(--action-color,var(--action-general));color:var(--action-foreground)!important;box-shadow:0 5px 15px #162b4e14;transform:translateY(-1px)}
 .account-experience :is(.profile-editor,.account-security)>summary{border-radius:10px;transition:background .16s,color .16s;padding:6px 10px;margin:-6px -10px}
 .account-experience :is(.profile-editor,.account-security)>summary:is(:hover,:focus-visible){background:color-mix(in srgb,var(--action-general) 10%,transparent);color:var(--action-general)}
 .account-review-action{margin:26px 0 0;padding-top:22px;border-top:1px solid var(--line)}
