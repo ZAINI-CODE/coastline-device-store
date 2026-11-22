@@ -171,7 +171,7 @@ async function render() {
       main.innerHTML=iphonePricingPage({...pricePreview,rows},params.get('product')||'');
     }
     else if (path === "/connection" && settings.localTools) main.innerHTML = await connectionPage();
-    else if (path === "/account") main.innerHTML = await accountPage(store);
+    else if (path === "/account") main.innerHTML = await accountPage(store,products);
     else if (path === "/admin") main.innerHTML = await adminPage();
     else if (path === "/deals") main.innerHTML = await bundlesPage(products, async (lines) => {
       cart.push(...lines);
