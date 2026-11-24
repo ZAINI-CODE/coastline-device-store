@@ -39,6 +39,6 @@ test('showcase respects reduced motion, pauses on hover and keeps manual navigat
   cleanup=wireShowcase(root);tick(100);tick(200);assert.equal(viewport.scrollLeft,0);assert.equal(pause.disabled,true);
   next.events.get('click')();assert.equal(viewport.scrollLeft,200);
   reduced.matches=false;reduced.events.get('change')();tick(10000);tick(10016);assert.ok(viewport.scrollLeft>200);
-  root.events.get('mouseenter')();const before=viewport.scrollLeft;tick(10032);tick(10048);assert.equal(viewport.scrollLeft,before);
+  root.events.get('mouseenter')();const before=viewport.scrollLeft;tick(10032);tick(10048);assert.equal(viewport.scrollLeft,before);assert.equal(frames.size,0,'Paused showcase must not keep scheduling animation frames');
  }finally{cleanup?.();for(const [key,value] of saved)if(value===undefined)delete globalThis[key];else globalThis[key]=value;}
 });

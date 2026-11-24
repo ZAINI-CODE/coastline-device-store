@@ -10,7 +10,7 @@ export function wireShowcase(root){
  const copy=set.cloneNode(true);copy.setAttribute('aria-hidden','true');copy.querySelectorAll('a').forEach(a=>a.tabIndex=-1);track.append(copy);
  let raf=0,last=0,position=viewport.scrollLeft,hover=false,focus=false,touch=false,userPaused=false,visible=false,resumeAt=0;
  const period=()=>set.getBoundingClientRect().width+18;
- function frame(now){raf=0;if(!root.isConnected)return;const dt=last?Math.min(40,now-last):0;last=now;const stop=reduced.matches||userPaused||hover||focus||touch||document.hidden||!visible||now<resumeAt;if(!stop){position=(position+dt*.025)%period();viewport.scrollLeft=position;}else position=viewport.scrollLeft;if(!reduced.matches&&!document.hidden&&visible)raf=requestAnimationFrame(frame);}
+ function frame(now){raf=0;if(!root.isConnected)return;const dt=last?Math.min(40,now-last):0;last=now;const stop=reduced.matches||userPaused||hover||focus||touch||document.hidden||!visible||now<resumeAt;if(!stop){position=(position+dt*.025)%period();viewport.scrollLeft=position;}else position=viewport.scrollLeft;if(!reduced.matches&&!document.hidden&&visible&&!userPaused&&!hover&&!focus&&!touch)raf=requestAnimationFrame(frame);}
  function start(){if(!raf){last=0;position=viewport.scrollLeft;raf=requestAnimationFrame(frame);}}
  function interaction(){resumeAt=performance.now()+6000;start();}
  const handlers=[];function on(target,event,fn,options){target.addEventListener(event,fn,options);handlers.push(()=>target.removeEventListener(event,fn,options));}
